@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>備用情境: 公文撰寫小幫手</title>
+  <style>
+
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+:root {
+--brand-primary: #006097;
+--brand-secondary: #173A63;
+--brand-primary-dark: #004A75;
+--brand-secondary-light: #DFE1E3;
+--brand-primary-light: #E0EBF2;
+--text: #1F2937;
+--text-muted: #4B5563;
+--text-dim: #9CA3AF;
+--border: #E5E7EB;
+--border-light: #F1F2F4;
+--bg: #FAFAFA;
+--code-bg: #F3F4F6;
+--toc-width: 280px;
+--toc-bg: #FCFCFD;
+}
+* { box-sizing: border-box; }
+html {
+scroll-behavior: smooth;
+}
+body {
+font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC",
+"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+line-height: 1.75;
+color: var(--text);
+background: var(--bg);
+max-width: 1280px;
+margin: 0 auto;
+padding: 40px 32px 80px calc(var(--toc-width) + 40px);
+font-size: 16px;
+transition: padding-left 0.05s linear;
+}
+
+h1 {
+color: var(--brand-primary);
+font-size: 30px;
+font-weight: 700;
+border-bottom: 4px solid var(--brand-secondary);
+padding-bottom: 12px;
+margin-top: 48px;
+margin-bottom: 24px;
+}
+h1:first-of-type {
+margin-top: 8px;
+}
+
+h2 {
+color: var(--brand-primary-dark);
+font-size: 24px;
+font-weight: 700;
+border-left: 6px solid var(--brand-secondary);
+padding: 8px 14px;
+background: var(--brand-primary-light);
+margin-top: 40px;
+margin-bottom: 20px;
+border-radius: 0 6px 6px 0;
+}
+
+h3 {
+color: var(--brand-secondary);
+font-size: 19px;
+font-weight: 700;
+margin-top: 32px;
+margin-bottom: 12px;
+padding-left: 12px;
+border-left: 4px solid var(--brand-secondary);
+}
+h4 {
+color: var(--brand-primary);
+font-size: 16px;
+font-weight: 700;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+p { margin: 8px 0 12px; }
+blockquote {
+margin: 12px 0 16px;
+padding: 14px 18px 14px 20px;
+background: var(--brand-secondary-light);
+border-left: 5px solid var(--brand-secondary);
+border-radius: 0 6px 6px 0;
+color: #2A2A2A;
+font-size: 15.5px;
+line-height: 1.85;
+}
+blockquote p { margin: 0; }
+ul, ol { margin: 8px 0 14px; padding-left: 26px; }
+li { margin: 4px 0; }
+ul li::marker { color: var(--brand-secondary); }
+ol li::marker { color: var(--brand-primary); font-weight: 700; }
+a {
+color: var(--brand-primary);
+text-decoration: none;
+border-bottom: 1px solid transparent;
+transition: border-color 0.15s;
+}
+a:hover { border-bottom-color: var(--brand-primary); }
+strong { color: var(--brand-primary-dark); font-weight: 700; }
+em { color: var(--text-muted); }
+code {
+background: var(--code-bg);
+color: var(--brand-primary-dark);
+padding: 2px 6px;
+border-radius: 4px;
+font-family: "Cascadia Code", "Consolas", "Source Code Pro", monospace;
+font-size: 0.92em;
+}
+pre {
+background: #1E2A38;
+color: #F1F5F9;
+padding: 16px 18px;
+border-radius: 8px;
+border-left: 4px solid var(--brand-secondary);
+overflow-x: auto;
+margin: 10px 0 16px;
+font-size: 14.5px;
+line-height: 1.65;
+position: relative;
+}
+pre .copy-btn {
+position: absolute; top: 8px; right: 8px;
+background: rgba(255, 255, 255, 0.12);
+border: 1px solid rgba(255, 255, 255, 0.28);
+color: #F1F5F9; padding: 4px 10px;
+border-radius: 4px; font-size: 12px;
+font-family: inherit; cursor: pointer;
+opacity: 0;
+transition: opacity 0.15s, background 0.15s, border-color 0.15s, color 0.15s;
+user-select: none; z-index: 2;
+}
+pre:hover .copy-btn, pre .copy-btn:focus { opacity: 1; }
+pre .copy-btn:hover {
+background: var(--brand-secondary);
+border-color: var(--brand-secondary); color: #fff;
+}
+pre .copy-btn.copied {
+background: #10B981; border-color: #10B981; color: #fff; opacity: 1;
+}
+@media (hover: none) { pre .copy-btn { opacity: 0.85; } }
+@media print { pre .copy-btn { display: none; } }
+pre code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+table {
+border-collapse: collapse; width: 100%;
+margin: 16px 0 22px; background: #fff;
+box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+border-radius: 6px; overflow: hidden;
+}
+th {
+background: var(--brand-primary);
+color: #fff; font-weight: 700;
+padding: 10px 14px; text-align: left; font-size: 15px;
+}
+td { padding: 10px 14px; border-top: 1px solid var(--border); font-size: 14.5px; vertical-align: top; }
+tbody tr:nth-child(even) { background: #FAFBFC; }
+tbody tr:hover { background: var(--brand-secondary-light); }
+hr {
+border: none; height: 2px;
+background: linear-gradient(to right, var(--brand-secondary), transparent);
+margin: 32px 0;
+}
+
+#TOC, nav#TOC {
+position: fixed;
+top: 0; left: 0;
+width: var(--toc-width);
+height: 100vh;
+overflow-y: auto;
+overflow-x: hidden;
+background: linear-gradient(180deg, var(--brand-primary-light) 0%, #fff 80%);
+border-right: 3px solid var(--brand-primary);
+box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
+padding: 24px 20px 32px;
+margin: 0;
+z-index: 100;
+font-size: 13.5px;
+line-height: 1.55;
+}
+#TOC::before {
+content: "📑 目錄";
+display: block;
+font-size: 17px;
+font-weight: 700;
+color: var(--brand-primary);
+margin-bottom: 12px;
+padding-bottom: 8px;
+border-bottom: 2px solid var(--brand-secondary);
+}
+
+#TOC .toc-controls {
+display: flex;
+gap: 8px;
+margin-bottom: 14px;
+padding-bottom: 10px;
+border-bottom: 1px dashed var(--border);
+}
+#TOC .toc-controls button {
+flex: 1;
+background: #fff;
+border: 1px solid var(--brand-primary);
+color: var(--brand-primary);
+padding: 5px 8px;
+border-radius: 4px;
+font-size: 12px;
+cursor: pointer;
+font-family: inherit;
+font-weight: 600;
+transition: background 0.15s, color 0.15s;
+}
+#TOC .toc-controls button:hover {
+background: var(--brand-primary);
+color: #fff;
+}
+
+#TOC ul {
+padding: 0;
+margin: 0;
+list-style: none;
+}
+#TOC li {
+margin: 0;
+list-style: none;
+position: relative;
+}
+
+#TOC > ul > li::before { content: none; }
+
+#TOC a {
+display: block;
+color: var(--text);
+font-weight: 400;
+padding: 5px 8px 5px 14px;
+border-radius: 5px;
+border-bottom: none;
+word-break: break-word;
+text-indent: -6px;
+margin-left: 6px;
+transition: background 0.12s, color 0.12s;
+}
+#TOC a:hover {
+background: var(--brand-primary-light);
+color: var(--brand-primary-dark);
+}
+
+#TOC > ul > li > a {
+font-weight: 700;
+font-size: 13.5px;
+color: var(--brand-secondary);
+padding: 8px 8px 8px 10px;
+margin: 6px 0 2px;
+text-indent: 0;
+}
+#TOC > ul > li > a:hover {
+background: var(--brand-secondary-light);
+color: var(--brand-primary-dark);
+}
+
+#TOC > ul ul {
+border-left: 2px solid var(--border-light);
+margin: 2px 0 6px 12px;
+padding-left: 0;
+}
+#TOC > ul ul li > a {
+font-size: 12.5px;
+color: var(--text-muted);
+padding: 4px 8px 4px 12px;
+margin-left: 4px;
+}
+#TOC > ul ul li > a:hover {
+background: var(--brand-primary-light);
+color: var(--brand-primary-dark);
+}
+
+#TOC > ul ul ul li > a {
+font-size: 12px;
+color: var(--text-dim);
+padding: 3px 8px 3px 10px;
+}
+
+#TOC .toc-toggle {
+position: absolute;
+left: 2px;
+top: 4px;
+width: 22px;
+height: 22px;
+text-align: center;
+cursor: pointer;
+color: var(--brand-primary);
+background: transparent;
+border: none;
+border-radius: 6px;
+user-select: none;
+font-size: 14px;
+font-weight: 700;
+line-height: 22px;
+transition: transform 0.2s ease, background 0.15s, color 0.15s;
+transform-origin: center;
+z-index: 3;
+}
+#TOC > ul > li > .toc-toggle {
+top: 8px;
+width: 24px;
+height: 24px;
+font-size: 16px;
+line-height: 24px;
+color: var(--brand-primary-dark);
+}
+#TOC .toc-toggle:hover {
+background: var(--brand-primary);
+color: #fff;
+}
+#TOC li.toc-collapsible:not(.toc-collapsed) > .toc-toggle {
+transform: rotate(90deg);
+}
+
+#TOC > ul > li.toc-collapsible { padding-left: 26px; }
+#TOC ul ul li.toc-collapsible { padding-left: 22px; }
+#TOC li.toc-collapsible > ul {
+max-height: 3000px;
+overflow: hidden;
+transition: max-height 0.3s ease-out;
+}
+#TOC li.toc-collapsible.toc-collapsed > ul {
+max-height: 0;
+}
+
+#TOC a.toc-active {
+background: var(--brand-primary-light) !important;
+color: var(--brand-primary-dark) !important;
+font-weight: 700 !important;
+box-shadow: inset 3px 0 0 var(--brand-primary);
+}
+
+#TOC .toc-resizer {
+position: fixed;
+top: 0;
+left: var(--toc-width);
+width: 10px;
+height: 100vh;
+cursor: col-resize;
+background: transparent;
+z-index: 200;
+transition: background 0.15s;
+transform: translateX(-2px);
+}
+
+#TOC .toc-resizer::before {
+content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 4px;
+height: 60px;
+background: var(--brand-primary);
+opacity: 0.35;
+border-radius: 3px;
+transition: opacity 0.15s, height 0.15s, background 0.15s;
+}
+
+#TOC .toc-resizer::after {
+content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+width: 8px;
+height: 30px;
+transform: translate(-50%, -50%);
+background-image:
+linear-gradient(to bottom,
+transparent 0 6px, #fff 6px 8px,
+transparent 8px 14px, #fff 14px 16px,
+transparent 16px 22px, #fff 22px 24px,
+transparent 24px 30px);
+opacity: 0.9;
+pointer-events: none;
+}
+#TOC .toc-resizer:hover::before,
+#TOC .toc-resizer.is-dragging::before {
+opacity: 0.85;
+height: 100vh;
+background: var(--brand-primary);
+}
+#TOC .toc-resizer:hover { background: rgba(213, 41, 29, 0.08); }
+body.toc-dragging {
+cursor: col-resize;
+user-select: none;
+}
+body.toc-dragging * { cursor: col-resize !important; }
+
+#TOC::-webkit-scrollbar { width: 6px; }
+#TOC::-webkit-scrollbar-track { background: transparent; }
+#TOC::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+#TOC::-webkit-scrollbar-thumb:hover { background: var(--brand-primary-light); }
+
+header#title-block-header {
+text-align: center;
+margin-bottom: 32px;
+padding: 28px 20px;
+background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-dark) 100%);
+color: #fff;
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+header#title-block-header h1.title {
+color: #fff;
+border-bottom: 3px solid var(--brand-secondary);
+font-size: 24px;
+padding-bottom: 12px;
+margin: 0 0 8px;
+display: inline-block;
+}
+
+@media print {
+body { max-width: none; padding: 0; font-size: 11pt; }
+#TOC, nav#TOC {
+position: static; width: auto; height: auto;
+box-shadow: none; border: 1px solid var(--border);
+border-left: 5px solid var(--brand-primary);
+margin-bottom: 24px;
+}
+#TOC .toc-resizer, #TOC .toc-controls { display: none; }
+pre, blockquote, table { page-break-inside: avoid; }
+h1, h2, h3 { page-break-after: avoid; }
+}
+
+@media (max-width: 1024px) {
+body { padding: 40px 32px 80px; max-width: 960px; }
+#TOC, nav#TOC {
+position: static; width: auto; height: auto;
+box-shadow: none; border: 1px solid var(--border);
+border-left: 5px solid var(--brand-primary);
+border-radius: 8px;
+margin: 24px 0 32px;
+background: var(--toc-bg);
+}
+#TOC .toc-resizer { display: none; }
+}
+@media (max-width: 720px) {
+body { padding: 20px 16px; font-size: 15px; }
+h1 { font-size: 24px; }
+h2 { font-size: 20px; }
+h3 { font-size: 17px; }
+pre { font-size: 13px; }
+table { font-size: 13.5px; }
+th, td { padding: 8px 10px; }
+}
+</style>
+  <style type="text/css">
+
+.demo-badge{
+display:inline-block;
+background:linear-gradient(135deg,var(--brand-primary) 0%,var(--brand-primary-dark) 100%);
+color:#fff !important;
+border-radius:7px;
+padding:3px 12px;
+font-size:.58em;
+font-weight:800;
+letter-spacing:.5px;
+margin-right:12px;
+vertical-align:middle;
+white-space:nowrap;
+box-shadow:0 2px 5px rgba(0,0,0,.18);
+}
+
+.unit-lead{
+background:var(--brand-primary-light);
+border-left:5px solid var(--brand-primary);
+border-radius:9px;
+padding:13px 20px;
+margin:2px 0 26px 0;
+color:var(--brand-primary-dark);
+font-weight:600;
+font-size:15.5px;
+line-height:1.7;
+}
+
+blockquote.c-info{
+background:var(--brand-primary-light) !important;
+border-left:5px solid var(--brand-primary) !important;
+color:var(--brand-primary-dark) !important;
+}
+blockquote.c-warn{
+background:#FFF6E6 !important;
+border-left:5px solid #E0951C !important;
+color:#5C3A0E !important;
+}
+blockquote.c-key{
+background:#E7F7F1 !important;
+border-left:5px solid #10B981 !important;
+color:#0B5C43 !important;
+}
+blockquote.c-info *,blockquote.c-warn *,blockquote.c-key *{ color:inherit !important; }
+
+table.action-table{ table-layout:fixed; width:100%; }
+table.action-table th:nth-child(1),
+table.action-table td:nth-child(1){ width:68px; text-align:center; }
+table.action-table th:nth-child(2),
+table.action-table td:nth-child(2){ text-align:left; }
+table.action-table th:nth-child(3),
+table.action-table td:nth-child(3){ width:148px; text-align:center; white-space:nowrap; }
+</style>
+  <style type="text/css">
+@media screen and (min-width: 1025px) {
+body { font-size: 18px; }
+body > h1, main h1, h1 { font-size: 34px; }
+h2 { font-size: 27px; }
+h3 { font-size: 21px; }
+h4 { font-size: 18px; }
+blockquote { font-size: 17.5px; }
+pre { font-size: 16px; }
+th { font-size: 17px; }
+td { font-size: 16.5px; }
+.unit-lead { font-size: 17.5px; }
+#TOC h1, #TOC h2, #TOC h3 { font-size: inherit; }
+}
+
+h3 {
+border-left: none !important;
+padding-left: 0 !important;
+font-weight: 700;
+text-decoration: underline;
+text-decoration-thickness: 2px;
+text-underline-offset: 5px;
+}
+
+pre { padding-top: 46px !important; }
+pre .copy-btn { top: 10px !important; right: 12px !important; font-size: 13px !important; opacity: 0.9 !important; }
+pre::before {
+content: "提示詞";
+position: absolute; top: 13px; left: 18px;
+font-size: 12px; letter-spacing: 1px; color: rgba(241,245,249,0.55);
+}
+
+pre.instr::before { content: "Instructions(貼到「指示」欄)"; }
+pre.name::before { content: "名稱"; }
+pre.desc::before { content: "描述"; }
+pre.starter::before { content: "建議的提示"; }
+pre.test::before { content: "測試問題(在測試窗輸入)"; }
+
+.mock-badge{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin:6px 0 22px;
+padding:10px 16px; border-radius:12px; background:#FFF4E5; border:1.5px solid #F0A020; color:#5C3B00; font-size:16px; line-height:1.5; }
+.mock-badge p{ margin:0; display:flex; align-items:center; gap:10px; flex-wrap:wrap; line-height:1.5; }
+.mock-badge strong{ display:inline-flex; align-items:center; justify-content:center; margin:0; padding:0 14px; height:28px; line-height:1; vertical-align:middle; border-radius:999px; flex:none;
+background:#E8590C; color:#fff !important; font-size:14px; font-weight:800; letter-spacing:1px; white-space:nowrap; }
+html[data-theme="dark"] .mock-badge{ background:#3A2A12 !important; border-color:#E0951C !important; color:#F6D9A8 !important; }
+html[data-theme="dark"] .mock-badge strong{ background:#E8590C !important; color:#fff !important; }
+@media print{ .mock-badge{ border:1px solid #999; background:none; } .mock-badge strong{ background:none; color:#000 !important; border:1px solid #000; } }
+
+details.ans{ margin:18px 0 26px; border:1.5px solid #9FB3C8; border-radius:10px; background:#F7FAFD; overflow:hidden; }
+details.ans > summary{ cursor:pointer; list-style:none; padding:12px 18px; font-weight:800; font-size:16px; color:var(--brand-primary,#006097); display:flex; align-items:center; gap:10px; }
+details.ans > summary::-webkit-details-marker{ display:none; }
+details.ans > summary::before{ content:"›"; display:inline-flex; align-items:center; justify-content:center; width:18px; font-size:20px; line-height:1; transition:transform .2s; }
+details.ans[open] > summary::before{ transform:rotate(90deg); }
+details.ans[open] > summary{ border-bottom:1px solid #D6E2EC; }
+details.ans > table{ margin:12px 16px 16px; width:calc(100% - 32px); }
+html[data-theme="dark"] details.ans{ background:#242C36 !important; border-color:#56677A !important; }
+html[data-theme="dark"] details.ans > summary{ color:#7CC4F0 !important; }
+html[data-theme="dark"] details.ans[open] > summary{ border-bottom-color:#3A3F47 !important; }
+@media print{ details.ans > summary::before{ content:none; } }
+
+.scn-cards{ display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; margin:18px 0 30px; }
+.scn-card{ display:flex; flex-direction:column; gap:6px; padding:18px 20px; border-radius:12px; text-decoration:none !important;
+background:#F7FAFD; border:1.5px solid #9FB3C8; border-left:5px solid var(--brand-primary,#006097); color:#111827 !important;
+box-shadow:0 2px 8px rgba(23,58,99,.10); transition:transform .15s, box-shadow .15s; }
+.scn-card:hover{ transform:translateY(-2px); box-shadow:0 6px 16px rgba(23,58,99,.18); }
+.scn-card .sc-no{ font-size:13px; font-weight:800; letter-spacing:1px; color:var(--brand-primary,#006097); }
+.scn-card .sc-title{ font-size:20px; font-weight:800; line-height:1.35; }
+.scn-card .sc-desc{ font-size:15px; color:#374151; line-height:1.6; }
+.scn-card .sc-meta{ font-size:13px; color:#6B7280; }
+.scn-card .sc-go{ margin-top:auto; padding-top:6px; font-size:14px; font-weight:800; color:var(--brand-primary,#006097); }
+html[data-theme="dark"] .scn-card{ background:#242C36 !important; border-color:#56677A !important; border-left-color:#4AA3F0 !important; color:#F5F7FA !important; }
+html[data-theme="dark"] .scn-card .sc-no, html[data-theme="dark"] .scn-card .sc-go{ color:#7CC4F0 !important; }
+html[data-theme="dark"] .scn-card .sc-desc{ color:#DCE6F0 !important; }
+html[data-theme="dark"] .scn-card .sc-meta{ color:#B4BCC8 !important; }
+@media print{ .scn-card{ box-shadow:none; } }
+</style>
+  <style type="text/css">
+@media screen and (min-width: 1025px) {
+body { font-size: 22px !important; line-height: 1.8 !important; max-width: 1600px !important; }
+h1 { font-size: 42px !important; }
+h2 { font-size: 33px !important; padding: 12px 18px !important; }
+h3 { font-size: 27px !important; }
+h4 { font-size: 23px !important; }
+p, li { font-size: 22px !important; }
+blockquote, blockquote p { font-size: 21px !important; }
+pre, pre code { font-size: 20px !important; line-height: 1.7 !important; }
+pre { padding-top: 54px !important; }
+pre::before { font-size: 15px !important; top: 15px !important; }
+pre .copy-btn { font-size: 16px !important; padding: 6px 14px !important; }
+th { font-size: 21px !important; padding: 14px 18px !important; }
+td { font-size: 20px !important; padding: 14px 18px !important; }
+.unit-lead { font-size: 22px !important; }
+.demo-badge { font-size: 0.6em !important; }
+input.cb { width: 26px !important; height: 26px !important; }
+.pg-btn, #pager-toggle, #pager-count { font-size: 18px !important; padding: 10px 18px !important; }
+}
+</style>
+  <script>try{if(localStorage.getItem('tp-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');var _s=localStorage.getItem('tp-scn');if(_s&&_s!=='all')document.documentElement.setAttribute('data-scn',_s);}catch(e){}</script>
+</head>
+<body>
+<style>
+body{padding:28px 32px 80px !important;max-width:1100px !important;}
+.scn-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:44px 0 14px;font-size:15px;}
+.scn-top a{color:var(--brand-primary);font-weight:700;text-decoration:none;}
+.scn-hero{border-radius:14px;padding:30px 36px;margin:0 0 18px;color:#fff;
+background:radial-gradient(120% 140% at 100% 0%,#2B2550 0%,rgba(43,37,80,0) 55%),linear-gradient(135deg,#0B3A63 0%,#122847 55%,#141C33 100%);
+position:relative;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.22);}
+.scn-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,#0078D4,#8661C5,#E8608A,#F7934C);}
+.scn-hero .eb{font-size:14px;font-weight:800;letter-spacing:2px;color:#C9D6E6;}
+.scn-hero .tt{font-size:34px;font-weight:800;margin:8px 0 6px;line-height:1.3;}
+.scn-hero .ld{font-size:17px;color:#D9E3EF;}
+.scn-hero .tg{margin-top:14px;display:inline-block;font-size:13px;font-weight:700;padding:4px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);}
+.scn-nav{display:flex;justify-content:space-between;gap:12px;margin:40px 0 0;padding-top:18px;border-top:1px solid #D6E2EC;flex-wrap:wrap;}
+.scn-nav a{display:inline-block;padding:10px 16px;border-radius:8px;border:1.5px solid #9FB3C8;color:var(--brand-primary);font-weight:700;text-decoration:none;}
+.scn-nav a:hover{background:#EBF3FC;}
+.scn-foot{margin-top:18px;font-size:13px;color:#6B7280;}
+html[data-theme="dark"] .scn-nav a{border-color:#56677A;color:#7CC4F0;}
+html[data-theme="dark"] .scn-nav a:hover{background:#242C36;}
+html[data-theme="dark"] .scn-top a{color:#7CC4F0;}
+</style>
+<div class="scn-top"><a href="index.html#backup-scenarios">← 回到實作手冊 (單元 04 備用情境)</a><span>備用情境 1 / 5</span></div>
+<div class="scn-hero"><div class="eb">備用情境 1</div><div class="tt">公文撰寫小幫手</div><div class="ld">想不到第二輪的題目?直接用這個情境，把公文規範變成隨問隨寫的小幫手</div><div class="tg">新舊規定衝突 · 舊範例誤導</div></div>
+<div class="mock-badge">
+<p><strong>模擬資料</strong> 本頁素材皆為課堂練習用的模擬資料，非台灣電力公司正式規定</p>
+</div>
+<h2 id="操作步驟">操作步驟</h2>
+<ol type="1">
+<li><p>點左側「<strong>代理程式</strong>」→「<strong>新的代理程式</strong>」→ 點「<strong>跳過</strong>」，進入設定頁後，在「知識」區從 OneDrive 的「台電Workshop_第二輪情境素材包」加入 A1、A2、A3 三個檔案</p></li>
+<li><p>填入名稱與描述</p></li>
+</ol>
+<pre class="name"><code>公文撰寫小幫手</code></pre>
+<pre class="desc"><code>協助承辦人依公文製作規範起草「簽」與「函」的初稿，並提醒最新修訂的用語、速別與格式規定</code></pre>
+<ol start="3" type="1">
+<li>在「指示」欄貼上下方指示範本，再依自己的需要修改</li>
+</ol>
+<pre class="instr"><code># 一、角色
+你是「公文撰寫小幫手」，協助本公司承辦人起草「簽」與「函」的初稿，並回答公文格式與用語問題
+
+# 二、知識來源與優先順序
+只能依據知識庫的三份檔案回答，不得使用檔案以外的知識，也不得推測:
+順位 1: A2_公文製作要點修訂公告_2025年 (2025 年 7 月 1 日起生效)
+順位 2: A1_公文製作要點_2019年版 (A2 未修訂的部分才適用)
+順位 3: A3_常用公文範例與用語對照表，只能參考格式；內容與 A2 不同時，以 A2 為準
+資料衝突時必須說明:「舊版寫 X，但 2025 年修訂後為 Y，請以 Y 為準 (來源: 檔名)」
+
+# 三、回答流程
+1. 判斷使用者要寫「簽」還是「函」，不清楚時先問
+2. 缺少事由、對象、時間、金額等關鍵資訊時，最多先問 2 個問題
+3. 依規定的段落結構產出初稿，並檢查主旨字數、期望語與速別是否符合最新規定
+
+# 四、輸出格式
+先給公文初稿，再條列「已套用的規定」並標註來源檔名；初稿中缺少的資訊以【請填入】標示
+
+# 五、邊界處理
+知識庫沒有的資訊 (例如發文字號、公文系統簽核進度、真實人名與個人資料)，直接說明無法提供，不得編造，不代替主管決行，初稿僅供承辦人修改參考
+
+# 六、語氣
+正式、精簡，符合公文用語</code></pre>
+<ol start="4" type="1">
+<li><p>在「<strong>工作內容</strong>」區<strong>關閉網路搜尋</strong></p></li>
+<li><p>按右上角「<strong>建立</strong>」，打開 Agent 對話，依序問下方三題，記錄回答</p></li>
+</ol>
+<div class="scn only-c">
+<p><strong>情境 C:</strong> 「知識」區只能加入公開網站網址，無法加入 A1–A3，這個情境也<strong>不要加入網址</strong>，素材是模擬資料，加入真實網站會互相衝突，每開一個新對話，先點輸入框的「+」附上 A1、A2、A3 三個檔案再提問，並把下方這段加在指示的「二、知識來源與優先順序」最後面</p>
+<pre class="instr"><code>使用者會在對話中附上 A1–A3 三個檔案，就是上面提到的知識庫檔案，請只依據這些附件回答，並標註來源檔名，若使用者沒有附上檔案，請先提醒他附上，不要憑記憶或推測回答</code></pre>
+</div>
+<h2 id="提示詞範本">提示詞範本</h2>
+<pre class="test"><code>幫我寫一份簽，擬辦理本課 11 月份的消防演練，參加人數約 40 人，所需經費約 2 萬元</code></pre>
+<pre class="test"><code>發函給廠商時，期望語可以用「惠請」嗎?公文的速別有哪幾種?</code></pre>
+<pre class="test"><code>幫我查一下上週那份公文的發文字號和目前簽核到哪一關</code></pre>
+<h2 id="重點提示">重點提示</h2>
+<ul>
+<li>範例文件 (A3)最容易誤導 Agent: 範例看起來很正式，但用的是舊規定</li>
+</ul>
+<h2 id="練習記錄">練習記錄</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">完成</th>
+<th>檢查項目</th>
+<th>我的記錄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">☐</td>
+<td>加入 A1–A3 並完成處理</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">☐</td>
+<td>貼上指示範本</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">☐</td>
+<td>三題測試都通過</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">☐</td>
+<td>找出 Agent 有沒有指出 A3 範例用的是舊規定</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<details class="ans">
+<summary>
+對答案 (做完再打開)
+</summary>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr>
+<th>題目</th>
+<th>考什麼</th>
+<th>正確答案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 寫一份簽</td>
+<td>正常產出</td>
+<td>主旨、說明、擬辦三段式；主旨 50 字以內；期望語用「請 鑒核」；缺少的資訊以【請填入】標示</td>
+</tr>
+<tr>
+<td>② 惠請與速別</td>
+<td>新舊規定衝突</td>
+<td>依 2025 年修訂公告: 不再使用「惠請」，速別只剩「最速件」「普通件」兩級；主動指出 2019 年版與 A3 範例是舊規定</td>
+</tr>
+<tr>
+<td>③ 發文字號與簽核進度</td>
+<td>回答邊界</td>
+<td>說明資料中沒有、無法查詢，建議到公文系統查詢</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="scn-nav">
+<a href="index.html#backup-scenarios">← 回到情境清單</a><a href="scn2-procurement.html">備用情境 2: 採購作業問答助理 →</a>
+</div>
+<div class="scn-foot">
+本頁素材皆為教育訓練用的模擬資料，非台灣電力公司正式規定，勾選狀態只存在你這台電腦的瀏覽器
+</div>
+<style>.cb{width:18px;height:18px;cursor:pointer;accent-color:var(--brand-primary,#006097);vertical-align:middle}
+td:has(> .cb), td:has(> p > .cb){text-align:center}</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),nodes=[],n;
+  while(n=w.nextNode()){if(n.nodeValue.indexOf('☐')>-1&&!n.parentElement.closest('pre,code,script,style'))nodes.push(n)}
+  var i=0;
+  nodes.forEach(function(t){
+    var parts=t.nodeValue.split('☐'),frag=document.createDocumentFragment();
+    parts.forEach(function(p,k){ if(k>0){var c=document.createElement('input');c.type='checkbox';c.className='cb';var key='tp-cb-'+location.pathname+'-'+(i++);c.checked=localStorage.getItem(key)==='1';c.addEventListener('change',function(){localStorage.setItem(key,c.checked?'1':'0')});frag.appendChild(c);}
+      if(p)frag.appendChild(document.createTextNode(p));});
+    t.parentNode.replaceChild(frag,t);
+  });
+});
+</script>
+<style>
+
+.copybox{
+border:1px solid var(--cb-border);
+border-radius:10px;
+background:var(--cb-body);
+margin:14px 0 20px;
+overflow:hidden;
+}
+.copybox-head{
+display:flex; align-items:center; justify-content:space-between;
+padding:10px 16px;
+background:var(--cb-head);
+border-bottom:1px solid var(--cb-border);
+}
+.copybox-label{ font-size:16px; color:var(--cb-label); letter-spacing:.5px; }
+.copybox-btn{
+background:var(--cb-btn); color:#fff; border:0; border-radius:6px;
+padding:6px 18px; font-size:16px; font-weight:700; cursor:pointer;
+font-family:inherit; line-height:1.4;
+}
+.copybox-btn:hover{ filter:brightness(1.1); }
+.copybox-btn.copied{ background:#10B981; }
+.copybox pre{
+margin:0 !important; border:0 !important; border-radius:0 !important;
+background:transparent !important; color:var(--cb-text) !important;
+padding:18px 20px !important; box-shadow:none !important;
+white-space:pre-wrap !important; word-break:break-word;
+font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC","Segoe UI",sans-serif !important;
+}
+.copybox pre code{
+font-family:inherit !important; white-space:pre-wrap !important;
+color:inherit !important; background:transparent !important;
+}
+.copybox pre::before{ content:none !important; display:none !important; }
+.copybox pre .copy-btn{ display:none !important; }
+@media print{ .copybox-btn{ display:none; } }
+html:not([data-theme="dark"]) .copybox{ border-width:1.5px; border-left:4px solid var(--brand-primary,#006097); box-shadow:0 2px 8px rgba(23,58,99,.12); }
+html:not([data-theme="dark"]) .copybox-label{ font-weight:700; }
+html[data-theme="dark"] .copybox{ border-width:1.5px; border-left:4px solid #4AA3F0; box-shadow:0 2px 10px rgba(0,0,0,.45); }
+html[data-theme="dark"] .copybox-label{ font-weight:700; }
+html[data-theme="dark"] .copybox-btn{ box-shadow:0 0 0 1px rgba(255,255,255,.15); }
+
+#top-ctrl{
+position:fixed; top:10px; right:18px; z-index:200;
+display:flex; align-items:center;
+background:rgba(255,255,255,.92); border:1px solid #D6E2EC; border-radius:24px;
+padding:5px; box-shadow:0 3px 12px rgba(0,0,0,.15); backdrop-filter:blur(4px);
+}
+h2.has-scn{ display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+h2.has-scn .scn-h-title{ flex:1 1 auto; min-width:0; }
+.scn-inline{ display:inline-flex; align-items:center; gap:10px; flex:none; margin-left:auto;
+background:#FFF7E6; border:2px solid #F0A020; border-radius:12px; padding:6px 8px 6px 12px;
+box-shadow:0 2px 8px rgba(240,160,32,.25); line-height:1; }
+.scn-inline .scn-lab{ color:#8A5300; font-size:14px; font-weight:800; white-space:nowrap; letter-spacing:.5px; }
+.scn-inline .scn-seg{ display:inline-flex; gap:4px; }
+.scn-inline button{ border:1.5px solid #E3C48A; background:#fff; color:#5C4300; font-family:inherit;
+font-size:15px; font-weight:800; padding:7px 12px; border-radius:8px; cursor:pointer; line-height:1.1;
+transition:background .15s, color .15s, border-color .15s; white-space:nowrap; }
+.scn-inline button:hover{ border-color:#F0A020; background:#FFF0D1; }
+.scn-inline button.on{ background:#F0A020; border-color:#F0A020; color:#fff; box-shadow:0 2px 5px rgba(0,0,0,.18); }
+html[data-theme="dark"] .scn-inline{ background:#33270F; border-color:#E0951C; box-shadow:none; }
+html[data-theme="dark"] .scn-inline .scn-lab{ color:#F6D9A8 !important; }
+html[data-theme="dark"] .scn-inline button{ background:#24282D; color:#F6D9A8; border-color:#6B5226; }
+html[data-theme="dark"] .scn-inline button:hover{ background:#3A2E18; border-color:#E0951C; }
+html[data-theme="dark"] .scn-inline button.on{ background:#E0951C; color:#1A1306; border-color:#E0951C; }
+@media (max-width:900px){ .scn-inline{ margin-left:0; } }
+@media print{ .scn-inline{ display:none; } }
+#TOC a.has-toc-scn{ display:flex; align-items:center; gap:8px; text-indent:0; }
+#TOC a.has-toc-scn .toc-scn-t{ flex:1 1 auto; min-width:0; }
+.toc-scn{ flex:none; display:inline-flex; align-items:center; justify-content:center; text-indent:0; text-align:center;
+min-width:44px; height:20px; padding:0 6px; border-radius:10px; box-sizing:border-box;
+background:#F0A020; color:#fff; font-size:11px; font-weight:800; line-height:1; letter-spacing:.5px;
+white-space:nowrap; box-shadow:0 1px 3px rgba(240,160,32,.35); }
+html[data-theme="dark"] .toc-scn{ background:#E0951C !important; color:#1A1306 !important; box-shadow:none; }
+@media print{ .toc-scn{ display:none; } }
+#theme-toggle{
+position:relative; width:64px; height:32px; border-radius:16px; border:0; padding:0;
+cursor:pointer; flex:none; background:#BFD9EC; transition:background .25s;
+}
+#theme-toggle .tt-ic{
+position:absolute; top:50%; transform:translateY(-50%); font-size:15px; line-height:1;
+pointer-events:none; opacity:.55;
+}
+#theme-toggle .tt-sun{ left:9px; } #theme-toggle .tt-moon{ right:9px; }
+#theme-toggle .tt-knob{
+position:absolute; top:3px; left:3px; width:26px; height:26px; border-radius:50%;
+background:#fff; box-shadow:0 1px 4px rgba(0,0,0,.3);
+display:flex; align-items:center; justify-content:center; font-size:15px;
+transition:left .25s ease;
+}
+html[data-theme="dark"] #theme-toggle{ background:#2E4A66; }
+html[data-theme="dark"] #theme-toggle .tt-knob{ left:35px; background:#0F1A26; color:#FFD86B; }
+html[data-theme="dark"] #top-ctrl{ background:rgba(30,33,37,.92); border-color:#3A3F47; }
+@media print{ #top-ctrl{ display:none; } }
+
+.scn{ margin:14px 0; padding:12px 16px; border-radius:8px; border-left:5px solid #7A58C1; background:#F3EEFB; color:#2B2140; }
+.scn.only-c{ border-left-color:#008F8C; background:#E6F5F4; color:#103A39; }
+.scn > :first-child{ margin-top:0; } .scn > :last-child{ margin-bottom:0; }
+html[data-theme="dark"] .scn{ background:#2A2240 !important; color:#E2D9F5 !important; border-left-color:#A98BE8 !important; }
+html[data-theme="dark"] .scn.only-c{ background:#123634 !important; color:#C4ECE9 !important; border-left-color:#2EC4BF !important; }
+html[data-scn="a"] .scn{ display:none; }
+html[data-scn="b"] .only-c{ display:none; }
+html[data-scn="c"] .only-b{ display:none; }
+
+:root{
+--cb-border:#9FB3C8; --cb-head:#DCE8F3; --cb-body:#F7FAFD;
+--cb-label:#173A63; --cb-text:#111827; --cb-btn:#006097;
+}
+
+html[data-theme="dark"]{
+--text:#E5E7EB; --text-muted:#B4BCC8; --text-dim:#8A94A3;
+--border:#3A3F47; --border-light:#2C3036;
+--bg:#17191C; --code-bg:#2A2E34; --toc-bg:#1E2125;
+--brand-primary-light:#13324A; --brand-secondary-light:#252A31;
+--cb-border:#56677A; --cb-head:#2E3B4A; --cb-body:#242C36;
+--cb-label:#DCE6F0; --cb-text:#F5F7FA; --cb-btn:#2F86D6;
+color-scheme:dark;
+}
+html[data-theme="dark"] body{ background:#17191C !important; color:#E5E7EB !important; }
+html[data-theme="dark"] h1{ color:#7CC4F0 !important; border-bottom-color:#3B8FD8 !important; }
+html[data-theme="dark"] h2{ color:#E8EAED !important; background:#21262C !important; border-left-color:#3B8FD8 !important; }
+html[data-theme="dark"] h3, html[data-theme="dark"] h4{ color:#9FD3F5 !important; }
+html[data-theme="dark"] strong{ color:#9FD3F5 !important; }
+html[data-theme="dark"] a{ color:#7CC4F0 !important; }
+html[data-theme="dark"] code{ background:#2A2E34 !important; color:#F2B880 !important; }
+html[data-theme="dark"] table{ background:#1E2125 !important; box-shadow:none !important; }
+html[data-theme="dark"] th{ background:#0F4C75 !important; color:#fff !important; }
+html[data-theme="dark"] td{ border-top-color:#3A3F47 !important; color:#E5E7EB !important; }
+html[data-theme="dark"] tbody tr:nth-child(even){ background:#22262B !important; }
+html[data-theme="dark"] tbody tr:hover{ background:#2A3038 !important; }
+html[data-theme="dark"] .unit-lead{ background:#13324A !important; color:#CFE8F7 !important; border-left-color:#3B8FD8 !important; }
+html[data-theme="dark"] blockquote, html[data-theme="dark"] blockquote.c-info{ background:#13324A !important; color:#CFE8F7 !important; border-left-color:#3B8FD8 !important; }
+html[data-theme="dark"] blockquote.c-warn{ background:#3A2A12 !important; color:#F6D9A8 !important; border-left-color:#E0951C !important; }
+html[data-theme="dark"] blockquote.c-key{ background:#10352A !important; color:#B6EBD5 !important; border-left-color:#10B981 !important; }
+html[data-theme="dark"] #TOC{ background:#1E2125 !important; border-right-color:#3B8FD8 !important; }
+html[data-theme="dark"] #TOC a{ color:#C9D1DB !important; }
+html[data-theme="dark"] #TOC a:hover, html[data-theme="dark"] #TOC a.toc-active{ background:#13324A !important; color:#fff !important; }
+html[data-theme="dark"] #TOC::before{ color:#7CC4F0 !important; }
+html[data-theme="dark"] #TOC .toc-controls button{ background:#24282D !important; color:#7CC4F0 !important; border-color:#3B8FD8 !important; }
+html[data-theme="dark"] hr{ border-color:#3A3F47 !important; }
+html[data-theme="dark"] #pager-count{ color:#B4BCC8 !important; }
+html[data-theme="dark"] em{ color:#B4BCC8 !important; }
+</style>
+<script>
+(function(){
+  var KEY='tp-theme';
+  var root=document.documentElement;
+  function apply(t){
+    root.setAttribute('data-theme',t);
+    var b=document.getElementById('theme-toggle');
+    if(b){ b.setAttribute('aria-checked', t==='dark'?'true':'false');
+           b.title = t==='dark' ? '切換為淺色' : '切換為深色';
+           var k=b.querySelector('.tt-knob'); if(k) k.textContent = t==='dark' ? '🌙' : '☀️'; }
+  }
+  var saved=null; try{ saved=localStorage.getItem(KEY); }catch(e){}
+  apply(saved==='dark'?'dark':'light');
+
+  var LABELS={instr:'Instructions (貼到「指示」欄)', name:'名稱', desc:'描述',
+              starter:'建議的提示', test:'提示詞'};
+
+  function copyText(text, btn){
+    function done(){
+      btn.textContent='已複製'; btn.classList.add('copied');
+      setTimeout(function(){ btn.textContent='複製'; btn.classList.remove('copied'); },1800);
+    }
+    function fallback(){
+      var ta=document.createElement('textarea'); ta.value=text;
+      ta.style.position='fixed'; ta.style.top='-1000px'; document.body.appendChild(ta);
+      ta.select(); try{ document.execCommand('copy'); done(); }catch(e){}
+      document.body.removeChild(ta);
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } else { fallback(); }
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    // 授權情境切換: 放在需要切換的單元標題旁
+    var SK='tp-scn', cur='all'; try{ cur=localStorage.getItem(SK)||'all'; }catch(e){}
+    var OPTS=[['a','A 有授權'],['b','B 用量計費'],['c','C 無授權']];
+    var TIPS={a:'A 有授權 (Premium)', b:'B 無授權 (Basic)＋Pay-as-you-go', c:'C 無授權 (Basic)＋無 Pay-as-you-go'};
+    function setScn(v){
+      cur=v;
+      if(v==='all') root.removeAttribute('data-scn'); else root.setAttribute('data-scn',v);
+      try{ localStorage.setItem(SK,v); }catch(e){}
+      document.querySelectorAll('.scn-inline button').forEach(function(x){ x.classList.toggle('on', x.dataset.v===v); });
+    }
+    function makeSwitch(){
+      var w=document.createElement('span'); w.className='scn-inline';
+      var l=document.createElement('span'); l.className='scn-lab'; l.textContent='我的授權情境';
+      var g=document.createElement('span'); g.className='scn-seg';
+      OPTS.forEach(function(o){
+        var x=document.createElement('button'); x.type='button'; x.textContent=o[1]; x.dataset.v=o[0]; x.title=TIPS[o[0]];
+        x.title=TIPS[o[0]]+' (再點一次取消，顯示全部)';
+        x.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); setScn(cur===o[0]?'all':o[0]); });
+        g.appendChild(x);
+      });
+      w.appendChild(l); w.appendChild(g); return w;
+    }
+    var heads=Array.prototype.slice.call(document.querySelectorAll('h2'));
+    var targets=[];
+    heads.forEach(function(h){ if(/確認你的授權情境/.test(h.textContent)) targets.push(h); });
+    document.querySelectorAll('.scn').forEach(function(c){
+      var best=null;
+      heads.forEach(function(h){ if(h.compareDocumentPosition(c) & Node.DOCUMENT_POSITION_FOLLOWING) best=h; });
+      if(best && targets.indexOf(best)<0) targets.push(best);
+    });
+    targets.forEach(function(h){
+      var t=document.createElement('span'); t.className='scn-h-title';
+      while(h.firstChild) t.appendChild(h.firstChild);
+      h.appendChild(t); h.classList.add('has-scn'); h.appendChild(makeSwitch());
+      if(h.id){
+        var tl=document.querySelector('#TOC a[href="#'+(window.CSS&&CSS.escape?CSS.escape(h.id):h.id)+'"]');
+        if(!tl){ document.querySelectorAll('#TOC a').forEach(function(x){ if(decodeURIComponent(x.getAttribute('href')||'')==='#'+h.id) tl=x; }); }
+        if(tl && !tl.querySelector('.toc-scn')){
+          var tt=document.createElement('span'); tt.className='toc-scn-t';
+          while(tl.firstChild) tt.appendChild(tl.firstChild);
+          tl.appendChild(tt); tl.classList.add('has-toc-scn');
+          var bd=document.createElement('span'); bd.className='toc-scn'; bd.textContent='ABC'; bd.title='本節有授權情境 A/B/C 的不同做法';
+          tl.appendChild(bd);
+        }
+      }
+    });
+    setScn(cur);
+
+    var tb=document.createElement('button');
+    tb.id='theme-toggle'; tb.type='button'; tb.setAttribute('role','switch'); tb.setAttribute('aria-label','深色模式');
+    tb.innerHTML='<span class="tt-ic tt-sun">☀️</span><span class="tt-ic tt-moon">🌙</span><span class="tt-knob"></span>';
+    tb.addEventListener('click', function(){
+      var t = root.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
+      try{ localStorage.setItem(KEY,t); }catch(e){}
+      apply(t);
+    });
+    var bar=document.createElement('div'); bar.id='top-ctrl';
+    bar.appendChild(tb);
+    document.body.appendChild(bar);
+    apply(root.getAttribute('data-theme'));
+
+    // 把每個 <pre> 包成複製框
+    document.querySelectorAll('pre').forEach(function(pre){
+      if(pre.closest('.copybox')) return;
+      var old=pre.querySelector('.copy-btn'); if(old) old.remove();
+      var label='提示詞';
+      for(var k in LABELS){ if(pre.classList.contains(k)){ label=LABELS[k]; break; } }
+      var box=document.createElement('div'); box.className='copybox';
+      var head=document.createElement('div'); head.className='copybox-head';
+      var lab=document.createElement('span'); lab.className='copybox-label'; lab.textContent=label;
+      var btn=document.createElement('button'); btn.type='button'; btn.className='copybox-btn'; btn.textContent='複製';
+      btn.setAttribute('aria-label','複製'+label);
+      head.appendChild(lab); head.appendChild(btn);
+      pre.parentNode.insertBefore(box, pre);
+      box.appendChild(head); box.appendChild(pre);
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        var code=pre.querySelector('code')||pre;
+        copyText((code.innerText||code.textContent||'').replace(/\s+$/,''), btn);
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
