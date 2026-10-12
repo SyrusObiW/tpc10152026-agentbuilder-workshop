@@ -647,6 +647,26 @@ html[data-theme="dark"] .dl-row .dl-btn{ background:#1F6FB2 !important; border-c
 html[data-theme="dark"] .dl-row .dl-btn:hover{ background:#2A80C6 !important; }
 html[data-theme="dark"] .dl-row .dl-go{ background:#F5F7FA; color:#1F6FB2; }
 @media (max-width:720px){ .dl-row{ grid-template-columns:1fr; } }
+
+.dl-row{ display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin:16px 0 24px; }
+.dl-card{ display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px 18px; border-radius:12px;
+background:#F3F8FC; border:1px solid #C9DCEB; border-left:5px solid #006097; }
+.dl-info{ display:flex; flex-direction:column; gap:2px; min-width:0; }
+.dl-card .dl-k{ font-size:12px; font-weight:800; letter-spacing:1px; color:#006097; }
+.dl-card .dl-t{ font-size:16px; font-weight:800; line-height:1.4; color:#1F2937; word-break:break-all; }
+.dl-card .dl-m{ font-size:13px; color:#6B7280; }
+.dl-card .dl-go{ flex:0 0 auto; padding:9px 18px; border-radius:8px; background:#006097; color:#fff !important; font-size:15px; font-weight:800;
+text-decoration:none !important; white-space:nowrap; transition:background .12s, transform .12s, box-shadow .12s; }
+.dl-card .dl-go::before{ content:"↓ "; }
+.dl-card .dl-go:hover{ background:#004B77; transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,96,151,.3); }
+html[data-theme="dark"] .dl-card{ background:#242C36; border-color:#56677A; border-left-color:#4AA3F0; }
+html[data-theme="dark"] .dl-card .dl-k{ color:#7CC4F0; }
+html[data-theme="dark"] .dl-card .dl-t{ color:#F5F7FA; }
+html[data-theme="dark"] .dl-card .dl-m{ color:#B4BCC8; }
+html[data-theme="dark"] .dl-card .dl-go{ background:#1F6FB2 !important; color:#fff !important; }
+html[data-theme="dark"] .dl-card .dl-go:hover{ background:#2A80C6 !important; }
+@media (max-width:720px){ .dl-row{ grid-template-columns:1fr; } }
+@media print{ .dl-row{ display:none !important; } }
 </style>
   <style type="text/css">
 @media screen and (min-width: 1025px) {
@@ -956,7 +976,18 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <li><p>第二輪請先想好自己每日工作中想交給 Agent 的一件事，並準備 2–5 份可在課堂使用的知識檔 (不含機敏或個人資料)；想不到題目的人，可以把「台電Workshop_第二輪情境素材包」也上傳到 OneDrive，課堂上直接改做備用情境</p></li>
 </ul>
 <div class="dl-row">
-<p><a class="dl-btn" href="downloads/hualien-pack.zip" download><span class="dl-k">第一輪</span><span class="dl-t">台電Workshop_花蓮素材包</span><span class="dl-m">00–08 共 9 個檔案 · ZIP</span><span class="dl-go">下載</span></a> <a class="dl-btn" href="downloads/round2-pack.zip" download><span class="dl-k">第二輪</span><span class="dl-t">台電Workshop_第二輪情境素材包</span><span class="dl-m">A1–E2 共 14 個檔案 · ZIP</span><span class="dl-go">下載</span></a></p>
+<div class="dl-card">
+<div class="dl-info">
+<span class="dl-k">第一輪</span><span class="dl-t">台電Workshop_花蓮素材包</span><span class="dl-m">00–08 共 9 個檔案 · ZIP</span>
+</div>
+<a class="dl-go" href="downloads/hualien-pack.zip" download>下載</a>
+</div>
+<div class="dl-card">
+<div class="dl-info">
+<span class="dl-k">第二輪</span><span class="dl-t">台電Workshop_第二輪情境素材包</span><span class="dl-m">A1–E2 共 14 個檔案 · ZIP</span>
+</div>
+<a class="dl-go" href="downloads/round2-pack.zip" download>下載</a>
+</div>
 </div>
 <table>
 <thead>
