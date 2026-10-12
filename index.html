@@ -632,6 +632,21 @@ html[data-theme="dark"] .dl-box{ border-color:#56677A; }
 html[data-theme="dark"] .dl-note{ color:#C9D3DE; }
 @media print{ .dl-row, .dl-box{ display:none; } }
 .dl-row > p{ display:contents; }
+
+.dl-row{ display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin:16px 0 24px; }
+.dl-row .dl-btn{ display:grid !important; grid-template-columns:1fr auto; grid-template-areas:"k go" "t go" "m go"; align-items:center; column-gap:14px; row-gap:2px;
+padding:14px 18px !important; border-radius:12px; background:#006097 !important; border:2px solid #006097 !important; color:#fff !important; text-decoration:none !important; }
+.dl-row .dl-btn::before{ content:none; }
+.dl-row .dl-btn:hover{ background:#004B77 !important; border-color:#004B77 !important; transform:translateY(-2px); box-shadow:0 6px 14px rgba(0,96,151,.3); }
+.dl-row .dl-k{ grid-area:k; font-size:12px; font-weight:700; letter-spacing:1px; opacity:.85; }
+.dl-row .dl-t{ grid-area:t; font-size:16px; font-weight:800; line-height:1.4; word-break:break-all; }
+.dl-row .dl-m{ grid-area:m; font-size:13px; opacity:.85; }
+.dl-row .dl-go{ grid-area:go; padding:8px 14px; border-radius:8px; background:#fff; color:#006097; font-size:14px; font-weight:800; white-space:nowrap; }
+.dl-row .dl-go::before{ content:"↓ "; }
+html[data-theme="dark"] .dl-row .dl-btn{ background:#1F6FB2 !important; border-color:#4AA3F0 !important; }
+html[data-theme="dark"] .dl-row .dl-btn:hover{ background:#2A80C6 !important; }
+html[data-theme="dark"] .dl-row .dl-go{ background:#F5F7FA; color:#1F6FB2; }
+@media (max-width:720px){ .dl-row{ grid-template-columns:1fr; } }
 </style>
   <style type="text/css">
 @media screen and (min-width: 1025px) {
@@ -941,7 +956,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <li><p>第二輪請先想好自己每日工作中想交給 Agent 的一件事，並準備 2–5 份可在課堂使用的知識檔 (不含機敏或個人資料)；想不到題目的人，可以把「台電Workshop_第二輪情境素材包」也上傳到 OneDrive，課堂上直接改做備用情境</p></li>
 </ul>
 <div class="dl-row">
-<p><a class="dl-btn" href="downloads/hualien-pack.zip" download>下載第一輪: 台電Workshop_花蓮素材包 (00–08)</a> <a class="dl-btn dl-alt" href="downloads/round2-pack.zip" download>下載第二輪: 台電Workshop_第二輪情境素材包 (A1–E2)</a></p>
+<p><a class="dl-btn" href="downloads/hualien-pack.zip" download><span class="dl-k">第一輪</span><span class="dl-t">台電Workshop_花蓮素材包</span><span class="dl-m">00–08 共 9 個檔案 · ZIP</span><span class="dl-go">下載</span></a> <a class="dl-btn" href="downloads/round2-pack.zip" download><span class="dl-k">第二輪</span><span class="dl-t">台電Workshop_第二輪情境素材包</span><span class="dl-m">A1–E2 共 14 個檔案 · ZIP</span><span class="dl-go">下載</span></a></p>
 </div>
 <table>
 <thead>
