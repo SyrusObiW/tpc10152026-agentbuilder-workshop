@@ -726,138 +726,35 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#microsoft-365-copilot-agent-builder-實作手冊" id="toc-microsoft-365-copilot-agent-builder-實作手冊">Microsoft 365 Copilot Agent Builder 實作手冊</a></li>
-<li><a href="#開始之前" id="toc-開始之前">開始之前</a>
-<ul>
-<li><a href="#今天你會學到什麼完成什麼" id="toc-今天你會學到什麼完成什麼">今天你會學到什麼、完成什麼</a></li>
-<li><a href="#議程-1015-13301615" id="toc-議程-1015-13301615">議程 (10/15 13:30–16:15)</a></li>
-<li><a href="#登入與企業資料保護" id="toc-登入與企業資料保護">登入與企業資料保護</a></li>
-<li><a href="#確認你的授權情境" id="toc-確認你的授權情境">確認你的授權情境</a></li>
-<li><a href="#課前準備-上傳素材到-onedrive" id="toc-課前準備-上傳素材到-onedrive">課前準備: 上傳素材到 OneDrive</a></li>
-</ul></li>
+<li><a href="#開始之前" id="toc-開始之前">開始之前</a></li>
 <li><a href="#簡報重點速查" id="toc-簡報重點速查">簡報重點速查</a></li>
-<li><a href="#單元-01從-chat-到-agent" id="toc-單元-01從-chat-到-agent">單元 01｜從 Chat 到 Agent</a>
+<li><a href="#實作暖身先看內建-agent-怎麼把提示詞變成專業流程" id="toc-實作暖身先看內建-agent-怎麼把提示詞變成專業流程">實作暖身｜先看內建 Agent 怎麼把提示詞變成專業流程</a>
 <ul>
-<li><a href="#提示詞煉金之術-四要素" id="toc-提示詞煉金之術-四要素">提示詞煉金之術: 四要素</a></li>
-<li><a href="#demo-1-1-用-prompt-完成單次任務" id="toc-demo-1-1-用-prompt-完成單次任務">1-1 · 用 Prompt 完成單次任務</a>
-<ul>
-<li><a href="#操作步驟" id="toc-操作步驟">操作步驟</a></li>
-<li><a href="#提示詞範本" id="toc-提示詞範本">提示詞範本</a></li>
-<li><a href="#重點提示" id="toc-重點提示">重點提示</a></li>
-<li><a href="#練習記錄" id="toc-練習記錄">練習記錄</a></li>
+<li><a href="#三種內建-agent-的差異" id="toc-三種內建-agent-的差異">三種內建 Agent 的差異</a></li>
+<li><a href="#demo-0-1-prompt-coach把模糊需求變成好提示詞" id="toc-demo-0-1-prompt-coach把模糊需求變成好提示詞">0-1 · Prompt Coach:把模糊需求變成好提示詞</a></li>
+<li><a href="#demo-0-2-researcher-研究工具把研究任務變成有來源的報告" id="toc-demo-0-2-researcher-研究工具把研究任務變成有來源的報告">0-2 · Researcher / 研究工具:把研究任務變成有來源的報告</a></li>
+<li><a href="#demo-0-3-analyst-分析師把資料問題拆成分析步驟" id="toc-demo-0-3-analyst-分析師把資料問題拆成分析步驟">0-3 · Analyst / 分析師:把資料問題拆成分析步驟</a></li>
 </ul></li>
-<li><a href="#demo-1-2-該做成-agent-了嗎讓-copilot-幫你起草指示" id="toc-demo-1-2-該做成-agent-了嗎讓-copilot-幫你起草指示">1-2 · 該做成 Agent 了嗎?讓 Copilot 幫你起草指示</a>
+<li><a href="#單元-01建立第一個-agent花蓮旅遊助理" id="toc-單元-01建立第一個-agent花蓮旅遊助理">單元 01｜建立第一個 Agent：花蓮旅遊助理</a>
 <ul>
-<li><a href="#操作步驟-1" id="toc-操作步驟-1">操作步驟</a></li>
-<li><a href="#提示詞範本-1" id="toc-提示詞範本-1">提示詞範本</a></li>
-<li><a href="#重點提示-1" id="toc-重點提示-1">重點提示</a></li>
-<li><a href="#練習記錄-1" id="toc-練習記錄-1">練習記錄</a></li>
+<li><a href="#demo-1-1-agent-builder-介面與建立流程" id="toc-demo-1-1-agent-builder-介面與建立流程">1-1 · Agent Builder 介面與建立流程</a></li>
+<li><a href="#demo-1-2-第一輪任務說明-花蓮三天兩夜旅遊助理" id="toc-demo-1-2-第一輪任務說明-花蓮三天兩夜旅遊助理">1-2 · 第一輪任務說明: 花蓮三天兩夜旅遊助理</a></li>
+<li><a href="#demo-1-3-建立-agent-並上傳七份知識" id="toc-demo-1-3-建立-agent-並上傳七份知識">1-3 · 建立 Agent 並上傳七份知識</a></li>
+<li><a href="#demo-1-4-陽春版指示先看見問題" id="toc-demo-1-4-陽春版指示先看見問題">1-4 · 陽春版指示:先看見問題</a></li>
+<li><a href="#demo-1-5-方式一-用自然語言對話產生指示" id="toc-demo-1-5-方式一-用自然語言對話產生指示">1-5 · 方式一: 用自然語言對話產生指示</a></li>
+<li><a href="#demo-1-6-方式二-貼上指示範本並測試" id="toc-demo-1-6-方式二-貼上指示範本並測試">1-6 · 方式二: 貼上指示範本並測試</a></li>
+<li><a href="#demo-1-7-修訂指示並重新測試" id="toc-demo-1-7-修訂指示並重新測試">1-7 · 修訂指示並重新測試</a></li>
 </ul></li>
-</ul></li>
-<li><a href="#單元-02認識-agent-builder" id="toc-單元-02認識-agent-builder">單元 02｜認識 Agent Builder</a>
+<li><a href="#單元-02第二輪實作建立自己工作情境的-agent" id="toc-單元-02第二輪實作建立自己工作情境的-agent">單元 02｜第二輪實作:建立自己工作情境的 Agent</a>
 <ul>
-<li><a href="#demo-2-1-體驗現成的-agent-prompt-coach" id="toc-demo-2-1-體驗現成的-agent-prompt-coach">2-1 · 體驗現成的 Agent: Prompt Coach</a>
-<ul>
-<li><a href="#操作步驟-2" id="toc-操作步驟-2">操作步驟</a></li>
-<li><a href="#提示詞範本-2" id="toc-提示詞範本-2">提示詞範本</a></li>
-<li><a href="#重點提示-2" id="toc-重點提示-2">重點提示</a></li>
-<li><a href="#練習記錄-2" id="toc-練習記錄-2">練習記錄</a></li>
+<li><a href="#demo-2-1-用六項框架定義你的-agent-情境" id="toc-demo-2-1-用六項框架定義你的-agent-情境">2-1 · 用六項框架定義你的 Agent 情境</a></li>
+<li><a href="#demo-2-2-用指示骨架建立-agent-原型" id="toc-demo-2-2-用指示骨架建立-agent-原型">2-2 · 用指示骨架建立 Agent 原型</a></li>
+<li><a href="#demo-2-3-自我測試與優化" id="toc-demo-2-3-自我測試與優化">2-3 · 自我測試與優化</a></li>
 </ul></li>
-<li><a href="#demo-2-2-體驗現成的-agent-研究工具" id="toc-demo-2-2-體驗現成的-agent-研究工具">2-2 · 體驗現成的 Agent: 研究工具</a>
+<li><a href="#單元-03成果發表與-next-steps" id="toc-單元-03成果發表與-next-steps">單元 03｜成果發表與 Next Steps</a>
 <ul>
-<li><a href="#操作步驟-3" id="toc-操作步驟-3">操作步驟</a></li>
-<li><a href="#提示詞範本-3" id="toc-提示詞範本-3">提示詞範本</a></li>
-<li><a href="#重點提示-3" id="toc-重點提示-3">重點提示</a></li>
-<li><a href="#練習記錄-3" id="toc-練習記錄-3">練習記錄</a></li>
-</ul></li>
-<li><a href="#demo-2-3-agent-builder-介面與建立流程" id="toc-demo-2-3-agent-builder-介面與建立流程">2-3 · Agent Builder 介面與建立流程</a>
-<ul>
-<li><a href="#操作步驟-4" id="toc-操作步驟-4">操作步驟</a></li>
-<li><a href="#提示詞範本-4" id="toc-提示詞範本-4">提示詞範本</a></li>
-<li><a href="#重點提示-4" id="toc-重點提示-4">重點提示</a></li>
-<li><a href="#練習記錄-4" id="toc-練習記錄-4">練習記錄</a></li>
-</ul></li>
-<li><a href="#demo-2-4-第一輪任務說明-花蓮三天兩夜旅遊助理" id="toc-demo-2-4-第一輪任務說明-花蓮三天兩夜旅遊助理">2-4 · 第一輪任務說明: 花蓮三天兩夜旅遊助理</a>
-<ul>
-<li><a href="#操作步驟-5" id="toc-操作步驟-5">操作步驟</a></li>
-<li><a href="#提示詞範本-5" id="toc-提示詞範本-5">提示詞範本</a></li>
-<li><a href="#重點提示-5" id="toc-重點提示-5">重點提示</a></li>
-<li><a href="#練習記錄-5" id="toc-練習記錄-5">練習記錄</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#單元-03第一輪實作花蓮旅遊助理" id="toc-單元-03第一輪實作花蓮旅遊助理">單元 03｜第一輪實作:花蓮旅遊助理</a>
-<ul>
-<li><a href="#demo-3-1-建立-agent-並上傳七份知識" id="toc-demo-3-1-建立-agent-並上傳七份知識">3-1 · 建立 Agent 並上傳七份知識</a>
-<ul>
-<li><a href="#操作步驟-6" id="toc-操作步驟-6">操作步驟</a></li>
-<li><a href="#練習記錄-6" id="toc-練習記錄-6">練習記錄</a></li>
-</ul></li>
-<li><a href="#demo-3-2-陽春版指示先看見問題" id="toc-demo-3-2-陽春版指示先看見問題">3-2 · 陽春版指示:先看見問題</a>
-<ul>
-<li><a href="#操作步驟-7" id="toc-操作步驟-7">操作步驟</a></li>
-<li><a href="#重點提示-6" id="toc-重點提示-6">重點提示</a></li>
-<li><a href="#練習記錄-7" id="toc-練習記錄-7">練習記錄</a></li>
-</ul></li>
-<li><a href="#demo-3-3-方式一-用自然語言對話產生指示" id="toc-demo-3-3-方式一-用自然語言對話產生指示">3-3 · 方式一: 用自然語言對話產生指示</a>
-<ul>
-<li><a href="#操作步驟-8" id="toc-操作步驟-8">操作步驟</a></li>
-<li><a href="#重點提示-7" id="toc-重點提示-7">重點提示</a></li>
-<li><a href="#練習記錄-8" id="toc-練習記錄-8">練習記錄</a></li>
-</ul></li>
-<li><a href="#demo-3-4-方式二-貼上指示範本並測試" id="toc-demo-3-4-方式二-貼上指示範本並測試">3-4 · 方式二: 貼上指示範本並測試</a>
-<ul>
-<li><a href="#操作步驟-9" id="toc-操作步驟-9">操作步驟</a></li>
-<li><a href="#提示詞範本-6" id="toc-提示詞範本-6">提示詞範本</a></li>
-<li><a href="#重點提示-8" id="toc-重點提示-8">重點提示</a></li>
-<li><a href="#練習記錄-9" id="toc-練習記錄-9">練習記錄</a></li>
-</ul></li>
-<li><a href="#demo-3-5-修訂指示並重新測試" id="toc-demo-3-5-修訂指示並重新測試">3-5 · 修訂指示並重新測試</a>
-<ul>
-<li><a href="#操作步驟-10" id="toc-操作步驟-10">操作步驟</a></li>
-<li><a href="#提示詞範本-7" id="toc-提示詞範本-7">提示詞範本</a></li>
-<li><a href="#重點提示-9" id="toc-重點提示-9">重點提示</a></li>
-<li><a href="#練習記錄-10" id="toc-練習記錄-10">練習記錄</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#單元-04第二輪實作建立自己工作情境的-agent" id="toc-單元-04第二輪實作建立自己工作情境的-agent">單元 04｜第二輪實作:建立自己工作情境的 Agent</a>
-<ul>
-<li><a href="#demo-4-1-用六項框架定義你的-agent-情境" id="toc-demo-4-1-用六項框架定義你的-agent-情境">4-1 · 用六項框架定義你的 Agent 情境</a>
-<ul>
-<li><a href="#操作步驟-11" id="toc-操作步驟-11">操作步驟</a></li>
-<li><a href="#backup-scenarios" id="toc-backup-scenarios">備用情境: 沒有題目時直接挑一個</a></li>
-<li><a href="#提示詞範本-8" id="toc-提示詞範本-8">提示詞範本</a></li>
-<li><a href="#重點提示-10" id="toc-重點提示-10">重點提示</a></li>
-<li><a href="#練習記錄-11" id="toc-練習記錄-11">練習記錄</a></li>
-</ul></li>
-<li><a href="#demo-4-2-用指示骨架建立-agent-原型" id="toc-demo-4-2-用指示骨架建立-agent-原型">4-2 · 用指示骨架建立 Agent 原型</a>
-<ul>
-<li><a href="#操作步驟-12" id="toc-操作步驟-12">操作步驟</a></li>
-<li><a href="#提示詞範本-9" id="toc-提示詞範本-9">提示詞範本</a></li>
-<li><a href="#重點提示-11" id="toc-重點提示-11">重點提示</a></li>
-<li><a href="#練習記錄-12" id="toc-練習記錄-12">練習記錄</a></li>
-</ul></li>
-<li><a href="#demo-4-3-自我測試與優化" id="toc-demo-4-3-自我測試與優化">4-3 · 自我測試與優化</a>
-<ul>
-<li><a href="#操作步驟-13" id="toc-操作步驟-13">操作步驟</a></li>
-<li><a href="#提示詞範本-10" id="toc-提示詞範本-10">提示詞範本</a></li>
-<li><a href="#練習記錄-13" id="toc-練習記錄-13">練習記錄</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#單元-05成果發表與-next-steps" id="toc-單元-05成果發表與-next-steps">單元 05｜成果發表與 Next Steps</a>
-<ul>
-<li><a href="#demo-5-1-成果發表" id="toc-demo-5-1-成果發表">5-1 · 成果發表</a>
-<ul>
-<li><a href="#操作步驟-14" id="toc-操作步驟-14">操作步驟</a></li>
-<li><a href="#提示詞範本-11" id="toc-提示詞範本-11">提示詞範本</a></li>
-<li><a href="#重點提示-12" id="toc-重點提示-12">重點提示</a></li>
-<li><a href="#練習記錄-14" id="toc-練習記錄-14">練習記錄</a></li>
-</ul></li>
-<li><a href="#demo-5-2-qa-與-next-steps從原型到正式上線" id="toc-demo-5-2-qa-與-next-steps從原型到正式上線">5-2 · Q&amp;A 與 Next Steps:從原型到正式上線</a>
-<ul>
-<li><a href="#操作步驟-15" id="toc-操作步驟-15">操作步驟</a></li>
-<li><a href="#提示詞範本-12" id="toc-提示詞範本-12">提示詞範本</a></li>
-<li><a href="#重點提示-13" id="toc-重點提示-13">重點提示</a></li>
-<li><a href="#練習記錄-15" id="toc-練習記錄-15">練習記錄</a></li>
-</ul></li>
+<li><a href="#demo-3-1-成果發表" id="toc-demo-3-1-成果發表">3-1 · 成果發表</a></li>
+<li><a href="#demo-3-2-qa-與-next-steps從原型到正式上線" id="toc-demo-3-2-qa-與-next-steps從原型到正式上線">3-2 · Q&amp;A 與 Next Steps:從原型到正式上線</a></li>
 </ul></li>
 <li><a href="#課後行動清單" id="toc-課後行動清單">課後行動清單</a></li>
 <li><a href="#一分鐘小教室與後續資源" id="toc-一分鐘小教室與後續資源">一分鐘小教室與後續資源</a></li>
@@ -870,7 +767,8 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <h1 id="開始之前">開始之前</h1>
 <h2 id="今天你會學到什麼完成什麼">今天你會學到什麼、完成什麼</h2>
 <ul>
-<li><p>✓ Agent 基礎知識</p></li>
+<li><p>✓ 認識 Prompt Coach、Researcher / Analyst 這類內建 Agent 的用法</p></li>
+<li><p>✓ 直接建立、測試並優化 Agent 的實作流程</p></li>
 <li><p>✓ 使用 Microsoft 365 Copilot Agent Builder 建立 Agent</p></li>
 <li><p>✓ 1 個跟著講師建立的「花蓮旅遊助理 Agent」</p></li>
 <li><p>✓ 1 個依自己每日工作情境建立的個人 Agent 原型</p></li>
@@ -902,13 +800,13 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tr>
 <tr>
 <td>13:55–14:10</td>
-<td>認識 Agent Builder、第一輪任務說明</td>
-<td>簡報後進入單元 01–02</td>
+<td>內建 Agent 暖身、認識 Agent Builder、第一輪任務說明</td>
+<td>實作暖身後進入單元 01</td>
 </tr>
 <tr>
 <td>14:10–14:55</td>
 <td>第一輪實作與測試:花蓮旅遊助理</td>
-<td>單元 03</td>
+<td>單元 01</td>
 </tr>
 <tr>
 <td>14:55–15:10</td>
@@ -923,7 +821,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <tr>
 <td>15:55–16:15</td>
 <td>成果發表、Q&amp;A 與 Next Steps</td>
-<td>單元 05</td>
+<td>單元 03</td>
 </tr>
 </tbody>
 </table>
@@ -1055,232 +953,106 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <blockquote class="c-warn">
 <p>⚠️ 不支援 .png/.jpg 圖片檔當知識；上傳到 Agent 的檔案，所有能用這個 Agent 的人都看得到內容</p>
 </blockquote>
-<h1 id="單元-01從-chat-到-agent">單元 01｜從 Chat 到 Agent</h1>
-<div class="unit-lead">一次性的任務用 Prompt | 重複、需要專業知識與固定規則的任務，做成 Agent</div>
-<h2 id="提示詞煉金之術-四要素">提示詞煉金之術: 四要素</h2>
+<h1 id="實作暖身先看內建-agent-怎麼把提示詞變成專業流程">實作暖身｜先看內建 Agent 怎麼把提示詞變成專業流程</h1>
+<h2 id="三種內建-agent-的差異">三種內建 Agent 的差異</h2>
 <table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>要素</th>
-<th>問自己</th>
-<th>範例</th>
-</tr>
-</thead>
+<thead><tr><th>內建 Agent</th><th>它主要幫你做什麼</th><th>最適合的問題</th><th>不適合的問題</th></tr></thead>
 <tbody>
-<tr>
-<td><strong>目標 (Goal)</strong></td>
-<td>我想要什麼結果?</td>
-<td>找出適合四人親子的住宿並算出費用</td>
-</tr>
-<tr>
-<td><strong>背景 (Context)</strong></td>
-<td>為什麼需要?誰會用?</td>
-<td>一家四口、一晚平日一晚假日、要自駕</td>
-</tr>
-<tr>
-<td><strong>來源 (Source)</strong></td>
-<td>依據哪些資料?</td>
-<td>03_住宿選擇比較表</td>
-</tr>
-<tr>
-<td><strong>期待 (Expectation)</strong></td>
-<td>格式、長度、語氣、不要做什麼?</td>
-<td>表格、列計算式、最多推 3 家</td>
-</tr>
+<tr><td><strong>Prompt Coach</strong></td><td>幫你診斷提示詞缺口，改寫成更清楚的問法</td><td>「我想問得更準」「幫我把需求變成好提示詞」</td><td>直接請它查資料或做長篇研究</td></tr>
+<tr><td><strong>Researcher / 研究工具</strong></td><td>自己規劃研究步驟，搜尋、閱讀、整理來源</td><td>「幫我研究案例、趨勢、風險、方案」</td><td>需要立刻回答的小問題、單一文件內查找</td></tr>
+<tr><td><strong>Analyst / 分析師</strong></td><td>拆解資料問題，分析表格、數字、趨勢與異常</td><td>「幫我看數據哪裡有問題」「比較各單位表現」</td><td>沒有資料、只想做文字改寫的任務</td></tr>
 </tbody>
 </table>
-<blockquote class="c-key">
-<p>💡 四要素是寫之前的檢查清單，實際寫提示詞時，用自然的句子把四件事講完整即可，不需要加上標題</p>
-</blockquote>
-<h2 id="demo-1-1-用-prompt-完成單次任務"><span class="demo-badge">Demo 1-1</span>用 Prompt 完成單次任務</h2>
+<h2 id="demo-0-1-prompt-coach把模糊需求變成好提示詞"><span class="demo-badge">Demo 0-1</span>Prompt Coach:把模糊需求變成好提示詞</h2>
 <h3 id="操作步驟">操作步驟</h3>
-<ol type="1">
-<li><p>開一個新的 Copilot Chat 對話</p></li>
-<li><p>點輸入框的「+」上傳 <code>03_住宿選擇比較表.xlsx</code></p></li>
-<li><p>貼上下方提示詞送出</p></li>
-<li><p>檢查: 有沒有表格?有沒有計算式?有沒有排除不符條件的住宿?</p></li>
+<ol>
+<li><p>先在一般 Copilot Chat 貼上「原始提示詞」，觀察回答是否籠統</p></li>
+<li><p>切換到 <strong>Prompt Coach</strong>，貼上同一段原始提示詞</p></li>
+<li><p>記下 Prompt Coach 指出的缺口</p></li>
+<li><p>把 Prompt Coach 改寫後的提示詞，再貼回一般 Copilot Chat 比較結果</p></li>
 </ol>
-<h3 id="提示詞範本">提示詞範本</h3>
-<pre><code>我們一家四口 (兩位大人、兩位小孩)要去花蓮住兩晚，一晚平日、一晚假日，會自己開車，請根據我上傳的住宿比較表，篩選出可以住四個人、停車免費、而且親子友善程度為「佳」或「極佳」的住宿，最多推薦三家，請用表格列出名稱、區域、平日與假日房價、兩晚合計，並寫出計算式;最後用一句話說明每一家適合什麼樣的家庭</code></pre>
+<h3 id="原始提示詞">原始提示詞</h3>
+<pre><code>幫我查一下公司內部作業規定，整理重點給我</code></pre>
+<h3 id="給-prompt-coach-的提示詞">給 Prompt Coach 的提示詞</h3>
+<pre><code>我是台電的同仁，常常需要請 Copilot 幫我查公司內部的作業規定，但它的回答常常太籠統、沒有標出依據哪一份文件。請幫我檢視這個需求，告訴我我的提問少了哪些資訊，並示範改寫成一句更精準的提示詞，用條列方式回覆，三百字以內</code></pre>
+<h3 id="比較重點">比較重點</h3>
+<table>
+<thead><tr><th>比較項目</th><th>一般 Copilot Chat</th><th>Prompt Coach 改寫後</th></tr></thead>
+<tbody>
+<tr><td>是否說清楚查哪類規定</td><td>☐</td><td>☐</td></tr>
+<tr><td>是否要求標註來源</td><td>☐</td><td>☐</td></tr>
+<tr><td>是否指定輸出格式</td><td>☐</td><td>☐</td></tr>
+<tr><td>是否說明限制與邊界</td><td>☐</td><td>☐</td></tr>
+</tbody>
+</table>
 <h3 id="重點提示">重點提示</h3>
 <ul>
-<li>條件寫得越具體 (人數、房型、停車)，越不容易被誤選</li>
+<li><p>Prompt Coach 的價值不是替你回答問題，而是幫你把「想問什麼」整理清楚</p></li>
 </ul>
+<ul>
+<li><p>等一下寫 Agent 指示時，也要用同樣方式補齊:角色、資料來源、回答流程、格式與邊界</p></li>
+</ul>
+<h2 id="demo-0-2-researcher-研究工具把研究任務變成有來源的報告"><span class="demo-badge">Demo 0-2</span>Researcher / 研究工具:把研究任務變成有來源的報告</h2>
+<h3 id="操作步驟">操作步驟</h3>
+<ol>
+<li><p>在一般 Copilot Chat 貼上 Researcher 提示詞，觀察它是否立即給出概略回答</p></li>
+<li><p>切換到 <strong>Researcher / 研究工具</strong>，貼上同一段提示詞</p></li>
+<li><p>如果它反問研究範圍、年份或地區，依自己的需求補充</p></li>
+<li><p>等報告完成後，至少點開 2 個來源，確認是否真的支持結論</p></li>
+<li><p>用「追問提示詞」要求它把研究結果收斂成適合台電部門試做的方向</p></li>
+</ol>
+<h3 id="researcher-提示詞範本">Researcher 提示詞範本</h3>
+<pre><code>我是台電的同仁，正在規劃部門導入 AI Agent。請幫我研究國內外電力公司或公用事業公開分享過的生成式 AI 與 AI Agent 應用案例，依「客服、設備維運、內部知識查詢、行政作業」分類，每個案例說明單位名稱、做了什麼、帶來什麼效益與資料來源；最後歸納 3 個適合台電部門先試做的方向，用繁體中文，表格加條列呈現</code></pre>
+<h3 id="追問提示詞">追問提示詞</h3>
+<pre><code>請把上面的研究結果收斂成「台電部門可以在 30 天內試做的 3 個 Agent 題目」，每個題目請列出目標使用者、需要準備的資料、第一個可測試問題、可能風險，並依容易度排序</code></pre>
+<h3 id="比較重點">比較重點</h3>
+<table>
+<thead><tr><th>比較項目</th><th>一般 Copilot Chat</th><th>Researcher / 研究工具</th></tr></thead>
+<tbody>
+<tr><td>是否先規劃研究方向</td><td>☐</td><td>☐</td></tr>
+<tr><td>是否引用可點開的來源</td><td>☐</td><td>☐</td></tr>
+<tr><td>是否分類整理案例</td><td>☐</td><td>☐</td></tr>
+<tr><td>是否能再收斂成試做題目</td><td>☐</td><td>☐</td></tr>
+</tbody>
+</table>
+<h2 id="demo-0-3-analyst-分析師把資料問題拆成分析步驟"><span class="demo-badge">Demo 0-3</span>Analyst / 分析師:把資料問題拆成分析步驟</h2>
+<h3 id="操作步驟">操作步驟</h3>
+<ol>
+<li><p>切換到 <strong>Analyst / 分析師</strong></p></li>
+<li><p>如果可以上傳檔案，使用 <code>03_住宿選擇比較表.xlsx</code>；如果暫時不能上傳，先用下方「無檔案版」提示詞</p></li>
+<li><p>觀察 Analyst 是否先確認欄位、指標與比較方式，而不是直接給結論</p></li>
+<li><p>請它把分析結果轉成「決策建議」或「下一步資料需求」</p></li>
+</ol>
+<h3 id="有檔案版提示詞">有檔案版提示詞</h3>
+<pre><code>請分析我上傳的住宿選擇比較表，找出最適合四人家庭入住兩晚的前三個選項。請說明你用了哪些欄位、如何計算兩晚總價、如何處理親子友善與停車條件，最後用表格列出推薦排名、理由、可能限制</code></pre>
+<h3 id="無檔案版提示詞">無檔案版提示詞</h3>
+<pre><code>假設我有一份各區處每月案件量、平均處理天數、逾期件數與人力數的表格，想找出哪幾個區處可能需要優先改善。請說明你會如何分析這份資料、會看哪些欄位與指標、如何避免只看案件量就誤判，最後會用什麼表格或圖表呈現</code></pre>
+<h3 id="追問提示詞">追問提示詞</h3>
+<pre><code>請把剛剛的分析方法改成一份「給主管看的摘要格式」，包含:一個結論、三個觀察、兩個需要補資料才能判斷的地方，以及一個建議的下一步</code></pre>
+<h3 id="比較重點">比較重點</h3>
+<table>
+<thead><tr><th>比較項目</th><th>一般 Copilot Chat</th><th>Analyst / 分析師</th></tr></thead>
+<tbody>
+<tr><td>是否先確認欄位與指標</td><td>☐</td><td>☐</td></tr>
+<tr><td>是否說明計算或比較方法</td><td>☐</td><td>☐</td></tr>
+<tr><td>是否指出資料不足處</td><td>☐</td><td>☐</td></tr>
+<tr><td>是否能轉成主管摘要</td><td>☐</td><td>☐</td></tr>
+</tbody>
+</table>
 <h3 id="練習記錄">練習記錄</h3>
 <table>
-<thead>
-<tr>
-<th style="text-align: center;">完成</th>
-<th>檢查項目</th>
-<th>我的記錄</th>
-</tr>
-</thead>
+<thead><tr><th>完成</th><th>觀察項目</th><th>我的記錄</th></tr></thead>
 <tbody>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>上傳住宿比較表並送出提示詞</td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>Copilot 推薦三家符合條件的住宿</td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>兩晚合計與計算式正確</td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>想到可以再改善提示詞的地方</td>
-<td></td>
-</tr>
+<tr><td>☐</td><td>Prompt Coach 幫我補強了哪些提示詞缺口</td><td></td></tr>
+<tr><td>☐</td><td>Researcher 的回答和一般 Chat 最大差異</td><td></td></tr>
+<tr><td>☐</td><td>Analyst 的回答和一般 Chat 最大差異</td><td></td></tr>
+<tr><td>☐</td><td>哪一種 Agent 最像我想建立的工作助理</td><td></td></tr>
+<tr><td>☐</td><td>我可以借用哪一種 Agent 的流程來設計自己的 Agent</td><td></td></tr>
 </tbody>
 </table>
-<h2 id="demo-1-2-該做成-agent-了嗎讓-copilot-幫你起草指示"><span class="demo-badge">Demo 1-2</span>該做成 Agent 了嗎?讓 Copilot 幫你起草指示</h2>
-<h3 id="操作步驟-1">操作步驟</h3>
-<ol type="1">
-<li><p>在 Demo 1-1 的同一個對話中，接著貼上下方提示詞</p></li>
-<li><p>檢查草稿是否涵蓋: 角色、知識範圍、衝突規則、格式、邊界</p></li>
-<li><p>用三個問題判斷是否該做 Agent: 會不會<strong>重複</strong>?需不需要<strong>固定資料</strong>?有沒有<strong>固定規則</strong>?簡單說: 同一件事會做超過 3 次，就做成 Agent</p></li>
-</ol>
-<h3 id="提示詞範本-1">提示詞範本</h3>
-<pre><code>我們部門每個月都會有同仁來問花蓮旅遊的住宿、交通和景點問題，我想把剛剛這種查詢做成一個可以重複使用的 Agent，讓同仁自己問，請根據我們剛剛的對話，幫我起草一份給 Agent 的指示，內容要包含它的角色與服務對象、只能依據哪些資料回答、資料互相矛盾時以哪一份為準、回答的格式，以及遇到資料沒有的問題時要怎麼回應，請用條列方式寫，控制在五百字以內</code></pre>
-<h3 id="重點提示-1">重點提示</h3>
-<ul>
-<li><p>不必從零寫 Agent 指示，先請 Copilot 根據對話起草，再修改</p></li>
-<li><p>Agent 是把好的 Prompt 變成<strong>部門資產</strong></p></li>
-</ul>
-<h3 id="練習記錄-1">練習記錄</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">完成</th>
-<th>檢查項目</th>
-<th>我的記錄</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>請 Copilot 起草 Agent 指示</td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>草稿涵蓋角色、知識範圍、衝突規則、格式、邊界</td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>找出草稿缺少或模糊的地方</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h1 id="單元-02認識-agent-builder">單元 02｜認識 Agent Builder</h1>
-<div class="unit-lead">Agent Builder 的主戰場在上下文: 知識決定它知道什麼，指示決定它怎麼想</div>
-<h2 id="demo-2-1-體驗現成的-agent-prompt-coach"><span class="demo-badge">Demo 2-1</span>體驗現成的 Agent: Prompt Coach</h2>
-<h3 id="操作步驟-2">操作步驟</h3>
-<ol type="1">
-<li><p>在 Copilot Chat 左側點「<strong>所有代理程式</strong>」</p></li>
-<li><p>找到 <strong>Prompt Coach</strong> Agent 並切換進去 (Prompt Coach 本身就是微軟內建的 Agent，不是切換模式)</p></li>
-<li><p>貼上下方提示詞送出</p></li>
-<li><p>回到一般 Copilot Chat，貼同一句話，比較兩邊的回答</p></li>
-</ol>
-<h3 id="提示詞範本-2">提示詞範本</h3>
-<pre><code>我是台電的同仁，常常需要請 Copilot 幫我查公司內部的作業規定，但它的回答常常太籠統、沒有標出依據哪一份文件，請幫我檢視這個需求，告訴我我的提問少了哪些資訊，並示範改寫成一句更精準的提示詞，用條列方式回覆，三百字以內</code></pre>
-<h3 id="重點提示-2">重點提示</h3>
-<ul>
-<li><p><strong>Agent = 固定好角色、知識與規則的專屬 Copilot</strong></p></li>
-<li><p>你每個月重複請 Copilot 做的事，就是最好的 Agent 題目</p></li>
-</ul>
-<h3 id="練習記錄-2">練習記錄</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">完成</th>
-<th>檢查項目</th>
-<th>我的記錄</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>用 Prompt Coach 檢視我的提問，記下它指出缺少的要素</td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>把提示詞改寫成更精準的版本</td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>想出一件工作中「重複請 Copilot 做」的事</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="demo-2-2-體驗現成的-agent-研究工具"><span class="demo-badge">Demo 2-2</span>體驗現成的 Agent: 研究工具</h2>
-<div class="scn only-bc">
-<p><strong>情境 B、C:</strong> 研究工具需要 Microsoft 365 Copilot 授權，沒有授權可能看不到或無法使用，請觀看講師示範，或和旁邊有授權的同學一起看</p>
-</div>
-<h3 id="操作步驟-3">操作步驟</h3>
-<ol type="1">
-<li><p>在 Copilot Chat 左側點「<strong>所有代理程式</strong>」</p></li>
-<li><p>找到 「<strong>研究工具</strong>」Agent 並切換進去 (研究工具是微軟內建的 Agent)</p></li>
-<li><p>貼上下方提示詞送出；如果研究工具先反問問題，依自己的需求補充條件</p></li>
-<li><p>等待時看它的進度說明: 規劃 → 搜尋 → 閱讀 → 彙整</p></li>
-<li><p>報告完成後，點開 2 個來源連結確認內容</p></li>
-</ol>
-<h3 id="提示詞範本-3">提示詞範本</h3>
-<pre><code>我是台電的同仁，正在規劃部門導入 AI Agent，請幫我研究國內外電力公司或公用事業公開分享過的生成式 AI 與 AI Agent 應用案例，整理成一份報告: 依「客服、設備維運、內部知識查詢、行政作業」分類，每個案例說明單位名稱、做了什麼、帶來什麼效益與資料來源；最後歸納 3 個適合台電部門先試做的方向，以及導入時要注意的風險，請用繁體中文，表格加條列呈現</code></pre>
-<h3 id="重點提示-3">重點提示</h3>
-<ul>
-<li><p><strong>Agent 會自己規劃步驟、使用工具、反覆查證</strong>，不是一問一答</p></li>
-<li><p>報告要花數分鐘，送出後可以先往下練習，稍後再回來看結果</p></li>
-<li><p>報告內容仍要點開來源查核，特別是數字與單位名稱</p></li>
-</ul>
-<h3 id="練習記錄-3">練習記錄</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">完成</th>
-<th>檢查項目</th>
-<th>我的記錄</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>切換到研究工具並送出提示詞</td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>回答研究工具的反問 (如果有)</td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>拿到研究報告，並點開 2 個來源確認</td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>記下報告中最值得台電試做的一個方向</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="demo-2-3-agent-builder-介面與建立流程"><span class="demo-badge">Demo 2-3</span>Agent Builder 介面與建立流程</h2>
+<h1 id="單元-01建立第一個-agent花蓮旅遊助理">單元 01｜建立第一個 Agent：花蓮旅遊助理</h1>
+<div class="unit-lead">直接從實作開始：先認識 Agent Builder 欄位，再用花蓮素材建立、測試並優化第一個 Agent</div>
+<h2 id="demo-1-1-agent-builder-介面與建立流程"><span class="demo-badge">Demo 1-1</span>Agent Builder 介面與建立流程</h2>
 <h3 id="操作步驟-4">操作步驟</h3>
 <ol type="1">
 <li><p>在 Copilot Chat 點左側「<strong>代理程式</strong>」→「<strong>新的代理程式</strong>」→ 點「<strong>跳過</strong>」，進入設定頁</p></li>
@@ -1377,7 +1149,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tr>
 </tbody>
 </table>
-<h2 id="demo-2-4-第一輪任務說明-花蓮三天兩夜旅遊助理"><span class="demo-badge">Demo 2-4</span>第一輪任務說明: 花蓮三天兩夜旅遊助理</h2>
+<h2 id="demo-1-2-第一輪任務說明-花蓮三天兩夜旅遊助理"><span class="demo-badge">Demo 1-2</span>第一輪任務說明: 花蓮三天兩夜旅遊助理</h2>
 <h3 id="操作步驟-5">操作步驟</h3>
 <ol type="1">
 <li><p>閱讀「00_情境說明卡_學員版」</p></li>
@@ -1469,9 +1241,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tr>
 </tbody>
 </table>
-<h1 id="單元-03第一輪實作花蓮旅遊助理">單元 03｜第一輪實作:花蓮旅遊助理</h1>
-<div class="unit-lead">跟著講師一步一步建出 Agent，用兩種方式寫指示，再用六道題目實際測試</div>
-<h2 id="demo-3-1-建立-agent-並上傳七份知識"><span class="demo-badge">Demo 3-1</span>建立 Agent 並上傳七份知識</h2>
+<h2 id="demo-1-3-建立-agent-並上傳七份知識"><span class="demo-badge">Demo 1-3</span>建立 Agent 並上傳七份知識</h2>
 <h3 id="操作步驟-6">操作步驟</h3>
 <ol type="1">
 <li><p>點左側「<strong>代理程式</strong>」→「<strong>新的代理程式</strong>」→ 點「<strong>跳過</strong>」，進入設定頁</p></li>
@@ -1483,7 +1253,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <pre class="name"><code>花蓮小助手</code></pre>
 <pre class="desc"><code>花蓮三天兩夜自由行的行程規劃顧問，依據 7 份指定資料回答景點、交通、住宿、步道現況與夜市消費問題，並主動處理資料衝突與時效問題</code></pre>
 <ol start="5" type="1">
-<li>在「<strong>工作內容</strong>」區先<strong>保持網路搜尋開啟</strong>，到 Demo 3-4 再關閉，比較前後差異</li>
+<li>在「<strong>工作內容</strong>」區先<strong>保持網路搜尋開啟</strong>，到 Demo 1-6 再關閉，比較前後差異</li>
 </ol>
 <div class="scn only-b">
 <p><strong>情境 B:</strong> 做法與 A 相同，之後每次提問都會依用量扣點，一次用到組織資料的問答約 12 點 (10 點檢索 + 2 點生成)</p>
@@ -1513,7 +1283,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
-<td>網路搜尋保持開啟 (Demo 3-4 再關閉)</td>
+<td>網路搜尋保持開啟 (Demo 1-6 再關閉)</td>
 <td></td>
 </tr>
 <tr>
@@ -1523,7 +1293,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tr>
 </tbody>
 </table>
-<h2 id="demo-3-2-陽春版指示先看見問題"><span class="demo-badge">Demo 3-2</span>陽春版指示:先看見問題</h2>
+<h2 id="demo-1-4-陽春版指示先看見問題"><span class="demo-badge">Demo 1-4</span>陽春版指示:先看見問題</h2>
 <h3 id="操作步驟-7">操作步驟</h3>
 <ol type="1">
 <li>在「<strong>指示</strong>」欄只貼上下方一句話</li>
@@ -1548,7 +1318,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <h3 id="重點提示-6">重點提示</h3>
 <ul>
 <li><p>問題不在知識庫，而在沒有告訴 Agent「怎麼想」</p></li>
-<li><p>網路搜尋先保持開啟，才看得出 Agent 會不會跑出資料範圍，到 Demo 3-4 再關閉比較</p></li>
+<li><p>網路搜尋先保持開啟，才看得出 Agent 會不會跑出資料範圍，到 Demo 1-6 再關閉比較</p></li>
 </ul>
 <h3 id="練習記錄-7">練習記錄</h3>
 <table>
@@ -1608,7 +1378,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tbody>
 </table>
 </details>
-<h2 id="demo-3-3-方式一-用自然語言對話產生指示"><span class="demo-badge">Demo 3-3</span>方式一: 用自然語言對話產生指示</h2>
+<h2 id="demo-1-5-方式一-用自然語言對話產生指示"><span class="demo-badge">Demo 1-5</span>方式一: 用自然語言對話產生指示</h2>
 <h3 id="操作步驟-8">操作步驟</h3>
 <ol type="1">
 <li><p>在代理程式編輯畫面上方，從「<strong>設定</strong>」切換到「<strong>描述</strong>」分頁 (英文介面為 Describe)</p></li>
@@ -1619,7 +1389,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <pre><code>回答時先講結論，三個以上的項目用表格，每個數字都標註來源檔名，控制在 400 字以內；資料裡沒有的內容要直接說沒有，不可以猜，也不提供即時天氣或班機資訊</code></pre>
 <ol start="3" type="1">
 <li><p>切回「<strong>設定</strong>」分頁，看看 Agent Builder 幫你寫進「指示」欄的內容</p></li>
-<li><p>按右上角「<strong>更新</strong>」，再打開 Agent 開一個新對話，重問 Demo 3-2 的接駁車問題</p></li>
+<li><p>按右上角「<strong>更新</strong>」，再打開 Agent 開一個新對話，重問 Demo 1-4 的接駁車問題</p></li>
 </ol>
 <pre class="test"><code>太魯閣接駁車一日券全票要多少錢?</code></pre>
 <div class="scn only-c">
@@ -1658,7 +1428,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tr>
 </tbody>
 </table>
-<h2 id="demo-3-4-方式二-貼上指示範本並測試"><span class="demo-badge">Demo 3-4</span>方式二: 貼上指示範本並測試</h2>
+<h2 id="demo-1-6-方式二-貼上指示範本並測試"><span class="demo-badge">Demo 1-6</span>方式二: 貼上指示範本並測試</h2>
 <h3 id="操作步驟-9">操作步驟</h3>
 <ol type="1">
 <li>刪除「指示」欄目前的內容，貼上下方「精簡版指示範本」 (前六段)</li>
@@ -1702,7 +1472,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <li><p>依你的定位，修改「一、你的角色」</p></li>
 <li><p>在最後自行補上「<strong>七、技能模組</strong>」，至少寫 3 個 (格式見範本末段)</p></li>
 <li><p>在「<strong>工作內容</strong>」區<strong>關閉網路搜尋</strong>，讓 Agent 只依據 7 份花蓮資料回答</p></li>
-<li><p>按右上角「<strong>更新</strong>」，再打開 Agent 開一個新對話，先重問 Demo 3-2 的兩個問題，比較陽春版、方式一與方式二的差異</p></li>
+<li><p>按右上角「<strong>更新</strong>」，再打開 Agent 開一個新對話，先重問 Demo 1-4 的兩個問題，比較陽春版、方式一與方式二的差異</p></li>
 <li><p>接著依序貼上下方六題，每一題考一種情況，記下回答</p></li>
 </ol>
 <div class="scn only-c">
@@ -1860,7 +1630,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tbody>
 </table>
 </details>
-<h2 id="demo-3-5-修訂指示並重新測試"><span class="demo-badge">Demo 3-5</span>修訂指示並重新測試</h2>
+<h2 id="demo-1-7-修訂指示並重新測試"><span class="demo-badge">Demo 1-7</span>修訂指示並重新測試</h2>
 <h3 id="操作步驟-10">操作步驟</h3>
 <ol type="1">
 <li><p>挑一題回答不理想的測試題，複製問題與 Agent 的回答</p></li>
@@ -1913,9 +1683,9 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tr>
 </tbody>
 </table>
-<h1 id="單元-04第二輪實作建立自己工作情境的-agent">單元 04｜第二輪實作:建立自己工作情境的 Agent</h1>
+<h1 id="單元-02第二輪實作建立自己工作情境的-agent">單元 02｜第二輪實作:建立自己工作情境的 Agent</h1>
 <div class="unit-lead">把第一輪的方法，搬回自己的每日工作</div>
-<h2 id="demo-4-1-用六項框架定義你的-agent-情境"><span class="demo-badge">Demo 4-1</span>用六項框架定義你的 Agent 情境</h2>
+<h2 id="demo-2-1-用六項框架定義你的-agent-情境"><span class="demo-badge">Demo 2-1</span>用六項框架定義你的 Agent 情境</h2>
 <h3 id="操作步驟-11">操作步驟</h3>
 <ol type="1">
 <li><p>想一件你每天或每週都會重複做的工作，作為這個 Agent 的情境</p></li>
@@ -2017,7 +1787,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tr>
 </tbody>
 </table>
-<h2 id="demo-4-2-用指示骨架建立-agent-原型"><span class="demo-badge">Demo 4-2</span>用指示骨架建立 Agent 原型</h2>
+<h2 id="demo-2-2-用指示骨架建立-agent-原型"><span class="demo-badge">Demo 2-2</span>用指示骨架建立 Agent 原型</h2>
 <h3 id="操作步驟-12">操作步驟</h3>
 <ol type="1">
 <li><p>點左側「<strong>代理程式</strong>」→「<strong>新的代理程式</strong>」→ 點「<strong>跳過</strong>」，進入設定頁後，<strong>先加入知識檔</strong></p></li>
@@ -2076,12 +1846,12 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tr>
 </tbody>
 </table>
-<h2 id="demo-4-3-自我測試與優化"><span class="demo-badge">Demo 4-3</span>自我測試與優化</h2>
+<h2 id="demo-2-3-自我測試與優化"><span class="demo-badge">Demo 2-3</span>自我測試與優化</h2>
 <h3 id="操作步驟-13">操作步驟</h3>
 <ol type="1">
 <li><p>換個角度，假設自己是第一次使用這個 Agent 的同事，設計三類題目: 正常問題 3 題、模糊問題 1 題、超出範圍問題 1 題</p></li>
 <li><p>打開自己的 Agent 開一個新對話，依序提問並記錄結果</p></li>
-<li><p>挑一題回答不理想的題目，比照 Demo 3-5 的做法: 開一個新的 Copilot Chat 對話，貼上下方提示詞 (連同指示全文與有問題的回答)，請它診斷並改寫對應段落</p></li>
+<li><p>挑一題回答不理想的題目，比照 Demo 1-7 的做法: 開一個新的 Copilot Chat 對話，貼上下方提示詞 (連同指示全文與有問題的回答)，請它診斷並改寫對應段落</p></li>
 <li><p>依建議修改「指示」欄，按右上角「<strong>更新</strong>」後開一個新對話重問同一題，完成至少 1 次優化</p></li>
 </ol>
 <h3 id="提示詞範本-10">提示詞範本</h3>
@@ -2148,9 +1918,9 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tr>
 </tbody>
 </table>
-<h1 id="單元-05成果發表與-next-steps">單元 05｜成果發表與 Next Steps</h1>
+<h1 id="單元-03成果發表與-next-steps">單元 03｜成果發表與 Next Steps</h1>
 <div class="unit-lead">從一個人的原型，走向部門的正式工具</div>
-<h2 id="demo-5-1-成果發表"><span class="demo-badge">Demo 5-1</span>成果發表</h2>
+<h2 id="demo-3-1-成果發表"><span class="demo-badge">Demo 3-1</span>成果發表</h2>
 <h3 id="操作步驟-14">操作步驟</h3>
 <ol type="1">
 <li><p>投影自己的 Agent</p></li>
@@ -2193,7 +1963,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tr>
 </tbody>
 </table>
-<h2 id="demo-5-2-qa-與-next-steps從原型到正式上線"><span class="demo-badge">Demo 5-2</span>Q&amp;A 與 Next Steps:從原型到正式上線</h2>
+<h2 id="demo-3-2-qa-與-next-steps從原型到正式上線"><span class="demo-badge">Demo 3-2</span>Q&amp;A 與 Next Steps:從原型到正式上線</h2>
 <h3 id="操作步驟-15">操作步驟</h3>
 <ol type="1">
 <li><p>用下方提示詞，請 Copilot 產出一份「部門 Agent 上線檢查清單」</p></li>
@@ -2260,22 +2030,22 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <tr>
 <td>☐</td>
 <td>補完自己 Agent 的技能模組至少 3 個</td>
-<td>單元 04</td>
+<td>單元 02</td>
 </tr>
 <tr>
 <td>☐</td>
 <td>用三類問題 (正常/模糊/超出範圍)再測一次並優化</td>
-<td>單元 04</td>
+<td>單元 02</td>
 </tr>
 <tr>
 <td>☐</td>
 <td>依上線檢查清單確認後，分享給 3 位同事試用一週</td>
-<td>單元 05</td>
+<td>單元 03</td>
 </tr>
 <tr>
 <td>☐</td>
 <td>收集試用回饋，再修改一次指示</td>
-<td>單元 05</td>
+<td>單元 03</td>
 </tr>
 </tbody>
 </table>
@@ -2299,7 +2069,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <tbody>
 <tr>
 <td><code>00_情境說明卡_學員版.docx</code></td>
-<td>Demo 2-4 第一輪任務說明 (不需上傳)</td>
+<td>Demo 1-2 第一輪任務說明 (不需上傳)</td>
 </tr>
 <tr>
 <td><code>01_花蓮景點導覽手冊_2024年版.docx</code></td>
@@ -2311,7 +2081,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tr>
 <tr>
 <td><code>03_住宿選擇比較表.xlsx</code></td>
-<td>Demo 1-1 單次任務、第一輪知識檔</td>
+<td>第一輪知識檔</td>
 </tr>
 <tr>
 <td><code>04_砂卡礑步道路線圖.pdf</code></td>
