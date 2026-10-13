@@ -862,6 +862,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <li><a href="#課後行動清單" id="toc-課後行動清單">課後行動清單</a></li>
 <li><a href="#一分鐘小教室與後續資源" id="toc-一分鐘小教室與後續資源">一分鐘小教室與後續資源</a></li>
 <li><a href="#附錄範例檔案清單" id="toc-附錄範例檔案清單">附錄:範例檔案清單</a></li>
+<li><a href="#課後問卷" id="toc-課後問卷">課後問卷</a></li>
 </ul>
 </nav>
 <h1 id="microsoft-365-copilot-agent-builder-實作手冊">Microsoft 365 Copilot Agent Builder 實作手冊</h1>
@@ -929,7 +930,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <h2 id="登入與企業資料保護">登入與企業資料保護</h2>
 <ol type="1">
 <li><p>開啟瀏覽器，前往 <code>https://m365.cloud.microsoft</code>，以公司帳號登入</p></li>
-<li><p>登入後看畫面<strong>左下角</strong>，會顯示你的公司帳號，「新增聊天」按鈕旁邊會出現<strong>綠色盾牌</strong>圖示，看到盾牌再開始用</p></li>
+<li><p>用<strong>公司帳號</strong>登入後，看畫面<strong>上方「新增聊天」按鈕旁</strong>，會出現<strong>綠色盾牌</strong>圖示，看到盾牌再開始用</p></li>
 <li><p>確認左側看得到「<strong>所有代理程式</strong>」</p></li>
 </ol>
 <blockquote class="c-warn">
@@ -950,16 +951,16 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </thead>
 <tbody>
 <tr>
-<td><strong>A 有授權 (Premium)</strong></td>
-<td>有 Microsoft 365 Copilot 授權 (登入後顯示「M365 Copilot (Premium)」)</td>
+<td><strong>A 有授權</strong></td>
+<td>有 Microsoft 365 Copilot 授權 (Premium)，登入後顯示「M365 Copilot (Premium)」</td>
 </tr>
 <tr>
-<td><strong>B 無授權 (Basic)＋Pay-as-you-go</strong></td>
-<td>只有 Copilot Chat，但公司已啟用 Pay-as-you-go 點數計費</td>
+<td><strong>B 無授權＋Pay-as-you-go</strong></td>
+<td>無授權 (Basic)，只有 Copilot Chat，但公司已啟用 Pay-as-you-go 點數計費</td>
 </tr>
 <tr>
-<td><strong>C 無授權 (Basic)＋無 Pay-as-you-go</strong></td>
-<td>只有 Copilot Chat，公司也未啟用 Pay-as-you-go；建立 Agent 時「知識」區只能加入公開網站網址，無法加入檔案</td>
+<td><strong>C 無授權＋無 Pay-as-you-go</strong></td>
+<td>無授權 (Basic)，只有 Copilot Chat，公司也未啟用 Pay-as-you-go；建立 Agent 時「知識」區只能加入公開網站網址，無法加入檔案</td>
 </tr>
 </tbody>
 </table>
@@ -970,7 +971,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <li><strong>第一輪 (花蓮旅遊助理)</strong>: 每位學員用花蓮素材包，各自建立自己的 Agent</li>
 <li><strong>第二輪 (個人工作情境 Agent)</strong>: 每位學員依自己每日的工作情境，各自建立一個 Agent</li>
 </ul></li>
-<li><p>請在上課前，下載「台電Workshop_花蓮素材包」，解壓縮後把整個資料夾上傳到<strong>自己的 OneDrive</strong></p></li>
+<li><p>下載「台電Workshop_花蓮素材包」，解壓縮後把整個資料夾上傳到<strong>自己的 OneDrive</strong></p></li>
 <li><p>放在「我的檔案」最上層，資料夾名稱維持「台電Workshop_花蓮素材包」，<strong>不要改名、不要拆開</strong></p></li>
 <li><p>資料夾內容: 00 情境說明卡 + 01–07 七份知識檔 + 08 合併版 (把 01–07 合併成一個文字檔，給情境 C 使用)</p></li>
 <li><p>第二輪請先想好自己每日工作中想交給 Agent 的一件事，並準備 2–5 份可在課堂使用的知識檔 (不含機敏或個人資料)；想不到題目的人，可以把「台電Workshop_第二輪情境素材包」也上傳到 OneDrive，課堂上直接改做備用情境</p></li>
@@ -1108,8 +1109,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <pre><code>我們一家四口 (兩位大人、兩位小孩)要去花蓮住兩晚，一晚平日、一晚假日，會自己開車，請根據我上傳的住宿比較表，篩選出可以住四個人、停車免費、而且親子友善程度為「佳」或「極佳」的住宿，最多推薦三家，請用表格列出名稱、區域、平日與假日房價、兩晚合計，並寫出計算式;最後用一句話說明每一家適合什麼樣的家庭</code></pre>
 <h3 id="重點提示">重點提示</h3>
 <ul>
-<li><p>條件寫得越具體 (人數、房型、停車)，越不容易被誤選</p></li>
-<li><p>記下剛剛打了多長一段話: 如果每週要做五次，就該考慮做成 Agent</p></li>
+<li>條件寫得越具體 (人數、房型、停車)，越不容易被誤選</li>
 </ul>
 <h3 id="練習記錄">練習記錄</h3>
 <table>
@@ -2391,6 +2391,10 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tr>
 </tbody>
 </table>
+<h1 id="課後問卷">課後問卷</h1>
+<p>台電 Microsoft 365 Copilot Agent Builder 工作坊｜課後問卷 (10/15/2026)</p>
+<p>感謝參與本次工作坊，請花一分鐘時間，掃描下方 QR Code 分享你的學習體驗與建議</p>
+<p style="text-align: center"><img src="survey-qr.png" alt="工作坊課後回饋問卷 QR Code" width="480" height="480" style="display: block; width: 480px; max-width: 100%; height: auto; margin: 24px auto" /></p>
 <script>
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
@@ -2791,7 +2795,8 @@ h2.has-scn .scn-h-title{ flex:1 1 auto; min-width:0; }
 background:#FFF7E6; border:2px solid #F0A020; border-radius:12px; padding:6px 8px 6px 12px;
 box-shadow:0 2px 8px rgba(240,160,32,.25); line-height:1; }
 .scn-inline .scn-lab{ color:#8A5300; font-size:14px; font-weight:800; white-space:nowrap; letter-spacing:.5px; }
-.scn-inline .scn-seg{ display:inline-flex; gap:4px; }
+.scn-inline .scn-seg{ display:inline-grid; grid-template-columns:repeat(3,1fr); gap:4px; }
+.scn-inline .scn-seg button{ width:100%; text-align:center; }
 .scn-inline button{ border:1.5px solid #E3C48A; background:#fff; color:#5C4300; font-family:inherit;
 font-size:15px; font-weight:800; padding:7px 12px; border-radius:8px; cursor:pointer; line-height:1.1;
 transition:background .15s, color .15s, border-color .15s; white-space:nowrap; }
@@ -2917,7 +2922,7 @@ html[data-theme="dark"] em{ color:#B4BCC8 !important; }
     // 授權情境切換: 放在需要切換的單元標題旁
     var SK='tp-scn', cur='all'; try{ cur=localStorage.getItem(SK)||'all'; }catch(e){}
     var OPTS=[['a','A 有授權'],['b','B 用量計費'],['c','C 無授權']];
-    var TIPS={a:'A 有授權 (Premium)', b:'B 無授權 (Basic)＋Pay-as-you-go', c:'C 無授權 (Basic)＋無 Pay-as-you-go'};
+    var TIPS={a:'A 有授權', b:'B 無授權＋Pay-as-you-go', c:'C 無授權＋無 Pay-as-you-go'};
     function setScn(v){
       cur=v;
       if(v==='all') root.removeAttribute('data-scn'); else root.setAttribute('data-scn',v);
