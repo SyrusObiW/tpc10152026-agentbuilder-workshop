@@ -1384,7 +1384,13 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <ol type="1">
 <li><p>點左側「<strong>代理程式</strong>」→「<strong>新的代理程式</strong>」→ 點「<strong>跳過</strong>」，進入設定頁</p></li>
 <li><p>在「<strong>知識</strong>」區點「瀏覽」 (附加雲端檔案)，到 OneDrive 的「台電Workshop_花蓮素材包」資料夾，選取 01–07 七個檔案</p></li>
+</ol>
+<div class="scn only-c"><p><strong>情境 C:</strong> 這一步略過，不加入任何網址</p></div>
+<ol start="3" type="1">
 <li><p>等待檔案狀態從「Preparing」變成可用 (約需數分鐘)</p></li>
+</ol>
+<div class="scn only-c"><p><strong>情境 C:</strong> 這一步也略過，因為沒有需要等待處理的知識來源</p></div>
+<ol start="4" type="1">
 <li><p>填入「<strong>名稱</strong>」與「<strong>描述</strong>」</p></li>
 </ol>
 <p>講師示範版 (請把「姓名或小名」改成自己的名字，避免全班 Agent 重名):</p>
@@ -1395,7 +1401,10 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </ol>
 <pre class="instr"><code>你是花蓮旅遊助理，請回答使用者的旅遊問題</code></pre>
 <ol start="6" type="1">
-<li>在「<strong>工作內容</strong>」區先<strong>保持網路搜尋開啟</strong>，到 Demo 1-6 再關閉，比較前後差異；情境 C 不加入網址，但也先保持網路搜尋開啟</li>
+<li>在「<strong>工作內容</strong>」區先<strong>保持網路搜尋開啟</strong>，到 Demo 1-6 再關閉，比較前後差異</li>
+</ol>
+<div class="scn only-c"><p><strong>情境 C:</strong> 先保持網路搜尋開啟，但不要在知識區加入任何網址。</p></div>
+<ol start="7" type="1">
 
 <h3 id="分享與資料權限-agent-access-data-access">分享與資料權限: Agent Access ≠ Data Access</h3>
 <blockquote class="c-key"><p><strong>全組織共用</strong>分享的是 Agent 的使用權，不是資料的存取權。</p></blockquote>
@@ -1411,14 +1420,6 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </ol>
 <div class="scn only-b">
 <p><strong>情境 B:</strong> 做法與 A 相同，之後每次提問都會依用量扣點，一次用到組織資料的問答約 12 點 (10 點檢索 + 2 點生成)</p>
-</div>
-<div class="scn only-c">
-<p><strong>情境 C:</strong> 沒有授權也沒有 Pay-as-you-go 時，「知識」區只能加入公開網站網址，無法加入檔案或 OneDrive 上的檔案，請改用以下做法:</p>
-<ol type="1">
-<li><p><strong>略過步驟 2–3</strong>，不加入檔案；這一輪也<strong>不要加入網址</strong>，避免 Agent 混用網路上的資訊，讓回答只依據素材</p></li>
-<li><p>照步驟 4–7 填好名稱、描述、陽春版指示並建立 Agent，網路搜尋先保持開啟；但不要加入任何網址，避免把網址當作知識來源</p></li>
-<li><p>確認電腦或 OneDrive 裡有「08_花蓮素材合併版_無授權學員用.txt」，之後每次打開 Agent 開新對話，都先點輸入框的「+」附上這個檔案再提問</p></li>
-</ol>
 </div>
 <h3 id="練習記錄-6">練習記錄</h3>
 <table>
@@ -1458,7 +1459,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <li><p>問下方兩個問題，觀察陽春版指示會出現哪些問題</p></li>
 </ol>
 <div class="scn only-c">
-<p><strong>情境 C:</strong> 先點輸入框的「+」附上「08_花蓮素材合併版_無授權學員用.txt」，再貼上問題</p>
+<p><strong>情境 C:</strong> 在這一步才需要附檔：打開 Agent 對話框後，先點輸入框的「+」附上「08_花蓮素材合併版_無授權學員用.txt」，再貼上問題</p>
 </div>
 <pre class="test"><code>太魯閣接駁車一日券全票要多少錢?</code></pre>
 <pre class="test"><code>從花蓮玩完之後我想去墾丁，行程怎麼接?有沒有直飛的班機?</code></pre>
@@ -1544,7 +1545,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </ol>
 <pre class="test"><code>太魯閣接駁車一日券全票要多少錢?</code></pre>
 <div class="scn only-c">
-<p><strong>情境 C:</strong> 上方提示詞已改成「我提供的花蓮素材」，不寫「知識區」。建立完成後，每次打開 Agent 開新對話，都要先點輸入框的「+」附上「08_花蓮素材合併版_無授權學員用.txt」再提問</p>
+<p><strong>情境 C:</strong> 上方提示詞已改成「我提供的花蓮素材」，不寫「知識區」。更新後重新開 Agent 對話時，再用「+」附上「08_花蓮素材合併版_無授權學員用.txt」提問</p>
 </div>
 <h3 id="重點提示-7">重點提示</h3>
 <ul>
@@ -1777,9 +1778,9 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <ol type="1">
 <li><p>想一件你每天或每週都會重複做的工作，作為這個 Agent 的情境</p></li>
 <li><p>依下方表格的填空句型，寫下六項定義</p></li>
-<li><p>準備 2–5 份可在課堂使用的知識檔;選練習情境的人，直接使用「台電Workshop_第二輪情境素材包」裡的檔案</p></li>
+<li><p>準備 2–5 份可在課堂使用的知識檔</p></li>
 <li><p>用下方提示詞請 Copilot Chat 檢查定義是否完整</p></li>
-<li><p>沒有題目時，可從八個方向擇一:<strong>SOP/作業程序查詢、法規與規章查詢、新人訓練、會議與公文整理、跨單位知識搜尋、業務簡報製作、抽查資料分析</strong></p></li>
+
 </ol>
 <table>
 <thead>
@@ -1825,58 +1826,16 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <li>題目太大 (例如「回答所有公司規定」)就縮小到一個單位、一類作業</li>
 </ul>
 <h3 id="練習記錄-11">練習記錄</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">完成</th>
-<th>檢查項目</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>定義目標使用者</td>
-</tr>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>定義核心任務</td>
-</tr>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>定義知識來源</td>
-</tr>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>定義禁止事項</td>
-</tr>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>定義例外處理</td>
-</tr>
-<tr>
-<td style="text-align: center;">☐</td>
-<td>定義成功標準</td>
-</tr>
-</tbody>
-</table>
+<table><thead><tr><th>檢查項目</th></tr></thead><tbody>
+<tr><td>☐ 定義目標使用者</td></tr>
+<tr><td>☐ 定義核心任務</td></tr>
+<tr><td>☐ 定義知識來源</td></tr>
+<tr><td>☐ 定義禁止事項</td></tr>
+<tr><td>☐ 定義例外處理</td></tr>
+<tr><td>☐ 定義成功標準</td></tr>
+</tbody></table>
 <h3 id="backup-scenarios">備案：用練習情境完成第二輪</h3>
 <p>如果完成六項框架後，仍暫時想不到自己的題目，請選一個練習情境完成第二輪。點卡片可開啟完整操作頁，名稱、描述、指示範本、提示詞和對答案都已準備好。</p>
-<div class="scn only-c">
-<p><strong>情境 C:</strong> 第二輪若使用練習情境，請不要把 A1–E2 檔案加入「知識」區；請改用素材包內對應的「合併版 txt」。建立 Agent 時只填名稱、描述與指示；每次開新對話前，先附上對應合併版 txt 再提問。</p>
-<table>
-<thead><tr><th>練習情境</th><th>情境 C 請附上的檔案</th></tr></thead>
-<tbody>
-<tr><td>公文撰寫小幫手</td><td><code>A_公文素材合併版_無授權學員用.txt</code></td></tr>
-<tr><td>採購作業問答助理</td><td><code>B_採購素材合併版_無授權學員用.txt</code></td></tr>
-<tr><td>差旅報支問答助理</td><td><code>C_差旅素材合併版_無授權學員用.txt</code></td></tr>
-<tr><td>請假與加班規定助理</td><td><code>D_請假加班素材合併版_無授權學員用.txt</code></td></tr>
-<tr><td>會議紀錄整理小幫手</td><td><code>E_會議紀錄素材合併版_無授權學員用.txt</code></td></tr>
-<tr><td>業務簡報製作助理</td><td><code>F_業務簡報素材合併版_無授權學員用.txt</code></td></tr>
-<tr><td>抽查資料分析助理</td><td><code>G_抽查資料素材合併版_無授權學員用.txt</code></td></tr>
-<tr><td>HR 教育訓練影片企劃助理</td><td><code>H_影片企劃素材合併版_無授權學員用.txt</code></td></tr>
-</tbody></table>
-</div>
-
 <div class="mock-badge">
 <p><strong>模擬資料</strong> 練習情境的素材皆為課堂練習用的模擬資料，非台灣電力公司正式規定</p>
 </div>

@@ -692,12 +692,40 @@ input.cb { width: 26px !important; height: 26px !important; }
   <script>try{if(localStorage.getItem('tp-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');var _s=localStorage.getItem('tp-scn');if(_s&&_s!=='all')document.documentElement.setAttribute('data-scn',_s);}catch(e){}</script>
 </head>
 <body>
-<nav id="TOC"><ul><li><a href="index.html#backup-scenarios">返回操作手冊</a></li></ul></nav>
-<h1>練習情境 6｜業務簡報製作助理</h1>
-<p>把月報資料、主管偏好與品牌格式，整理成可報告的簡報大綱與講稿。</p>
-<h2>Agent 名稱</h2><pre class="name"><code>業務簡報製作助理</code></pre>
-<h2>描述</h2><pre class="desc"><code>把月報資料、主管偏好與品牌格式，整理成可報告的簡報大綱與講稿。</code></pre>
-<h2>指示範本</h2><pre class="instr"><code># 一、角色
+<style>
+body{padding:28px 32px 80px !important;max-width:1100px !important;}
+.scn-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:44px 0 14px;font-size:15px;}
+.scn-top a{color:var(--brand-primary);font-weight:700;text-decoration:none;}
+.scn-hero{border-radius:14px;padding:30px 36px;margin:0 0 18px;color:#fff;
+background:radial-gradient(120% 140% at 100% 0%,#2B2550 0%,rgba(43,37,80,0) 55%),linear-gradient(135deg,#0B3A63 0%,#122847 55%,#141C33 100%);
+position:relative;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.22);}
+.scn-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,#0078D4,#8661C5,#E8608A,#F7934C);}
+.scn-hero .eb{font-size:14px;font-weight:800;letter-spacing:2px;color:#C9D6E6;}
+.scn-hero .tt{font-size:34px;font-weight:800;margin:8px 0 6px;line-height:1.3;}
+.scn-hero .ld{font-size:17px;color:#D9E3EF;}
+.scn-hero .tg{margin-top:14px;display:inline-block;font-size:13px;font-weight:700;padding:4px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);}
+.scn-nav{display:flex;justify-content:space-between;gap:12px;margin:40px 0 0;padding-top:18px;border-top:1px solid #D6E2EC;flex-wrap:wrap;}
+.scn-nav a{display:inline-block;padding:10px 16px;border-radius:8px;border:1.5px solid #9FB3C8;color:var(--brand-primary);font-weight:700;text-decoration:none;}
+.scn-nav a:hover{background:#EBF3FC;}
+.scn-foot{margin-top:18px;font-size:13px;color:#6B7280;}
+html[data-theme="dark"] .scn-nav a{border-color:#56677A;color:#7CC4F0;}
+html[data-theme="dark"] .scn-nav a:hover{background:#242C36;}
+html[data-theme="dark"] .scn-top a{color:#7CC4F0;}
+</style>
+<div class="scn-top"><a href="index.html#backup-scenarios">← 回到實作手冊 (單元 02 練習情境)</a><span>練習情境 6 / 8</span></div>
+<div class="scn-hero"><div class="eb">練習情境 6</div><div class="tt">業務簡報製作助理</div><div class="ld">把月報資料、主管偏好與品牌格式，整理成可報告的簡報大綱與講稿。</div><div class="tg">簡報架構 · 品牌格式 · 講稿範例</div></div>
+<div class="mock-badge"><p><strong>模擬資料</strong> 本頁素材皆為課堂練習用的模擬資料，非台灣電力公司正式規定</p></div>
+<h2 id="操作步驟">操作步驟</h2>
+<ol type="1">
+<li><p>點左側「<strong>代理程式</strong>」→「<strong>新的代理程式</strong>」→ 點「<strong>跳過</strong>」，進入設定頁後，在「知識」區從 OneDrive 的「台電Workshop_第二輪情境素材包」加入本情境素材檔</p></li>
+<div class="scn only-c"><p><strong>情境 C:</strong> 這一步略過，不加入任何網址</p></div>
+
+<li><p>填入名稱與描述</p></li>
+</ol>
+<pre class="name"><code>業務簡報製作助理</code></pre>
+<pre class="desc"><code>把月報資料、主管偏好與品牌格式，整理成可報告的簡報大綱與講稿。</code></pre>
+<ol start="3" type="1"><li>在「指示」欄貼上下方指示範本，再依自己的需要修改</li></ol>
+<pre class="instr"><code># 一、角色
 你是「業務簡報製作助理」，協助同仁依據月報資料、品牌格式與主管偏好，產出簡報大綱、每頁主訊息、表格建議與講稿。
 # 二、知識來源與優先順序
 只能依據 F1–F4 或使用者附上的 F_業務簡報素材合併版回答；主管偏好與品牌格式優先於一般寫作習慣。
@@ -705,19 +733,299 @@ input.cb { width: 26px !important; height: 26px !important; }
 先確認簡報目的、聽眾、頁數限制與可用資料；再產出頁面架構；最後列出每頁標題、重點、建議視覺與講稿提示。
 # 四、邊界
 不能直接製作 PowerPoint 檔案；若資料不足，列出需要補的資料。</code></pre>
-<div class="scn only-c"><p><strong>情境 C:</strong> 請在每次新對話先附上對應合併版 txt，再貼測試問題。</p></div>
-<h2>測試題</h2>
+<ol start="4" type="1"><li><p>在「<strong>工作內容</strong>」區<strong>關閉網路搜尋</strong></p></li><li><p>按右上角「<strong>建立</strong>」，打開 Agent 對話，依序問下方測試題，記錄回答</p></li></ol>
+
+<div class="scn only-c"><p><strong>情境 C:</strong> 到測試提問時才附檔。按「建立」後打開 Agent 對話框，每次開新對話都先點輸入框的「+」附上 <code>F_業務簡報素材合併版_無授權學員用.txt</code>，再貼下方測試題。</p></div>
+<h2 id="提示詞範本">提示詞範本</h2>
 <pre class="test"><code>請幫我把 9 月業務月報整理成 6 頁主管簡報大綱</code></pre>
 <pre class="test"><code>請把智慧電表換裝進度做成一頁簡報，標題要先講結論</code></pre>
 <pre class="test"><code>主管只給 5 分鐘，哪些內容應該刪掉或移到備註？</code></pre>
-
 <details class="ans"><summary>對答案 (做完再打開)</summary><table><thead><tr><th>題目</th><th>正確答案</th></tr></thead><tbody>
 <tr><td>6 頁主管簡報大綱</td><td>應包含重點摘要、三項成果、風險/異常、原因分析、下月行動、需要協調事項</td></tr>
 <tr><td>智慧電表一頁簡報</td><td>標題需先講結論，例如「智慧電表換裝達 92%，剩餘區域需跨單位協調」</td></tr>
 <tr><td>5 分鐘刪減</td><td>保留一頁一訊息與下月行動；細節表格、背景說明移到備註</td></tr>
 </tbody></table></details>
+<div class="scn-nav">
+<a href="scn5-minutes.html">← 練習情境 5: 會議紀錄整理小幫手</a><a href="scn7-audit.html">練習情境 7: 抽查資料分析助理 →</a>
+</div>
+<div class="scn-foot">本頁素材皆為教育訓練用的模擬資料，非台灣電力公司正式規定，勾選狀態只存在你這台電腦的瀏覽器</div>
+<style>.cb{width:18px;height:18px;cursor:pointer;accent-color:var(--brand-primary,#006097);vertical-align:middle}
+td:has(> .cb), td:has(> p > .cb){text-align:center}</style>
 <script>
-document.querySelectorAll('pre').forEach(function(pre){var b=document.createElement('button');b.className='copy-btn';b.type='button';b.textContent='複製';b.onclick=function(){navigator.clipboard.writeText(pre.innerText);b.textContent='已複製';setTimeout(function(){b.textContent='複製'},1200)};pre.appendChild(b);});
+document.addEventListener('DOMContentLoaded',function(){
+  var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),nodes=[],n;
+  while(n=w.nextNode()){if(n.nodeValue.indexOf('☐')>-1&&!n.parentElement.closest('pre,code,script,style'))nodes.push(n)}
+  var i=0;
+  nodes.forEach(function(t){
+    var parts=t.nodeValue.split('☐'),frag=document.createDocumentFragment();
+    parts.forEach(function(p,k){ if(k>0){var c=document.createElement('input');c.type='checkbox';c.className='cb';var key='tp-cb-'+location.pathname+'-'+(i++);c.checked=localStorage.getItem(key)==='1';c.addEventListener('change',function(){localStorage.setItem(key,c.checked?'1':'0')});frag.appendChild(c);}
+      if(p)frag.appendChild(document.createTextNode(p));});
+    t.parentNode.replaceChild(frag,t);
+  });
+});
+</script>
+<style>
+
+.copybox{
+border:1px solid var(--cb-border);
+border-radius:10px;
+background:var(--cb-body);
+margin:14px 0 20px;
+overflow:hidden;
+}
+.copybox-head{
+display:flex; align-items:center; justify-content:space-between;
+padding:10px 16px;
+background:var(--cb-head);
+border-bottom:1px solid var(--cb-border);
+}
+.copybox-label{ font-size:16px; color:var(--cb-label); letter-spacing:.5px; }
+.copybox-btn{
+background:var(--cb-btn); color:#fff; border:0; border-radius:6px;
+padding:6px 18px; font-size:16px; font-weight:700; cursor:pointer;
+font-family:inherit; line-height:1.4;
+}
+.copybox-btn:hover{ filter:brightness(1.1); }
+.copybox-btn.copied{ background:#10B981; }
+.copybox pre{
+margin:0 !important; border:0 !important; border-radius:0 !important;
+background:transparent !important; color:var(--cb-text) !important;
+padding:18px 20px !important; box-shadow:none !important;
+white-space:pre-wrap !important; word-break:break-word;
+font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC","Segoe UI",sans-serif !important;
+}
+.copybox pre code{
+font-family:inherit !important; white-space:pre-wrap !important;
+color:inherit !important; background:transparent !important;
+}
+.copybox pre::before{ content:none !important; display:none !important; }
+.copybox pre .copy-btn{ display:none !important; }
+@media print{ .copybox-btn{ display:none; } }
+html:not([data-theme="dark"]) .copybox{ border-width:1.5px; border-left:4px solid var(--brand-primary,#006097); box-shadow:0 2px 8px rgba(23,58,99,.12); }
+html:not([data-theme="dark"]) .copybox-label{ font-weight:700; }
+html[data-theme="dark"] .copybox{ border-width:1.5px; border-left:4px solid #4AA3F0; box-shadow:0 2px 10px rgba(0,0,0,.45); }
+html[data-theme="dark"] .copybox-label{ font-weight:700; }
+html[data-theme="dark"] .copybox-btn{ box-shadow:0 0 0 1px rgba(255,255,255,.15); }
+
+#top-ctrl{
+position:fixed; top:10px; right:18px; z-index:200;
+display:flex; align-items:center;
+background:rgba(255,255,255,.92); border:1px solid #D6E2EC; border-radius:24px;
+padding:5px; box-shadow:0 3px 12px rgba(0,0,0,.15); backdrop-filter:blur(4px);
+}
+h2.has-scn{ display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+h2.has-scn .scn-h-title{ flex:1 1 auto; min-width:0; }
+.scn-inline{ display:inline-flex; align-items:center; gap:10px; flex:none; margin-left:auto;
+background:#FFF7E6; border:2px solid #F0A020; border-radius:12px; padding:6px 8px 6px 12px;
+box-shadow:0 2px 8px rgba(240,160,32,.25); line-height:1; }
+.scn-inline .scn-lab{ color:#8A5300; font-size:14px; font-weight:800; white-space:nowrap; letter-spacing:.5px; }
+.scn-inline .scn-seg{ display:inline-grid; grid-template-columns:repeat(3,1fr); gap:4px; }
+.scn-inline .scn-seg button{ width:100%; text-align:center; }
+.scn-inline button{ border:1.5px solid #E3C48A; background:#fff; color:#5C4300; font-family:inherit;
+font-size:15px; font-weight:800; padding:7px 12px; border-radius:8px; cursor:pointer; line-height:1.1;
+transition:background .15s, color .15s, border-color .15s; white-space:nowrap; }
+.scn-inline button:hover{ border-color:#F0A020; background:#FFF0D1; }
+.scn-inline button.on{ background:#F0A020; border-color:#F0A020; color:#fff; box-shadow:0 2px 5px rgba(0,0,0,.18); }
+html[data-theme="dark"] .scn-inline{ background:#33270F; border-color:#E0951C; box-shadow:none; }
+html[data-theme="dark"] .scn-inline .scn-lab{ color:#F6D9A8 !important; }
+html[data-theme="dark"] .scn-inline button{ background:#24282D; color:#F6D9A8; border-color:#6B5226; }
+html[data-theme="dark"] .scn-inline button:hover{ background:#3A2E18; border-color:#E0951C; }
+html[data-theme="dark"] .scn-inline button.on{ background:#E0951C; color:#1A1306; border-color:#E0951C; }
+@media (max-width:900px){ .scn-inline{ margin-left:0; } }
+@media print{ .scn-inline{ display:none; } }
+#TOC a.has-toc-scn{ display:flex; align-items:center; gap:8px; text-indent:0; }
+#TOC a.has-toc-scn .toc-scn-t{ flex:1 1 auto; min-width:0; }
+.toc-scn{ flex:none; display:inline-flex; align-items:center; justify-content:center; text-indent:0; text-align:center;
+min-width:44px; height:20px; padding:0 6px; border-radius:10px; box-sizing:border-box;
+background:#F0A020; color:#fff; font-size:11px; font-weight:800; line-height:1; letter-spacing:.5px;
+white-space:nowrap; box-shadow:0 1px 3px rgba(240,160,32,.35); }
+html[data-theme="dark"] .toc-scn{ background:#E0951C !important; color:#1A1306 !important; box-shadow:none; }
+@media print{ .toc-scn{ display:none; } }
+#theme-toggle{
+position:relative; width:64px; height:32px; border-radius:16px; border:0; padding:0;
+cursor:pointer; flex:none; background:#BFD9EC; transition:background .25s;
+}
+#theme-toggle .tt-ic{
+position:absolute; top:50%; transform:translateY(-50%); font-size:15px; line-height:1;
+pointer-events:none; opacity:.55;
+}
+#theme-toggle .tt-sun{ left:9px; } #theme-toggle .tt-moon{ right:9px; }
+#theme-toggle .tt-knob{
+position:absolute; top:3px; left:3px; width:26px; height:26px; border-radius:50%;
+background:#fff; box-shadow:0 1px 4px rgba(0,0,0,.3);
+display:flex; align-items:center; justify-content:center; font-size:15px;
+transition:left .25s ease;
+}
+html[data-theme="dark"] #theme-toggle{ background:#2E4A66; }
+html[data-theme="dark"] #theme-toggle .tt-knob{ left:35px; background:#0F1A26; color:#FFD86B; }
+html[data-theme="dark"] #top-ctrl{ background:rgba(30,33,37,.92); border-color:#3A3F47; }
+@media print{ #top-ctrl{ display:none; } }
+
+.scn{ margin:14px 0; padding:12px 16px; border-radius:8px; border-left:5px solid #7A58C1; background:#F3EEFB; color:#2B2140; }
+.scn.only-c{ border-left-color:#008F8C; background:#E6F5F4; color:#103A39; }
+.scn > :first-child{ margin-top:0; } .scn > :last-child{ margin-bottom:0; }
+html[data-theme="dark"] .scn{ background:#2A2240 !important; color:#E2D9F5 !important; border-left-color:#A98BE8 !important; }
+html[data-theme="dark"] .scn.only-c{ background:#123634 !important; color:#C4ECE9 !important; border-left-color:#2EC4BF !important; }
+html[data-scn="a"] .scn{ display:none; }
+html[data-scn="b"] .only-c{ display:none; }
+html[data-scn="c"] .only-b{ display:none; }
+
+:root{
+--cb-border:#9FB3C8; --cb-head:#DCE8F3; --cb-body:#F7FAFD;
+--cb-label:#173A63; --cb-text:#111827; --cb-btn:#006097;
+}
+
+html[data-theme="dark"]{
+--text:#E5E7EB; --text-muted:#B4BCC8; --text-dim:#8A94A3;
+--border:#3A3F47; --border-light:#2C3036;
+--bg:#17191C; --code-bg:#2A2E34; --toc-bg:#1E2125;
+--brand-primary-light:#13324A; --brand-secondary-light:#252A31;
+--cb-border:#56677A; --cb-head:#2E3B4A; --cb-body:#242C36;
+--cb-label:#DCE6F0; --cb-text:#F5F7FA; --cb-btn:#2F86D6;
+color-scheme:dark;
+}
+html[data-theme="dark"] body{ background:#17191C !important; color:#E5E7EB !important; }
+html[data-theme="dark"] h1{ color:#7CC4F0 !important; border-bottom-color:#3B8FD8 !important; }
+html[data-theme="dark"] h2{ color:#E8EAED !important; background:#21262C !important; border-left-color:#3B8FD8 !important; }
+html[data-theme="dark"] h3, html[data-theme="dark"] h4{ color:#9FD3F5 !important; }
+html[data-theme="dark"] strong{ color:#9FD3F5 !important; }
+html[data-theme="dark"] a{ color:#7CC4F0 !important; }
+html[data-theme="dark"] code{ background:#2A2E34 !important; color:#F2B880 !important; }
+html[data-theme="dark"] table{ background:#1E2125 !important; box-shadow:none !important; }
+html[data-theme="dark"] th{ background:#0F4C75 !important; color:#fff !important; }
+html[data-theme="dark"] td{ border-top-color:#3A3F47 !important; color:#E5E7EB !important; }
+html[data-theme="dark"] tbody tr:nth-child(even){ background:#22262B !important; }
+html[data-theme="dark"] tbody tr:hover{ background:#2A3038 !important; }
+html[data-theme="dark"] .unit-lead{ background:#13324A !important; color:#CFE8F7 !important; border-left-color:#3B8FD8 !important; }
+html[data-theme="dark"] blockquote, html[data-theme="dark"] blockquote.c-info{ background:#13324A !important; color:#CFE8F7 !important; border-left-color:#3B8FD8 !important; }
+html[data-theme="dark"] blockquote.c-warn{ background:#3A2A12 !important; color:#F6D9A8 !important; border-left-color:#E0951C !important; }
+html[data-theme="dark"] blockquote.c-key{ background:#10352A !important; color:#B6EBD5 !important; border-left-color:#10B981 !important; }
+html[data-theme="dark"] #TOC{ background:#1E2125 !important; border-right-color:#3B8FD8 !important; }
+html[data-theme="dark"] #TOC a{ color:#C9D1DB !important; }
+html[data-theme="dark"] #TOC a:hover, html[data-theme="dark"] #TOC a.toc-active{ background:#13324A !important; color:#fff !important; }
+html[data-theme="dark"] #TOC::before{ color:#7CC4F0 !important; }
+html[data-theme="dark"] #TOC .toc-controls button{ background:#24282D !important; color:#7CC4F0 !important; border-color:#3B8FD8 !important; }
+html[data-theme="dark"] hr{ border-color:#3A3F47 !important; }
+html[data-theme="dark"] #pager-count{ color:#B4BCC8 !important; }
+html[data-theme="dark"] em{ color:#B4BCC8 !important; }
+</style>
+<script>
+(function(){
+  var KEY='tp-theme';
+  var root=document.documentElement;
+  function apply(t){
+    root.setAttribute('data-theme',t);
+    var b=document.getElementById('theme-toggle');
+    if(b){ b.setAttribute('aria-checked', t==='dark'?'true':'false');
+           b.title = t==='dark' ? '切換為淺色' : '切換為深色';
+           var k=b.querySelector('.tt-knob'); if(k) k.textContent = t==='dark' ? '🌙' : '☀️'; }
+  }
+  var saved=null; try{ saved=localStorage.getItem(KEY); }catch(e){}
+  apply(saved==='dark'?'dark':'light');
+
+  var LABELS={instr:'Instructions (貼到「指示」欄)', name:'名稱', desc:'描述',
+              starter:'建議的提示', test:'提示詞'};
+
+  function copyText(text, btn){
+    function done(){
+      btn.textContent='已複製'; btn.classList.add('copied');
+      setTimeout(function(){ btn.textContent='複製'; btn.classList.remove('copied'); },1800);
+    }
+    function fallback(){
+      var ta=document.createElement('textarea'); ta.value=text;
+      ta.style.position='fixed'; ta.style.top='-1000px'; document.body.appendChild(ta);
+      ta.select(); try{ document.execCommand('copy'); done(); }catch(e){}
+      document.body.removeChild(ta);
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } else { fallback(); }
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    // 授權情境切換: 放在需要切換的單元標題旁
+    var SK='tp-scn', cur='all'; try{ cur=localStorage.getItem(SK)||'all'; }catch(e){}
+    var OPTS=[['a','A 有授權'],['b','B 用量計費'],['c','C 無授權']];
+    var TIPS={a:'A 有授權', b:'B 無授權＋Pay-as-you-go', c:'C 無授權＋無 Pay-as-you-go'};
+    function setScn(v){
+      cur=v;
+      if(v==='all') root.removeAttribute('data-scn'); else root.setAttribute('data-scn',v);
+      try{ localStorage.setItem(SK,v); }catch(e){}
+      document.querySelectorAll('.scn-inline button').forEach(function(x){ x.classList.toggle('on', x.dataset.v===v); });
+    }
+    function makeSwitch(){
+      var w=document.createElement('span'); w.className='scn-inline';
+      var l=document.createElement('span'); l.className='scn-lab'; l.textContent='我的授權情境';
+      var g=document.createElement('span'); g.className='scn-seg';
+      OPTS.forEach(function(o){
+        var x=document.createElement('button'); x.type='button'; x.textContent=o[1]; x.dataset.v=o[0]; x.title=TIPS[o[0]];
+        x.title=TIPS[o[0]]+' (再點一次取消，顯示全部)';
+        x.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); setScn(cur===o[0]?'all':o[0]); });
+        g.appendChild(x);
+      });
+      w.appendChild(l); w.appendChild(g); return w;
+    }
+    var heads=Array.prototype.slice.call(document.querySelectorAll('h2'));
+    var targets=[];
+    heads.forEach(function(h){ if(/確認你的授權情境/.test(h.textContent)) targets.push(h); });
+    document.querySelectorAll('.scn').forEach(function(c){
+      var best=null;
+      heads.forEach(function(h){ if(h.compareDocumentPosition(c) & Node.DOCUMENT_POSITION_FOLLOWING) best=h; });
+      if(best && targets.indexOf(best)<0) targets.push(best);
+    });
+    targets.forEach(function(h){
+      var t=document.createElement('span'); t.className='scn-h-title';
+      while(h.firstChild) t.appendChild(h.firstChild);
+      h.appendChild(t); h.classList.add('has-scn'); h.appendChild(makeSwitch());
+      if(h.id){
+        var tl=document.querySelector('#TOC a[href="#'+(window.CSS&&CSS.escape?CSS.escape(h.id):h.id)+'"]');
+        if(!tl){ document.querySelectorAll('#TOC a').forEach(function(x){ if(decodeURIComponent(x.getAttribute('href')||'')==='#'+h.id) tl=x; }); }
+        if(tl && !tl.querySelector('.toc-scn')){
+          var tt=document.createElement('span'); tt.className='toc-scn-t';
+          while(tl.firstChild) tt.appendChild(tl.firstChild);
+          tl.appendChild(tt); tl.classList.add('has-toc-scn');
+          var bd=document.createElement('span'); bd.className='toc-scn'; bd.textContent='ABC'; bd.title='本節有授權情境 A/B/C 的不同做法';
+          tl.appendChild(bd);
+        }
+      }
+    });
+    setScn(cur);
+
+    var tb=document.createElement('button');
+    tb.id='theme-toggle'; tb.type='button'; tb.setAttribute('role','switch'); tb.setAttribute('aria-label','深色模式');
+    tb.innerHTML='<span class="tt-ic tt-sun">☀️</span><span class="tt-ic tt-moon">🌙</span><span class="tt-knob"></span>';
+    tb.addEventListener('click', function(){
+      var t = root.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
+      try{ localStorage.setItem(KEY,t); }catch(e){}
+      apply(t);
+    });
+    var bar=document.createElement('div'); bar.id='top-ctrl';
+    bar.appendChild(tb);
+    document.body.appendChild(bar);
+    apply(root.getAttribute('data-theme'));
+
+    // 把每個 <pre> 包成複製框
+    document.querySelectorAll('pre').forEach(function(pre){
+      if(pre.closest('.copybox')) return;
+      var old=pre.querySelector('.copy-btn'); if(old) old.remove();
+      var label='提示詞';
+      for(var k in LABELS){ if(pre.classList.contains(k)){ label=LABELS[k]; break; } }
+      var box=document.createElement('div'); box.className='copybox';
+      var head=document.createElement('div'); head.className='copybox-head';
+      var lab=document.createElement('span'); lab.className='copybox-label'; lab.textContent=label;
+      var btn=document.createElement('button'); btn.type='button'; btn.className='copybox-btn'; btn.textContent='複製';
+      btn.setAttribute('aria-label','複製'+label);
+      head.appendChild(lab); head.appendChild(btn);
+      pre.parentNode.insertBefore(box, pre);
+      box.appendChild(head); box.appendChild(pre);
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        var code=pre.querySelector('code')||pre;
+        copyText((code.innerText||code.textContent||'').replace(/\s+$/,''), btn);
+      });
+    });
+  });
+})();
 </script>
 </body>
 </html>
