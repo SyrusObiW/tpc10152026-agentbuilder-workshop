@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>備用情境: 請假與加班規定助理</title>
+  <title>練習情境: 請假與加班規定助理</title>
   <style>
 
 code{white-space: pre-wrap;}
@@ -632,6 +632,41 @@ html[data-theme="dark"] .dl-box{ border-color:#56677A; }
 html[data-theme="dark"] .dl-note{ color:#C9D3DE; }
 @media print{ .dl-row, .dl-box{ display:none; } }
 .dl-row > p{ display:contents; }
+
+.dl-row{ display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin:16px 0 24px; }
+.dl-row .dl-btn{ display:grid !important; grid-template-columns:1fr auto; grid-template-areas:"k go" "t go" "m go"; align-items:center; column-gap:14px; row-gap:2px;
+padding:14px 18px !important; border-radius:12px; background:#006097 !important; border:2px solid #006097 !important; color:#fff !important; text-decoration:none !important; }
+.dl-row .dl-btn::before{ content:none; }
+.dl-row .dl-btn:hover{ background:#004B77 !important; border-color:#004B77 !important; transform:translateY(-2px); box-shadow:0 6px 14px rgba(0,96,151,.3); }
+.dl-row .dl-k{ grid-area:k; font-size:12px; font-weight:700; letter-spacing:1px; opacity:.85; }
+.dl-row .dl-t{ grid-area:t; font-size:16px; font-weight:800; line-height:1.4; word-break:break-all; }
+.dl-row .dl-m{ grid-area:m; font-size:13px; opacity:.85; }
+.dl-row .dl-go{ grid-area:go; padding:8px 14px; border-radius:8px; background:#fff; color:#006097; font-size:14px; font-weight:800; white-space:nowrap; }
+.dl-row .dl-go::before{ content:"↓ "; }
+html[data-theme="dark"] .dl-row .dl-btn{ background:#1F6FB2 !important; border-color:#4AA3F0 !important; }
+html[data-theme="dark"] .dl-row .dl-btn:hover{ background:#2A80C6 !important; }
+html[data-theme="dark"] .dl-row .dl-go{ background:#F5F7FA; color:#1F6FB2; }
+@media (max-width:720px){ .dl-row{ grid-template-columns:1fr; } }
+
+.dl-row{ display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin:16px 0 24px; }
+.dl-card{ display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px 18px; border-radius:12px;
+background:#F3F8FC; border:1px solid #C9DCEB; border-left:5px solid #006097; }
+.dl-info{ display:flex; flex-direction:column; gap:2px; min-width:0; }
+.dl-card .dl-k{ font-size:12px; font-weight:800; letter-spacing:1px; color:#006097; }
+.dl-card .dl-t{ font-size:16px; font-weight:800; line-height:1.4; color:#1F2937; word-break:break-all; }
+.dl-card .dl-m{ font-size:13px; color:#6B7280; }
+.dl-card .dl-go{ flex:0 0 auto; padding:9px 18px; border-radius:8px; background:#006097; color:#fff !important; font-size:15px; font-weight:800;
+text-decoration:none !important; white-space:nowrap; transition:background .12s, transform .12s, box-shadow .12s; }
+.dl-card .dl-go::before{ content:"↓ "; }
+.dl-card .dl-go:hover{ background:#004B77; transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,96,151,.3); }
+html[data-theme="dark"] .dl-card{ background:#242C36; border-color:#56677A; border-left-color:#4AA3F0; }
+html[data-theme="dark"] .dl-card .dl-k{ color:#7CC4F0; }
+html[data-theme="dark"] .dl-card .dl-t{ color:#F5F7FA; }
+html[data-theme="dark"] .dl-card .dl-m{ color:#B4BCC8; }
+html[data-theme="dark"] .dl-card .dl-go{ background:#1F6FB2 !important; color:#fff !important; }
+html[data-theme="dark"] .dl-card .dl-go:hover{ background:#2A80C6 !important; }
+@media (max-width:720px){ .dl-row{ grid-template-columns:1fr; } }
+@media print{ .dl-row{ display:none !important; } }
 </style>
   <style type="text/css">
 @media screen and (min-width: 1025px) {
@@ -677,9 +712,9 @@ html[data-theme="dark"] .scn-nav a{border-color:#56677A;color:#7CC4F0;}
 html[data-theme="dark"] .scn-nav a:hover{background:#242C36;}
 html[data-theme="dark"] .scn-top a{color:#7CC4F0;}
 </style>
-<div class="scn-top"><a href="index.html#backup-scenarios">← 回到實作手冊 (單元 04 備用情境)</a><span>備用情境 4 / 5</span></div>
-<div class="scn-hero"><div class="eb">備用情境 4</div><div class="tt">請假與加班規定助理</div><div class="ld">同仁最常問的請假、補休與遠距工作規定，一次問清楚</div><div class="tg">新舊規定衝突 · 非正式說法</div></div>
-<div class="dl-box"><a class="dl-btn" href="downloads/scn4-docs.zip" download>下載本情境素材 (D1–D3)</a><span class="dl-note">解壓縮後把資料夾上傳到自己的 OneDrive，再從「知識」區加入檔案</span></div>
+<div class="scn-top"><a href="index.html#backup-scenarios">← 回到實作手冊 (單元 04 練習情境)</a><span>練習情境 4 / 5</span></div>
+<div class="scn-hero"><div class="eb">練習情境 4</div><div class="tt">請假與加班規定助理</div><div class="ld">同仁最常問的請假、補休與遠距工作規定，一次問清楚</div><div class="tg">新舊規定衝突 · 非正式說法</div></div>
+<div class="dl-box"><a class="dl-btn" href="downloads/scn4-docs.zip" download>下載本情境素材 (D1–D4)</a><span class="dl-note">解壓縮後把資料夾上傳到自己的 OneDrive，再從「知識」區加入檔案</span></div>
 <div class="mock-badge">
 <p><strong>模擬資料</strong> 本頁素材皆為課堂練習用的模擬資料，非台灣電力公司正式規定</p>
 </div>
@@ -721,8 +756,8 @@ html[data-theme="dark"] .scn-top a{color:#7CC4F0;}
 <li><p>按右上角「<strong>建立</strong>」，打開 Agent 對話，依序問下方三題，記錄回答</p></li>
 </ol>
 <div class="scn only-c">
-<p><strong>情境 C:</strong> 「知識」區只能加入公開網站網址，無法加入 D1–D3，這個情境也<strong>不要加入網址</strong>，素材是模擬資料，加入真實網站會互相衝突，每開一個新對話，先點輸入框的「+」附上 D1、D2、D3 三個檔案再提問，並把下方這段加在指示的「二、知識來源」最後面</p>
-<pre class="instr"><code>使用者會在對話中附上 D1–D3 檔案，就是上面提到的知識庫檔案，請只依據這些附件回答，並標註來源檔名，若使用者沒有附上檔案，請先提醒他附上，不要憑記憶或推測回答</code></pre>
+<p><strong>情境 C:</strong> 「知識」區只能加入公開網站網址，無法加入 D1–D4，這個情境也<strong>不要加入網址</strong>，素材是模擬資料，加入真實網站會互相衝突，每開一個新對話，先點輸入框的「+」附上 D1、D2、D3 三個檔案再提問，並把下方這段加在指示的「二、知識來源」最後面</p>
+<pre class="instr"><code>使用者會在對話中附上 D_請假加班素材合併版_無授權學員用.txt，就是本情境的合併版素材。請只依據這個附件回答，並標註來源檔名；若使用者沒有附上檔案，請先提醒他附上，不要憑記憶或推測回答</code></pre>
 </div>
 <h2 id="提示詞範本">提示詞範本</h2>
 <pre class="test"><code>我這個月想請 2 天家庭照顧假，會不會扣到我的事假天數?</code></pre>
@@ -744,7 +779,7 @@ html[data-theme="dark"] .scn-top a{color:#7CC4F0;}
 <tbody>
 <tr>
 <td style="text-align: center;">☐</td>
-<td>加入 D1–D3 並完成處理</td>
+<td>加入 D1–D4 並完成處理</td>
 <td></td>
 </tr>
 <tr>
@@ -801,7 +836,7 @@ html[data-theme="dark"] .scn-top a{color:#7CC4F0;}
 </table>
 </details>
 <div class="scn-nav">
-<a href="scn3-travel.html">← 備用情境 3: 差旅報支問答助理</a><a href="scn5-minutes.html">備用情境 5: 會議紀錄整理小幫手 →</a>
+<a href="scn3-travel.html">← 練習情境 3: 差旅報支問答助理</a><a href="scn5-minutes.html">練習情境 5: 會議紀錄整理小幫手 →</a>
 </div>
 <div class="scn-foot">
 本頁素材皆為教育訓練用的模擬資料，非台灣電力公司正式規定，勾選狀態只存在你這台電腦的瀏覽器
@@ -876,7 +911,8 @@ h2.has-scn .scn-h-title{ flex:1 1 auto; min-width:0; }
 background:#FFF7E6; border:2px solid #F0A020; border-radius:12px; padding:6px 8px 6px 12px;
 box-shadow:0 2px 8px rgba(240,160,32,.25); line-height:1; }
 .scn-inline .scn-lab{ color:#8A5300; font-size:14px; font-weight:800; white-space:nowrap; letter-spacing:.5px; }
-.scn-inline .scn-seg{ display:inline-flex; gap:4px; }
+.scn-inline .scn-seg{ display:inline-grid; grid-template-columns:repeat(3,1fr); gap:4px; }
+.scn-inline .scn-seg button{ width:100%; text-align:center; }
 .scn-inline button{ border:1.5px solid #E3C48A; background:#fff; color:#5C4300; font-family:inherit;
 font-size:15px; font-weight:800; padding:7px 12px; border-radius:8px; cursor:pointer; line-height:1.1;
 transition:background .15s, color .15s, border-color .15s; white-space:nowrap; }
@@ -1002,7 +1038,7 @@ html[data-theme="dark"] em{ color:#B4BCC8 !important; }
     // 授權情境切換: 放在需要切換的單元標題旁
     var SK='tp-scn', cur='all'; try{ cur=localStorage.getItem(SK)||'all'; }catch(e){}
     var OPTS=[['a','A 有授權'],['b','B 用量計費'],['c','C 無授權']];
-    var TIPS={a:'A 有授權 (Premium)', b:'B 無授權 (Basic)＋Pay-as-you-go', c:'C 無授權 (Basic)＋無 Pay-as-you-go'};
+    var TIPS={a:'A 有授權', b:'B 無授權＋Pay-as-you-go', c:'C 無授權＋無 Pay-as-you-go'};
     function setScn(v){
       cur=v;
       if(v==='all') root.removeAttribute('data-scn'); else root.setAttribute('data-scn',v);

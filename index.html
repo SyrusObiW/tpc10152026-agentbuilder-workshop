@@ -607,7 +607,7 @@ html[data-theme="dark"] .scn-btn{ background:#1F6FB2 !important; border-color:#4
 @media (max-width:900px){ .scn-btns{ flex-wrap:wrap; } .scn-btn{ flex:1 1 40%; } }
 @media print{ .scn-btn{ background:#fff !important; color:#006097 !important; } }
 
-.scn-cards{ grid-template-columns:repeat(5,minmax(0,1fr)) !important; gap:10px !important; }
+.scn-cards{ grid-template-columns:1fr !important; gap:10px !important; }
 .scn-card{ padding:14px 12px !important; gap:5px !important; }
 .scn-card .sc-no{ font-size:12px !important; }
 .scn-card .sc-title{ font-size:16px !important; }
@@ -688,6 +688,241 @@ td { font-size: 20px !important; padding: 14px 18px !important; }
 input.cb { width: 26px !important; height: 26px !important; }
 .pg-btn, #pager-toggle, #pager-count { font-size: 18px !important; padding: 10px 18px !important; }
 }
+
+
+/* TOC main unit emphasis. */
+#TOC > ul > li > a[href*="單元-"] {
+  background: linear-gradient(90deg, var(--brand-primary) 0%, var(--brand-secondary) 100%) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  letter-spacing: .2px;
+  margin-top: 12px !important;
+  margin-bottom: 5px !important;
+  box-shadow: 0 2px 6px rgba(0, 96, 151, .22);
+}
+#TOC > ul > li > a[href*="單元-"]:hover,
+#TOC > ul > li > a[href*="單元-"].toc-active {
+  background: linear-gradient(90deg, var(--brand-primary-dark) 0%, var(--brand-primary) 100%) !important;
+  color: #fff !important;
+  box-shadow: inset 4px 0 0 #fff, 0 2px 8px rgba(0, 96, 151, .28) !important;
+}
+#TOC > ul > li > a[href*="單元-"] + ul {
+  margin-top: 4px !important;
+  margin-bottom: 10px !important;
+  border-left: 3px solid var(--brand-primary-light) !important;
+}
+html[data-theme="dark"] #TOC > ul > li > a[href*="單元-"] {
+  background: linear-gradient(90deg, #1F6FB2 0%, #173A63 100%) !important;
+  color: #fff !important;
+}
+
+
+/* TOC main units: underline marker only; active highlight is reserved for the current section. */
+#TOC > ul > li > a[href*="單元-"]{
+  background: transparent !important;
+  color: var(--brand-secondary) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border-bottom: 2px solid var(--brand-primary) !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  letter-spacing: .2px;
+  margin-top: 14px !important;
+  margin-bottom: 6px !important;
+}
+#TOC > ul > li > a[href*="單元-"]:hover,
+#TOC > ul > li > a[href*="單元-"].toc-active{
+  background: transparent !important;
+  color: var(--brand-primary-dark) !important;
+  box-shadow: none !important;
+  border-bottom: 2px solid var(--brand-primary-dark) !important;
+}
+#TOC > ul > li > a[href*="單元-"] + ul{
+  margin-top: 4px !important;
+  margin-bottom: 12px !important;
+  border-left: 3px solid var(--brand-primary-light) !important;
+}
+html[data-theme="dark"] #TOC > ul > li > a[href*="單元-"]{
+  background: transparent !important;
+  color:#7CC4F0 !important;
+  border-bottom-color:#4AA3F0 !important;
+}
+html[data-theme="dark"] #TOC > ul > li > a[href*="單元-"].toc-active,
+html[data-theme="dark"] #TOC > ul > li > a[href*="單元-"]:hover{
+  background: transparent !important;
+  color:#fff !important;
+  box-shadow:none !important;
+}
+
+
+.scn-card .sc-feedback{
+  display:inline-block;
+  margin-top:4px;
+  padding:3px 8px;
+  border-radius:999px;
+  background:#EAF4F8;
+  color:#006097;
+  font-size:12px;
+  font-weight:800;
+  line-height:1.4;
+}
+html[data-theme="dark"] .scn-card .sc-feedback{ background:#13324A; color:#7CC4F0; }
+
+
+
+/* Stronger feedback pill contrast. */
+.scn-card .sc-feedback{
+  display:inline-flex !important;
+  align-items:center;
+  width:max-content;
+  max-width:100%;
+  margin:8px 0 2px !important;
+  padding:5px 12px !important;
+  border-radius:999px !important;
+  background:#006097 !important;
+  color:#fff !important;
+  border:1px solid #004A75 !important;
+  box-shadow:0 2px 6px rgba(0,96,151,.22);
+  font-size:14px !important;
+  font-weight:900 !important;
+  line-height:1.35 !important;
+}
+.scn-card .sc-feedback::before{
+  content:"對應回饋";
+  display:inline-block;
+  margin-right:8px;
+  padding:2px 7px;
+  border-radius:999px;
+  background:#fff;
+  color:#006097;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.3px;
+}
+html[data-theme="dark"] .scn-card .sc-feedback{
+  background:#2A80C6 !important;
+  color:#fff !important;
+  border-color:#7CC4F0 !important;
+}
+html[data-theme="dark"] .scn-card .sc-feedback::before{ color:#1F6FB2; }
+
+/* Scenario card larger typography. */
+.scn-card .sc-title{ font-size:20px !important; }
+.scn-card .sc-desc{ font-size:16px !important; line-height:1.65 !important; }
+.scn-card .sc-feedback{ font-size:14px !important; }
+.scn-card .sc-meta{ font-size:14px !important; }
+.scn-card .sc-go{ font-size:15px !important; }
+
+/* Backup scenario cards: vertical list for easier scanning. */
+.scn-cards{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:10px !important;
+  align-items:stretch !important;
+}
+.scn-card{
+  width:100% !important;
+  min-height:auto !important;
+}
+
+
+
+/* Treat warmup as a main TOC unit too. */
+#TOC > ul > li > a[href*="實作暖身"]{
+  background: transparent !important;
+  color: var(--brand-secondary) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border-left: 4px solid var(--brand-primary) !important;
+  padding-left: 26px !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  letter-spacing: .2px;
+  margin-top: 14px !important;
+  margin-bottom: 6px !important;
+}
+#TOC > ul > li > a[href*="實作暖身"]:hover,
+#TOC > ul > li > a[href*="實作暖身"].toc-active{
+  background: transparent !important;
+  color: var(--brand-primary-dark) !important;
+  box-shadow: none !important;
+  border-left-color: var(--brand-primary-dark) !important;
+}
+#TOC > ul > li > a[href*="實作暖身"] + ul{
+  margin-top: 4px !important;
+  margin-bottom: 12px !important;
+  border-left: 3px solid var(--brand-primary-light) !important;
+}
+html[data-theme="dark"] #TOC > ul > li > a[href*="實作暖身"]{
+  color:#7CC4F0 !important;
+  border-left-color:#4AA3F0 !important;
+}
+html[data-theme="dark"] #TOC > ul > li > a[href*="實作暖身"].toc-active,
+html[data-theme="dark"] #TOC > ul > li > a[href*="實作暖身"]:hover{
+  background: transparent !important;
+  color:#fff !important;
+  box-shadow:none !important;
+}
+
+/* TOC final hierarchy + active behavior. */
+#TOC > ul > li > a[href*="單元-"]{
+  background: transparent !important;
+  color: var(--brand-secondary) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+  border-left: 4px solid var(--brand-primary) !important;
+  padding-left: 26px !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  letter-spacing: .2px;
+  margin-top: 14px !important;
+  margin-bottom: 6px !important;
+}
+#TOC > ul > li > a[href*="單元-"]:hover,
+#TOC > ul > li > a[href*="單元-"].toc-active{
+  background: transparent !important;
+  color: var(--brand-primary-dark) !important;
+  box-shadow: none !important;
+  border-left-color: var(--brand-primary-dark) !important;
+}
+#TOC > ul ul li > a.toc-active{
+  background: var(--brand-primary-light) !important;
+  color: var(--brand-primary-dark) !important;
+  font-weight: 900 !important;
+  box-shadow: inset 4px 0 0 var(--brand-primary) !important;
+}
+html[data-theme="dark"] #TOC > ul > li > a[href*="單元-"]{
+  color:#7CC4F0 !important;
+  border-left-color:#4AA3F0 !important;
+}
+html[data-theme="dark"] #TOC > ul ul li > a.toc-active{
+  background:#13324A !important;
+  color:#fff !important;
+}
+
+/* TOC alignment fix: reserve the same gutter for collapsible and non-collapsible rows. */
+#TOC > ul > li.toc-collapsible,
+#TOC ul ul li.toc-collapsible { padding-left: 0 !important; }
+#TOC .toc-toggle { left: 0 !important; }
+#TOC > ul > li > .toc-toggle { left: 0 !important; }
+#TOC > ul > li > a {
+  padding-left: 30px !important;
+  margin-left: 0 !important;
+  text-indent: 0 !important;
+}
+#TOC > ul ul li > a {
+  padding-left: 26px !important;
+  margin-left: 0 !important;
+  text-indent: 0 !important;
+}
+#TOC > ul ul ul li > a {
+  padding-left: 26px !important;
+  margin-left: 0 !important;
+  text-indent: 0 !important;
+}
 </style>
   <script>try{if(localStorage.getItem('tp-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');var _s=localStorage.getItem('tp-scn');if(_s&&_s!=='all')document.documentElement.setAttribute('data-scn',_s);}catch(e){}</script>
 </head>
@@ -725,7 +960,6 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </div>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#microsoft-365-copilot-agent-builder-實作手冊" id="toc-microsoft-365-copilot-agent-builder-實作手冊">Microsoft 365 Copilot Agent Builder 實作手冊</a></li>
 <li><a href="#開始之前" id="toc-開始之前">開始之前</a></li>
 <li><a href="#簡報重點速查" id="toc-簡報重點速查">簡報重點速查</a></li>
 <li><a href="#實作暖身先看內建-agent-怎麼把提示詞變成專業流程" id="toc-實作暖身先看內建-agent-怎麼把提示詞變成專業流程">實作暖身｜先看內建 Agent 怎麼把提示詞變成專業流程</a>
@@ -762,74 +996,20 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <li><a href="#課後問卷" id="toc-課後問卷">課後問卷</a></li>
 </ul>
 </nav>
-<h1 id="microsoft-365-copilot-agent-builder-實作手冊">Microsoft 365 Copilot Agent Builder 實作手冊</h1>
-<p><em>從 Prompt 單次協作到建立可重複使用的 Agent —— 三小時實作工作坊・邊做邊學</em></p>
 <h1 id="開始之前">開始之前</h1>
-<h2 id="今天你會學到什麼完成什麼">今天你會學到什麼、完成什麼</h2>
+<h2 id="今天實作你會學到什麼完成什麼">今天實作你會學到什麼、完成什麼</h2>
 <ul>
 <li><p>✓ 認識 Prompt Coach、Researcher / Analyst 這類內建 Agent 的用法</p></li>
 <li><p>✓ 直接建立、測試並優化 Agent 的實作流程</p></li>
 <li><p>✓ 使用 Microsoft 365 Copilot Agent Builder 建立 Agent</p></li>
-<li><p>✓ 1 個跟著講師建立的「花蓮旅遊助理 Agent」</p></li>
+<li><p>✓ 跟著講師建立的「花蓮旅遊助理 Agent」學習 UI 的操作</p></li>
 <li><p>✓ 1 個依自己每日工作情境建立的個人 Agent 原型</p></li>
 </ul>
-<h2 id="議程-1015-13301615">議程 (10/15 13:30–16:15)</h2>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>時間</th>
-<th>課程內容</th>
-<th>對應單元</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>13:30–13:40</td>
-<td>開場:什麼是 Agent?</td>
-<td>簡報</td>
-</tr>
-<tr>
-<td>13:40–13:55</td>
-<td>從 Chat 到 Agent</td>
-<td>簡報</td>
-</tr>
-<tr>
-<td>13:55–14:10</td>
-<td>內建 Agent 暖身、認識 Agent Builder、第一輪任務說明</td>
-<td>實作暖身後進入單元 01</td>
-</tr>
-<tr>
-<td>14:10–14:55</td>
-<td>第一輪實作與測試:花蓮旅遊助理</td>
-<td>單元 01</td>
-</tr>
-<tr>
-<td>14:55–15:10</td>
-<td><strong>休息</strong></td>
-<td>—</td>
-</tr>
-<tr>
-<td>15:10–15:55</td>
-<td>第二輪:依每日工作情境建立自己的 Agent、自我測試</td>
-<td>單元 04 (備用情境 1–5)</td>
-</tr>
-<tr>
-<td>15:55–16:15</td>
-<td>成果發表、Q&amp;A 與 Next Steps</td>
-<td>單元 03</td>
-</tr>
-</tbody>
-</table>
 <h2 id="登入與企業資料保護">登入與企業資料保護</h2>
 <ol type="1">
 <li><p>開啟瀏覽器，前往 <code>https://m365.cloud.microsoft</code>，以公司帳號登入</p></li>
-<li><p>用<strong>公司帳號</strong>登入後，看畫面<strong>上方「新增聊天」按鈕旁</strong>，會出現<strong>綠色盾牌</strong>圖示，看到盾牌再開始用</p></li>
-<li><p>確認左側看得到「<strong>所有代理程式</strong>」</p></li>
+<li><p>用<strong>公司帳號</strong>登入後，確認畫面<strong>右上角</strong>出現<strong>綠色盾牌</strong>圖示，看到盾牌再開始用</p></li>
+<li><p>確認左側看得到「<strong>代理程式</strong>」入口；可看到的代理程式會依授權不同而有差異</p></li>
 </ol>
 <blockquote class="c-warn">
 <p>⚠️ Agent Builder 不支援手機，請使用筆電操作</p>
@@ -862,7 +1042,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tr>
 </tbody>
 </table>
-<h2 id="課前準備-上傳素材到-onedrive">課前準備: 上傳素材到 OneDrive</h2>
+<h2 id="操作練習前-上傳素材到-onedrive">操作練習前: 上傳素材到 OneDrive</h2>
 <ul>
 <li><p>本課程有<strong>兩輪實作</strong>:</p>
 <ul>
@@ -872,7 +1052,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <li><p>下載「台電Workshop_花蓮素材包」，解壓縮後把整個資料夾上傳到<strong>自己的 OneDrive</strong></p></li>
 <li><p>放在「我的檔案」最上層，資料夾名稱維持「台電Workshop_花蓮素材包」，<strong>不要改名、不要拆開</strong></p></li>
 <li><p>資料夾內容: 00 情境說明卡 + 01–07 七份知識檔 + 08 合併版 (把 01–07 合併成一個文字檔，給情境 C 使用)</p></li>
-<li><p>第二輪請先想好自己每日工作中想交給 Agent 的一件事，並準備 2–5 份可在課堂使用的知識檔 (不含機敏或個人資料)；想不到題目的人，可以把「台電Workshop_第二輪情境素材包」也上傳到 OneDrive，課堂上直接改做備用情境</p></li>
+<li><p>第二輪請先想好自己每日工作中想交給 Agent 的一件事，並準備 2–5 份可在課堂使用的知識檔 (不含機敏或個人資料)；想不到題目的人，可以把「台電Workshop_第二輪情境素材包」也上傳到 OneDrive，課堂上直接改做練習情境</p></li>
 </ul>
 <div class="dl-row">
 <div class="dl-card">
@@ -892,7 +1072,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <thead>
 <tr>
 <th style="text-align: center;">完成</th>
-<th>課前檢查</th>
+<th>操作前檢查</th>
 </tr>
 </thead>
 <tbody>
@@ -903,6 +1083,10 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <tr>
 <td style="text-align: center;">☐</td>
 <td>資料夾內有 00–08 共 9 個檔案</td>
+</tr>
+<tr>
+<td style="text-align: center;">☐</td>
+<td>已下載「台電Workshop_第二輪情境素材包」，需要時可用練習情境素材</td>
 </tr>
 </tbody>
 </table>
@@ -1060,11 +1244,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <li><p>注意: 編輯頁面<strong>沒有測試窗</strong>，不能一邊編輯一邊提問，要先按右上角「<strong>建立</strong>」，再從左側代理程式清單打開 Agent 對話；之後每次修改都要按「<strong>更新</strong>」，再開新對話測試</p></li>
 </ol>
 <table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
+
 <thead>
 <tr>
 <th>欄位 (由上到下)</th>
@@ -1133,19 +1313,16 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <tr>
 <th style="text-align: center;">完成</th>
 <th>檢查項目</th>
-<th>我的記錄</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>找到「新的代理程式」並進入設定頁</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>說得出最重要的兩個欄位</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -1158,11 +1335,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <li><p>用下方提示詞幫你的 Agent 想名稱與描述</p></li>
 </ol>
 <table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
+
 <thead>
 <tr>
 <th>檔名</th>
@@ -1220,24 +1393,20 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <tr>
 <th style="text-align: center;">完成</th>
 <th>檢查項目</th>
-<th>我的記錄</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>決定我們的定位</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>想好 Agent 名稱</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>寫好描述</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -1272,24 +1441,20 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <tr>
 <th style="text-align: center;">完成</th>
 <th>檢查項目</th>
-<th>我的記錄</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>花蓮素材已準備好 (知識區已加入 7 個檔案，或已備妥 08 合併版)</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>網路搜尋保持開啟 (Demo 1-6 再關閉)</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>名稱與描述已填好</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -1326,24 +1491,20 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <tr>
 <th style="text-align: center;">完成</th>
 <th>檢查項目</th>
-<th>我的記錄</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>貼上陽春版指示並測試兩個問題</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>墾丁問題: 有沒有上網回答範圍外的內容</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>票價問題: 有沒有標來源、說明新舊資料</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -1407,24 +1568,20 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <tr>
 <th style="text-align: center;">完成</th>
 <th>檢查項目</th>
-<th>我的記錄</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>在「描述」分頁完成三段對話</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>在「設定」頁看到自動產生的指示</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>重問接駁車問題，記下回答</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -1477,6 +1634,10 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </ol>
 <div class="scn only-c">
 <p><strong>情境 C:</strong> 每開一個新對話，都要先附上「08_花蓮素材合併版_無授權學員用.txt」再提問，合併版已把 PDF 內容轉成文字，所以 ③ 在你的版本不會用到 PDF 讀取</p>
+
+
+
+<a class="scn-card" href="scn8-video.html"><span class="sc-no">練習情境 8</span><span class="sc-title">HR 教育訓練影片企劃助理</span><span class="sc-desc">回應人資影片製作需求，產出短影片腳本、分鏡、字幕稿與 Clipchamp 製作步驟</span><span class="sc-feedback">影片製作、HR 溝通、Clipchamp 應用</span><span class="sc-meta">素材 H1–H4｜腳本分鏡 · 字幕旁白 · 合規檢查</span><span class="sc-go">開啟操作頁 →</span></a>
 </div>
 <h3 id="提示詞範本-6">提示詞範本</h3>
 <p><strong>① 基本資料查詢</strong>: 從知識檔找出答案，並說明理由</p>
@@ -1503,24 +1664,20 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <tr>
 <th style="text-align: center;">完成</th>
 <th>檢查項目</th>
-<th>我的記錄</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>貼上精簡版指示範本</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>依定位修改「一、你的角色」</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>寫好至少 3 個技能模組</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -1540,42 +1697,36 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <td style="text-align: center;">☐</td>
 <td style="text-align: center;">☐</td>
 <td style="text-align: center;">☐</td>
-<td></td>
 </tr>
 <tr>
 <td>② 表格條件比較</td>
 <td style="text-align: center;">☐</td>
 <td style="text-align: center;">☐</td>
 <td style="text-align: center;">☐</td>
-<td></td>
 </tr>
 <tr>
 <td>③ PDF 資訊擷取</td>
 <td style="text-align: center;">☐</td>
 <td style="text-align: center;">☐</td>
 <td style="text-align: center;">☐</td>
-<td></td>
 </tr>
 <tr>
 <td>④ 新舊資料判斷</td>
 <td style="text-align: center;">☐</td>
 <td style="text-align: center;">☐</td>
 <td style="text-align: center;">☐</td>
-<td></td>
 </tr>
 <tr>
 <td>⑤ 資訊可信度</td>
 <td style="text-align: center;">☐</td>
 <td style="text-align: center;">☐</td>
 <td style="text-align: center;">☐</td>
-<td></td>
 </tr>
 <tr>
 <td>⑥ 回答邊界</td>
 <td style="text-align: center;">☐</td>
 <td style="text-align: center;">☐</td>
 <td style="text-align: center;">☐</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -1657,29 +1808,24 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <tr>
 <th style="text-align: center;">完成</th>
 <th>檢查項目</th>
-<th>我的記錄</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>找出一題回答不理想的測試題</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>請 Copilot 診斷並改寫對應段落</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>修改指示並重測</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>重測結果有改善</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -1690,9 +1836,9 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <ol type="1">
 <li><p>想一件你每天或每週都會重複做的工作，作為這個 Agent 的情境</p></li>
 <li><p>依下方表格的填空句型，寫下六項定義</p></li>
-<li><p>準備 2–5 份可在課堂使用的知識檔;選備用情境的人，直接使用「台電Workshop_第二輪情境素材包」裡的檔案</p></li>
+<li><p>準備 2–5 份可在課堂使用的知識檔;選練習情境的人，直接使用「台電Workshop_第二輪情境素材包」裡的檔案</p></li>
 <li><p>用下方提示詞請 Copilot Chat 檢查定義是否完整</p></li>
-<li><p>沒有題目時，可從五個方向擇一:<strong>SOP/作業程序查詢、法規與規章查詢、新人訓練、會議與公文整理、跨單位知識搜尋</strong></p></li>
+<li><p>沒有題目時，可從八個方向擇一:<strong>SOP/作業程序查詢、法規與規章查詢、新人訓練、會議與公文整理、跨單位知識搜尋、業務簡報製作、抽查資料分析</strong></p></li>
 </ol>
 <table>
 <thead>
@@ -1728,14 +1874,6 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tr>
 </tbody>
 </table>
-<h3 id="backup-scenarios">備用情境: 沒有題目時直接挑一個</h3>
-<p>想不到自己的工作情境，或手邊沒有合適的資料?直接挑一個備用情境，點卡片開啟完整的操作頁，名稱、描述、指示範本、提示詞和對答案都準備好了，素材在「台電Workshop_第二輪情境素材包」</p>
-<div class="mock-badge">
-<p><strong>模擬資料</strong> 備用情境的素材皆為課堂練習用的模擬資料，非台灣電力公司正式規定</p>
-</div>
-<div class="scn-cards">
-<p><a class="scn-card" href="scn1-doc-writer.html"><span class="sc-no">備用情境 1</span><span class="sc-title">公文撰寫小幫手</span><span class="sc-desc">想不到第二輪的題目?直接用這個情境，把公文規範變成隨問隨寫的小幫手</span><span class="sc-meta">素材 A1–A3｜新舊規定衝突 · 舊範例誤導</span><span class="sc-go">開啟操作頁 →</span></a> <a class="scn-card" href="scn2-procurement.html"><span class="sc-no">備用情境 2</span><span class="sc-title">採購作業問答助理</span><span class="sc-desc">把散在手冊、權限表和同仁經驗裡的採購規定，整理成一問就答的助理</span><span class="sc-meta">素材 B1–B3｜新舊規定衝突 · 非正式說法</span><span class="sc-go">開啟操作頁 →</span></a> <a class="scn-card" href="scn3-travel.html"><span class="sc-no">備用情境 3</span><span class="sc-title">差旅報支問答助理</span><span class="sc-desc">把作業要點、修訂公告和同仁經驗整理成一問就答的差旅小幫手</span><span class="sc-meta">素材 C1–C3｜新舊規定衝突 · 非正式說法</span><span class="sc-go">開啟操作頁 →</span></a> <a class="scn-card" href="scn4-leave.html"><span class="sc-no">備用情境 4</span><span class="sc-title">請假與加班規定助理</span><span class="sc-desc">同仁最常問的請假、補休與遠距工作規定，一次問清楚</span><span class="sc-meta">素材 D1–D3｜新舊規定衝突 · 非正式說法</span><span class="sc-go">開啟操作頁 →</span></a> <a class="scn-card" href="scn5-minutes.html"><span class="sc-no">備用情境 5</span><span class="sc-title">會議紀錄整理小幫手</span><span class="sc-desc">貼上逐字稿，依公司規範一次產出格式正確的會議紀錄</span><span class="sc-meta">素材 E1｜產出文件 · 不推定 · 個資保護</span><span class="sc-go">開啟操作頁 →</span></a></p>
-</div>
 <h3 id="提示詞範本-8">提示詞範本</h3>
 <pre><code>我是台電的同仁，每天常被同事問到內部的作業程序，想為自己建立一個 Agent，幫我快速查詢並整理回覆，知識來源是部門的作業手冊和最新的修訂公告，它不應該代替主管做核決，也不能回答手冊以外的規定，當手冊與公告內容不一致時，要以較新的公告為準;找不到答案時，要建議洽詢承辦窗口，我希望查詢並回覆一項作業程序的時間能從半小時縮短到五分鐘，請幫我檢查這份情境定義是否完整，指出缺漏或模糊的地方，並各給一個補強建議，用條列方式回覆</code></pre>
 <h3 id="重點提示-10">重點提示</h3>
@@ -1751,42 +1889,66 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <tr>
 <th style="text-align: center;">完成</th>
 <th>檢查項目</th>
-<th>我的記錄</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>定義目標使用者</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>定義核心任務</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>定義知識來源</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>定義禁止事項</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>定義例外處理</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>定義成功標準</td>
-<td></td>
 </tr>
 </tbody>
 </table>
+<h3 id="backup-scenarios">備案：用練習情境完成第二輪</h3>
+<p>如果完成六項框架後，仍暫時想不到自己的題目，請選一個練習情境完成第二輪。點卡片可開啟完整操作頁，名稱、描述、指示範本、提示詞和對答案都已準備好。</p>
+<div class="scn only-c">
+<p><strong>情境 C:</strong> 第二輪若使用練習情境，請不要把 A1–E2 檔案加入「知識」區；請改用素材包內對應的「合併版 txt」。建立 Agent 時只填名稱、描述與指示；每次開新對話前，先附上對應合併版 txt 再提問。</p>
+<table>
+<thead><tr><th>練習情境</th><th>情境 C 請附上的檔案</th></tr></thead>
+<tbody>
+<tr><td>公文撰寫小幫手</td><td><code>A_公文素材合併版_無授權學員用.txt</code></td></tr>
+<tr><td>採購作業問答助理</td><td><code>B_採購素材合併版_無授權學員用.txt</code></td></tr>
+<tr><td>差旅報支問答助理</td><td><code>C_差旅素材合併版_無授權學員用.txt</code></td></tr>
+<tr><td>請假與加班規定助理</td><td><code>D_請假加班素材合併版_無授權學員用.txt</code></td></tr>
+<tr><td>會議紀錄整理小幫手</td><td><code>E_會議紀錄素材合併版_無授權學員用.txt</code></td></tr>
+<tr><td>業務簡報製作助理</td><td><code>F_業務簡報素材合併版_無授權學員用.txt</code></td></tr>
+<tr><td>抽查資料分析助理</td><td><code>G_抽查資料素材合併版_無授權學員用.txt</code></td></tr>
+<tr><td>HR 教育訓練影片企劃助理</td><td><code>H_影片企劃素材合併版_無授權學員用.txt</code></td></tr>
+</tbody></table>
+</div>
+
+<div class="mock-badge">
+<p><strong>模擬資料</strong> 練習情境的素材皆為課堂練習用的模擬資料，非台灣電力公司正式規定</p>
+</div>
+<div class="scn-cards">
+<a class="scn-card" href="scn1-doc-writer.html"><span class="sc-no">練習情境 1</span><span class="sc-title">公文撰寫小幫手</span><span class="sc-desc">依公文規範、修訂公告與常用範例，協助起草簽、函並檢查用語與格式</span><span class="sc-feedback">文書處理、公文撰寫、Word 文件應用</span><span class="sc-meta">素材 A1–A3｜新舊規定衝突 · 舊範例誤導</span><span class="sc-go">開啟操作頁 →</span></a>
+<a class="scn-card" href="scn2-procurement.html"><span class="sc-no">練習情境 2</span><span class="sc-title">採購作業問答助理</span><span class="sc-desc">把散在手冊、權限表和同仁經驗裡的採購規定，整理成一問就答的助理</span><span class="sc-feedback">公司業務流程相關案例、辦公室管理</span><span class="sc-meta">素材 B1–B3｜新舊規定衝突 · 非正式說法</span><span class="sc-go">開啟操作頁 →</span></a>
+<a class="scn-card" href="scn3-travel.html"><span class="sc-no">練習情境 3</span><span class="sc-title">差旅報支問答助理</span><span class="sc-desc">把作業要點、修訂公告和同仁經驗整理成一問就答的差旅小幫手</span><span class="sc-feedback">日常工作場景、流程優化</span><span class="sc-meta">素材 C1–C3｜新舊規定衝突 · 非正式說法</span><span class="sc-go">開啟操作頁 →</span></a>
+<a class="scn-card" href="scn4-leave.html"><span class="sc-no">練習情境 4</span><span class="sc-title">請假與加班規定助理</span><span class="sc-desc">同仁最常問的請假、補休與遠距工作規定，一次問清楚</span><span class="sc-feedback">辦公室管理、個人秘書/待辦稽催</span><span class="sc-meta">素材 D1–D4｜請假加班 · 待辦追蹤 · 稽催規則</span><span class="sc-go">開啟操作頁 →</span></a>
+<a class="scn-card" href="scn5-minutes.html"><span class="sc-no">練習情境 5</span><span class="sc-title">會議紀錄整理小幫手</span><span class="sc-desc">貼上逐字稿，依公司規範一次產出格式正確的會議紀錄</span><span class="sc-feedback">會議紀錄、文書處理、實際操作</span><span class="sc-meta">素材 E1｜產出文件 · 不推定 · 個資保護</span><span class="sc-go">開啟操作頁 →</span></a>
+<a class="scn-card" href="scn6-presentation.html"><span class="sc-no">練習情境 6</span><span class="sc-title">業務簡報製作助理</span><span class="sc-desc">回應學員對簡報製作與主管報告的需求，把月報資料整理成簡報大綱與講稿</span><span class="sc-feedback">簡報製作、業務簡報、公司風格</span><span class="sc-meta">素材 F1–F4｜簡報架構 · 品牌格式 · 講稿範例</span><span class="sc-go">開啟操作頁 →</span></a>
+<a class="scn-card" href="scn7-audit.html"><span class="sc-no">練習情境 7</span><span class="sc-title">抽查資料分析助理</span><span class="sc-desc">回應歷年業務抽查資料整理與查詢需求，協助分類缺失與產出主管摘要</span><span class="sc-feedback">資料分析、歷年抽查資料整理查詢</span><span class="sc-meta">素材 G1–G3｜資料查詢 · 缺失分類 · 風險摘要</span><span class="sc-go">開啟操作頁 →</span></a>
+</div>
+
 <h2 id="demo-2-2-用指示骨架建立-agent-原型"><span class="demo-badge">Demo 2-2</span>用指示骨架建立 Agent 原型</h2>
 <h3 id="操作步驟-12">操作步驟</h3>
 <ol type="1">
@@ -1798,7 +1960,7 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <li><p>按右上角「<strong>建立</strong>」，打開 Agent 對話，至少問 3 題正常問題</p></li>
 </ol>
 <div class="scn only-c">
-<p><strong>情境 C:</strong> 「知識」區只能加入公開網站網址 (最多 4 個)，無法加入檔案，可以加入與你工作相關的公開網址，例如公司官網或政府公開資訊網站；內部資料則整理成一個檔案，在對話中附上使用 (做法同第一輪)</p>
+<p><strong>情境 C:</strong> 「知識」區只能加入公開網站網址，無法加入檔案。第二輪若用自己的內部資料，請整理成一個 txt 後在每次對話中附上；若使用練習情境，請附上素材包內對應的合併版 txt，例如 <code>A_公文素材合併版_無授權學員用.txt</code>。</p>
 </div>
 <h3 id="提示詞範本-9">提示詞範本</h3>
 <pre><code>請把我下面這份 Agent 情境定義，改寫成可以直接貼進 Agent Builder「指示」欄位的內容，結構請依序分成七段:一、角色;二、知識來源與優先順序 (資料衝突時以日期較新、層級較高的文件為準，並要主動說明差異);三、回答流程 (條件不足時最多先問兩個問題);四、輸出格式 (先結論、條列或表格、每個關鍵數字或規定標註來源檔名、四百字以內);五、邊界處理 (資料沒有就直接說沒有，不得推測);六、語氣;七、至少三個技能模組，每個寫出觸發條件、使用資料與執行步驟，全文控制在三千字元以內
@@ -1815,34 +1977,28 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <tr>
 <th style="text-align: center;">完成</th>
 <th>檢查項目</th>
-<th>我的記錄</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>上傳知識檔</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>填好名稱與描述</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>貼上七段指示</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>設定建議的提示</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>完成 3 題正常測試</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -1879,12 +2035,10 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <td>正常 1</td>
 <td></td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>正常 2</td>
-<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -1893,12 +2047,10 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <td>正常 3</td>
 <td></td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>模糊</td>
-<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -1907,12 +2059,10 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <td>超出範圍</td>
 <td></td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>依結果完成至少 1 次指示優化</td>
-<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -1942,24 +2092,20 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <tr>
 <th style="text-align: center;">完成</th>
 <th>檢查項目</th>
-<th>我的記錄</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>寫好定位一句話</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>準備最得意的問答範例</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>完成 3 分鐘發表</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -1981,24 +2127,20 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <tr>
 <th style="text-align: center;">完成</th>
 <th>檢查項目</th>
-<th>我的記錄</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>產出部門 Agent 上線檢查清單</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>決定回部門第一個要上線的 Agent</td>
-<td></td>
 </tr>
 <tr>
 <td style="text-align: center;">☐</td>
 <td>找好第一批試用的同事</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -2105,60 +2247,79 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 </tr>
 <tr>
 <td><code>A1_公文製作要點_2019年版.docx</code></td>
-<td>備用情境 1 公文撰寫小幫手 (模擬資料)</td>
+<td>練習情境 1 公文撰寫小幫手 (模擬資料)</td>
 </tr>
 <tr>
 <td><code>A2_公文製作要點修訂公告_2025年.docx</code></td>
-<td>備用情境 1 公文撰寫小幫手 (模擬資料)</td>
+<td>練習情境 1 公文撰寫小幫手 (模擬資料)</td>
 </tr>
 <tr>
 <td><code>A3_常用公文範例與用語對照表.docx</code></td>
-<td>備用情境 1 公文撰寫小幫手 (模擬資料)</td>
+<td>練習情境 1 公文撰寫小幫手 (模擬資料)</td>
 </tr>
 <tr>
 <td><code>B1_採購作業手冊_2022年版.docx</code></td>
-<td>備用情境 2 採購作業問答助理 (模擬資料)</td>
+<td>練習情境 2 採購作業問答助理 (模擬資料)</td>
 </tr>
 <tr>
 <td><code>B2_採購金額級距與核決權限表_2026年.docx</code></td>
-<td>備用情境 2 採購作業問答助理 (模擬資料)</td>
+<td>練習情境 2 採購作業問答助理 (模擬資料)</td>
 </tr>
 <tr>
 <td><code>B3_採購常見問答_同仁經驗整理.docx</code></td>
-<td>備用情境 2 採購作業問答助理 (模擬資料)</td>
+<td>練習情境 2 採購作業問答助理 (模擬資料)</td>
 </tr>
 <tr>
 <td><code>C1_國內出差旅費報支作業要點_2024年版.docx</code></td>
-<td>備用情境 3 差旅報支問答助理 (模擬資料)</td>
+<td>練習情境 3 差旅報支問答助理 (模擬資料)</td>
 </tr>
 <tr>
 <td><code>C2_國內出差旅費報支修訂公告_2026年.docx</code></td>
-<td>備用情境 3 差旅報支問答助理 (模擬資料)</td>
+<td>練習情境 3 差旅報支問答助理 (模擬資料)</td>
 </tr>
 <tr>
 <td><code>C3_差旅報支常見問答_同仁經驗整理.docx</code></td>
-<td>備用情境 3 差旅報支問答助理 (模擬資料)</td>
+<td>練習情境 3 差旅報支問答助理 (模擬資料)</td>
 </tr>
 <tr>
 <td><code>D1_員工請假與加班規則_2021年版.docx</code></td>
-<td>備用情境 4 請假與加班規定助理 (模擬資料)</td>
+<td>練習情境 4 請假與加班規定助理 (模擬資料)</td>
 </tr>
 <tr>
 <td><code>D2_請假與加班規則修訂公告_2026年.docx</code></td>
-<td>備用情境 4 請假與加班規定助理 (模擬資料)</td>
+<td>練習情境 4 請假與加班規定助理 (模擬資料)</td>
 </tr>
 <tr>
 <td><code>D3_請假加班常見問答_同仁經驗整理.docx</code></td>
-<td>備用情境 4 請假與加班規定助理 (模擬資料)</td>
+<td>練習情境 4 請假與加班規定助理 (模擬資料)</td>
 </tr>
 <tr>
 <td><code>E1_會議紀錄撰寫規範_2025年版.docx</code></td>
-<td>備用情境 5 會議紀錄整理小幫手 (模擬資料)</td>
+<td>練習情境 5 會議紀錄整理小幫手 (模擬資料)</td>
 </tr>
 <tr>
 <td><code>E2_會議逐字稿範例_設備維護協調會議.docx</code></td>
-<td>備用情境 5 會議紀錄整理小幫手 (模擬資料)</td>
+<td>練習情境 5 會議紀錄整理小幫手 (模擬資料)</td>
 </tr>
+<tr><td><code>A_公文素材合併版_無授權學員用.txt</code></td><td>情境 C 用: 練習情境 1 公文素材合併版</td></tr>
+<tr><td><code>B_採購素材合併版_無授權學員用.txt</code></td><td>情境 C 用: 練習情境 2 採購素材合併版</td></tr>
+<tr><td><code>C_差旅素材合併版_無授權學員用.txt</code></td><td>情境 C 用: 練習情境 3 差旅素材合併版</td></tr>
+<tr><td><code>D_請假加班素材合併版_無授權學員用.txt</code></td><td>情境 C 用: 練習情境 4 請假加班素材合併版</td></tr>
+<tr><td><code>E_會議紀錄素材合併版_無授權學員用.txt</code></td><td>情境 C 用: 練習情境 5 會議紀錄素材合併版</td></tr>
+<tr><td><code>F1_業務月報簡報需求說明_2026年9月.docx</code></td><td>練習情境 6 業務簡報製作助理 (模擬資料)</td></tr>
+<tr><td><code>F2_簡報品牌與格式指南.docx</code></td><td>練習情境 6 業務簡報製作助理 (模擬資料)</td></tr>
+<tr><td><code>F3_月報簡報常見問題與範例.docx</code></td><td>練習情境 6 業務簡報製作助理 (模擬資料)</td></tr>
+<tr><td><code>F4_業務簡報頁面大綱與講稿範例.docx</code></td><td>練習情境 6 業務簡報頁面大綱與講稿範例 (模擬資料)</td></tr>
+<tr><td><code>F_業務簡報素材合併版_無授權學員用.txt</code></td><td>情境 C 用: 練習情境 6 業務簡報素材合併版</td></tr>
+<tr><td><code>G1_歷年業務抽查結果彙整_2024-2026.docx</code></td><td>練習情境 7 抽查資料分析助理 (模擬資料)</td></tr>
+<tr><td><code>G2_抽查缺失分類與改善追蹤規則.docx</code></td><td>練習情境 7 抽查資料分析助理 (模擬資料)</td></tr>
+<tr><td><code>G3_抽查資料查詢常見問題.docx</code></td><td>練習情境 7 抽查資料分析助理 (模擬資料)</td></tr>
+<tr><td><code>G_抽查資料素材合併版_無授權學員用.txt</code></td><td>情境 C 用: 練習情境 7 抽查資料素材合併版</td></tr><tr><td><code>H1_HR教育訓練影片需求說明.docx</code></td><td>練習情境 8 HR 教育訓練影片企劃助理 (模擬資料)</td></tr>
+<tr><td><code>H2_影片腳本與分鏡格式指南.docx</code></td><td>練習情境 8 HR 教育訓練影片企劃助理 (模擬資料)</td></tr>
+<tr><td><code>H3_Clipchamp製作步驟參考.docx</code></td><td>練習情境 8 HR 教育訓練影片企劃助理 (模擬資料)</td></tr>
+<tr><td><code>H4_影片內容合規與內部溝通注意事項.docx</code></td><td>練習情境 8 HR 教育訓練影片企劃助理 (模擬資料)</td></tr>
+<tr><td><code>H_影片企劃素材合併版_無授權學員用.txt</code></td><td>情境 C 用: 練習情境 8 影片企劃素材合併版</td></tr>
+
 </tbody>
 </table>
 <h1 id="課後問卷">課後問卷</h1>
@@ -2299,11 +2460,9 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
       localStorage.removeItem(STORAGE_KEY);
     });
 
-    /* ── 6. Active 章節高亮(IntersectionObserver)── */
-    if (!('IntersectionObserver' in window)) return;
-
-    var headings = document.querySelectorAll('h1[id], h2[id], h3[id]');
-    if (!headings.length) return;
+    /* ── 6. Active 章節高亮(scroll position)── */
+    var headingList = Array.prototype.slice.call(document.querySelectorAll('h1[id], h2[id]'));
+    if (!headingList.length) return;
 
     var linkById = {};
     toc.querySelectorAll('a[href^="#"]').forEach(function (a) {
@@ -2311,51 +2470,47 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
       linkById[id] = a;
     });
 
-    var visible = {};
+    var headings = headingList.filter(function (h) { return linkById[h.id]; });
+    if (!headings.length) return;
 
-    function setActive() {
-      var ids = Object.keys(visible).filter(function (k) { return visible[k]; });
-      if (!ids.length) return;
-      ids.sort(function (a, b) { return visible[a].top - visible[b].top; });
-      var topId = ids[0];
-
+    function setActiveByScroll() {
+      var probe = window.scrollY + Math.max(120, window.innerHeight * 0.22);
+      var current = headings[0];
+      for (var i = 0; i < headings.length; i++) {
+        if (headings[i].offsetTop <= probe) current = headings[i];
+        else break;
+      }
       toc.querySelectorAll('a.toc-active').forEach(function (a) {
         a.classList.remove('toc-active');
       });
-      var active = linkById[topId];
-      if (active) {
-        active.classList.add('toc-active');
-        var parent = active.parentElement;
-        while (parent && parent !== toc) {
-          if (parent.classList && parent.classList.contains('toc-collapsible')) {
-            parent.classList.remove('toc-collapsed');
-          }
-          parent = parent.parentElement;
+      var active = linkById[current.id];
+      if (!active) return;
+      active.classList.add('toc-active');
+      var parent = active.parentElement;
+      while (parent && parent !== toc) {
+        if (parent.classList && parent.classList.contains('toc-collapsible')) {
+          parent.classList.remove('toc-collapsed');
         }
-        var rect = active.getBoundingClientRect();
-        var tocRect = toc.getBoundingClientRect();
-        if (rect.top < tocRect.top + 40 || rect.bottom > tocRect.bottom - 40) {
-          active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-        }
+        parent = parent.parentElement;
+      }
+      var rect = active.getBoundingClientRect();
+      var tocRect = toc.getBoundingClientRect();
+      if (rect.top < tocRect.top + 40 || rect.bottom > tocRect.bottom - 40) {
+        // TOC position stays stable; highlight only.
       }
     }
 
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        var id = entry.target.id;
-        if (entry.isIntersecting) {
-          visible[id] = entry.target.getBoundingClientRect();
-        } else {
-          visible[id] = null;
-        }
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        setActiveByScroll();
+        ticking = false;
       });
-      setActive();
-    }, {
-      rootMargin: '-15% 0px -70% 0px',
-      threshold: 0
-    });
-
-    headings.forEach(function (h) { observer.observe(h); });
+    }, { passive: true });
+    window.addEventListener('resize', setActiveByScroll);
+    setActiveByScroll();
   });
 })();
 </script>
@@ -2460,6 +2615,22 @@ body.pager-all #pager-nav{display:none!important;}
     function full(i){var h=groups[i].sec.querySelector('h1');return h?h.textContent.trim():'';}
     function title(i){return full(i).split('｜')[0].trim();}
     function clip(s){return s.length>22?s.slice(0,22)+'…':s;}
+
+    function syncTocActive(id){
+      if(!id)return;
+      toc.querySelectorAll('a.toc-active').forEach(function(a){a.classList.remove('toc-active');});
+      var sel='a[href="#'+(window.CSS&&CSS.escape?CSS.escape(id):id.replace(/"/g,'\"'))+'"]';
+      var a=toc.querySelector(sel);
+      if(!a){toc.querySelectorAll('a[href^="#"]').forEach(function(x){if(decodeURIComponent(x.getAttribute('href').slice(1))===id)a=x;});}
+      if(!a)return;
+      a.classList.add('toc-active');
+      var parent=a.parentElement;
+      while(parent&&parent!==toc){
+        if(parent.classList&&parent.classList.contains('toc-collapsible'))parent.classList.remove('toc-collapsed');
+        parent=parent.parentElement;
+      }
+      // Keep the user's TOC scroll position stable; only update highlight.
+    }
     function show(i,targetId,scroll){
       if(i<0||i>=groups.length)return;
       groups.forEach(function(g,k){g.sec.style.display=(k===i)?'':'none';});
@@ -2469,6 +2640,7 @@ body.pager-all #pager-nav{display:none!important;}
       next.textContent=i<groups.length-1?('下一個: '+clip(title(i+1))+' →'):'→';
       cnt.textContent='目前: '+clip(full(i));cnt.title=full(i);
       if(scroll!==false){var tg=targetId&&document.getElementById(targetId);if(tg){tg.scrollIntoView();}else{window.scrollTo(0,0);}}
+      syncTocActive(targetId||groups[i].id);
       if(targetId){try{history.replaceState(null,'','#'+encodeURIComponent(targetId));}catch(e){}}
     }
     prev.addEventListener('click',function(){show(active-1,groups[active-1].id,true);});
