@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>工作坊課後回饋問卷｜總結分頁</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--cp-bg);
+      color: var(--cp-text);
+      font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.5;
+    }
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: end;
+      padding: 28px;
+      border: 1px solid var(--cp-border);
+      border-radius: 16px;
+      background: var(--cp-panel-strong);
+      box-shadow: var(--cp-shadow);
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--cp-accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      margin-bottom: 10px;
+      font-size: clamp(32px, 4vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+    h2 {
+      margin-bottom: 16px;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+    }
+    h3 {
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+    .lede {
+      max-width: 780px;
+      margin-bottom: 0;
+      color: var(--cp-text-muted);
+      font-size: 18px;
+    }
+    .meta {
+      min-width: 220px;
+      padding: 18px;
+      border: 1px solid var(--cp-border);
+      border-radius: 16px;
+      background: var(--cp-surface);
+    }
+    .meta strong {
+      display: block;
+      font-size: 32px;
+      line-height: 1;
+    }
+    .meta span {
+      color: var(--cp-text-muted);
+      font-size: 14px;
+    }
+    .grid {
+      display: grid;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .span-all { grid-column: 1 / -1; }
+    .card {
+      padding: 20px;
+      border: 1px solid var(--cp-border-strong);
+      border-radius: 16px;
+      background: var(--cp-surface);
+      box-shadow: 0 0 0 3px var(--cp-accent-soft), 0 1px 2px var(--cp-highlight);
+    }
+    .kpi-value {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--cp-accent);
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+    .kpi-label {
+      color: var(--cp-text-muted);
+      font-size: 14px;
+    }
+    .section {
+      margin-top: 28px;
+    }
+    .section-title {
+      margin: 32px 0 12px;
+      color: var(--cp-text-muted);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .section-caption {
+      margin: -4px 0 12px;
+      color: var(--cp-text-muted);
+      font-size: 13px;
+    }
+    .bar-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 78px;
+      gap: 6px 12px;
+      align-items: center;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--cp-border);
+      font-size: 14px;
+    }
+    .bar-row > span:first-child {
+      grid-column: 1 / -1;
+    }
+    .bar-row:last-child { border-bottom: 0; }
+    .bar-track {
+      min-width: 0;
+      height: 14px;
+      overflow: hidden;
+      border-radius: 0.625rem;
+      background: var(--cp-border);
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 0.625rem;
+      background: var(--cp-accent);
+    }
+    .bar-value {
+      color: var(--cp-accent);
+      font-weight: 800;
+      text-align: right;
+      white-space: nowrap;
+    }
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .pill {
+      padding: 8px 10px;
+      border: 1px solid var(--cp-border);
+      border-radius: 0.625rem;
+      background: var(--cp-accent-soft);
+      color: var(--cp-text);
+      font-size: 14px;
+    }
+    .insight {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--cp-text-muted);
+    }
+    .insight li { margin: 8px 0; }
+    .callout {
+      border-color: var(--cp-accent);
+      background: var(--cp-accent-soft);
+      box-shadow: 0 0 0 3px var(--cp-accent-soft), 0 1px 2px var(--cp-highlight);
+    }
+    .recommendations {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .recommendations li {
+      padding: 14px;
+      border: 1px solid var(--cp-border);
+      border-radius: 0.625rem;
+      background: var(--cp-surface);
+    }
+    .tag {
+      display: inline-block;
+      margin-bottom: 6px;
+      color: var(--cp-accent);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .quote {
+      margin: 0;
+      padding: 14px;
+      border-left: 4px solid var(--cp-accent);
+      border-radius: 0.625rem;
+      background: var(--cp-surface-soft);
+      color: var(--cp-text-muted);
+      font-size: 14px;
+    }
+    .footer {
+      margin-top: 28px;
+      color: var(--cp-text-soft);
+      font-size: 13px;
+      text-align: right;
+    }
+    @media (max-width: 900px) {
+      .hero, .kpis, .two, .three { grid-template-columns: 1fr; }
+      .bar-row { grid-template-columns: 1fr; gap: 6px; }
+      .bar-value { text-align: left; }
+    }
+    @media print {
+      body { background: var(--cp-surface); }
+      .page { max-width: none; padding: 16px; }
+      .hero, .card { box-shadow: none; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Microsoft Copilot Agent Builder Workshop Feedback</p>
+        <h1>工作坊課後回饋總結</h1>
+        <p class="lede">56 份回覆顯示課程整體滿意度高、節奏多數合適；學員對 Agent 的概念、實作與自建工作情境最有感，但後續落地仍需要授權／治理、答案核對、資料整理與指示撰寫支援</p>
+      </div>
+      <div class="meta">
+        <strong>56</strong>
+        <span>份匿名回覆｜平均填答 2 分 53 秒｜表單狀態 Active</span>
+      </div>
+    </section>
+
+    <section class="grid kpis section">
+      <article class="card">
+        <span class="kpi-value">93%</span>
+        <span class="kpi-label">滿意或非常滿意；其中 50% 非常滿意</span>
+      </article>
+      <article class="card">
+        <span class="kpi-value">71%</span>
+        <span class="kpi-label">認為課程與實作節奏「剛好」</span>
+      </article>
+      <article class="card">
+        <span class="kpi-value">55%</span>
+        <span class="kpi-label">最受益於 Chat 與 Agent 概念差異</span>
+      </article>
+      <article class="card">
+        <span class="kpi-value">41%</span>
+        <span class="kpi-label">主要阻礙是授權、用量計費或權限不明</span>
+      </article>
+    </section>
+
+    <p class="section-title">整體回饋</p>
+    <section class="grid two">
+      <article class="card">
+        <h2>整體滿意度</h2>
+        <div class="bar-row">
+          <span>非常滿意</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 50%"></div></div>
+          <span class="bar-value">28｜50%</span>
+        </div>
+        <div class="bar-row">
+          <span>滿意</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 43%"></div></div>
+          <span class="bar-value">24｜43%</span>
+        </div>
+        <div class="bar-row">
+          <span>普通以下</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 7%"></div></div>
+          <span class="bar-value">4｜7%</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>課程與實作節奏</h2>
+        <div class="bar-row">
+          <span>節奏剛好</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 71%"></div></div>
+          <span class="bar-value">40｜71%</span>
+        </div>
+        <div class="bar-row">
+          <span>稍慢</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 2%"></div></div>
+          <span class="bar-value">1｜2%</span>
+        </div>
+        <div class="bar-row">
+          <span>稍快或太快</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 27%"></div></div>
+          <span class="bar-value">15｜27%</span>
+        </div>
+      </article>
+
+      <article class="card callout span-all">
+        <h2>一句話結論</h2>
+        <p>課程已成功讓多數學員理解 Agent 的定位並完成初步實作；下一步應把焦點從「會做一個 Agent」推進到「如何在台電場景安全、可驗證、可維運地用 Agent」</p>
+        <ul class="pill-list">
+          <li class="pill">概念建立有效</li>
+          <li class="pill">自建情境吸引力高</li>
+          <li class="pill">治理與授權需補強</li>
+          <li class="pill">答案核對需標準化</li>
+        </ul>
+      </article>
+    </section>
+
+    <p class="section-title">內容成效與落地需求</p>
+    <p class="section-caption">右側百分比＝56 份回覆中選取該項的人數比例；「最有幫助的內容」與「主要阻礙」是多選題，所以百分比不會加總為 100%</p>
+    <section class="grid three">
+      <article class="card">
+        <h2>最有幫助的內容</h2>
+        <div class="bar-row">
+          <span>Chat 到 Agent 的差異</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 55%"></div></div>
+          <span class="bar-value">31｜55%</span>
+        </div>
+        <div class="bar-row">
+          <span>建立自己的工作情境 Agent</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 48%"></div></div>
+          <span class="bar-value">27｜48%</span>
+        </div>
+        <div class="bar-row">
+          <span>Instructions 撰寫與優化</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 43%"></div></div>
+          <span class="bar-value">24｜43%</span>
+        </div>
+        <div class="bar-row">
+          <span>五個備用情境與範本</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 34%"></div></div>
+          <span class="bar-value">19｜34%</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>優先嘗試情境</h2>
+        <div class="bar-row">
+          <span>公文／文件草稿</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 20%"></div></div>
+          <span class="bar-value">11｜20%</span>
+        </div>
+        <div class="bar-row">
+          <span>會議紀錄整理</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 16%"></div></div>
+          <span class="bar-value">9｜16%</span>
+        </div>
+        <div class="bar-row">
+          <span>尚未想到適合情境</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 14%"></div></div>
+          <span class="bar-value">8｜14%</span>
+        </div>
+        <div class="bar-row">
+          <span>法規／新人訓練</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 13%"></div></div>
+          <span class="bar-value">各 7｜13%</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>主要阻礙</h2>
+        <div class="bar-row">
+          <span>授權／用量／權限不明</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 41%"></div></div>
+          <span class="bar-value">23｜41%</span>
+        </div>
+        <div class="bar-row">
+          <span>答案正確性與核對</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 39%"></div></div>
+          <span class="bar-value">22｜39%</span>
+        </div>
+        <div class="bar-row">
+          <span>指示撰寫仍不熟</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 36%"></div></div>
+          <span class="bar-value">20｜36%</span>
+        </div>
+        <div class="bar-row">
+          <span>缺少整理好的知識來源</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 36%"></div></div>
+          <span class="bar-value">20｜36%</span>
+        </div>
+      </article>
+    </section>
+
+    <p class="section-title">能力信心與開放回饋</p>
+    <section class="grid two">
+      <article class="card">
+        <h2>實作後信心</h2>
+        <div class="bar-row">
+          <span>判斷工作是否適合 Agent</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 71%"></div></div>
+          <span class="bar-value">71%｜3.82/5</span>
+        </div>
+        <div class="bar-row">
+          <span>依授權選擇資料使用方式</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 59%"></div></div>
+          <span class="bar-value">59%｜3.66/5</span>
+        </div>
+        <div class="bar-row">
+          <span>撰寫清楚 Instructions</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 54%"></div></div>
+          <span class="bar-value">54%｜3.57/5</span>
+        </div>
+        <div class="bar-row">
+          <span>用測試題找錯並修訂</span>
+          <div class="bar-track"><div class="bar-fill" style="width: 48%"></div></div>
+          <span class="bar-value">48%｜3.45/5</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>開放回饋主題</h2>
+        <ul class="insight">
+          <li>希望提供更多範例、FAQ、公文草稿範本與簡報素材</li>
+          <li>希望補上內部網站／內網資料、動態網頁、多層網頁來源限制的情境教學</li>
+          <li>對 Copilot Studio、Microsoft Foundry、多 Agent 串接、模型選配與開源模型適用性有興趣</li>
+          <li>有部門情境需求：圖面審查、法規條文查詢、電力系統專業研究應用</li>
+          <li>有人建議定期在訓練所開實體課，降低線上課被工作中斷的問題</li>
+        </ul>
+      </article>
+    </section>
+
+    <p class="section-title">後續建議</p>
+    <section class="grid two">
+      <article class="card">
+        <h2>建議後續行動</h2>
+        <ol class="recommendations">
+          <li><span class="tag">1. 補一份治理速查</span><br>用一頁說清楚 Copilot Chat、Agent Builder、Copilot Studio、資料來源、授權、權限與用量限制</li>
+          <li><span class="tag">2. 做「答案核對」練習包</span><br>提供測試題、錯誤樣態、引用檢查與修訂範例，對應目前最低的信心項目</li>
+          <li><span class="tag">3. 擴充台電情境範本</span><br>優先補公文草稿、會議紀錄、SOP／法規查詢與新人 FAQ，並加入內網資料可用性說明</li>
+          <li><span class="tag">4. 規劃進階場</span><br>聚焦 Copilot Studio／Foundry、多 Agent 串接、部門資料整理與高風險情境治理</li>
+        </ol>
+      </article>
+
+      <article class="card">
+        <h2>可引用的學員聲音</h2>
+        <p class="quote">「講師準備的資料很完整，很用心！現場內網連線有點狀況，但不影響課程的充實」</p>
+        <p class="quote">「需要公文的草稿範本」</p>
+        <p class="quote">「網頁資訊來源很多限制，但大家不熟悉，比如動態網頁，或是太多層抓不到」</p>
+        <p class="quote">「agent 跟 agent 之間可以連動，或是使用方式……目前辦理圖面審查」</p>
+      </article>
+    </section>
+
+    <p class="footer">資料來源：工作坊課後回饋問卷，56 份回覆；製作時間：2026/10/15</p>
+  </main>
+</body>
+</html>
