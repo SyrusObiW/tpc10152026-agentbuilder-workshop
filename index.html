@@ -1411,16 +1411,6 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <div class="scn only-c"><p><strong>授權情境 C:</strong> 先保持網路搜尋開啟，但不要在知識區加入任何網址</p></div>
 <ol start="7" type="1">
 
-<h3 id="分享與資料權限-agent-access-data-access">分享與資料權限: Agent Access ≠ Data Access</h3>
-<blockquote class="c-key"><p><strong>全組織共用</strong>分享的是 Agent 的使用權，不是資料的存取權</p></blockquote>
-<table><thead><tr><th>項目</th><th>全組織共用後</th></tr></thead><tbody>
-<tr><td>全組織可以跟 Agent 聊天</td><td>✅ 可以</td></tr>
-<tr><td>全組織可以修改 Agent</td><td>❌ 不可以</td></tr>
-<tr><td>全組織變成 Agent Owner</td><td>❌ 不會</td></tr>
-<tr><td>自動取得 SharePoint / OneDrive 檔案權限</td><td>❌ 不會</td></tr>
-<tr><td>看到原本無權限的資料</td><td>❌ 不行</td></tr>
-</tbody></table>
-<p><strong>重點觀念:</strong> Agent Access 控制「誰可以使用這個 Agent」；Data Access 控制「這個使用者透過 Agent 可以取得哪些資訊」，兩層權限是分開的</p>
 <li><p>按右上角「<strong>建立</strong>」，再從左側代理程式清單打開這個 Agent</p></li>
 </ol>
 <div class="scn only-b">
@@ -1542,6 +1532,10 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <li><p>依序貼上下方三段對話，每貼一段，等 Agent Builder 回覆後再貼下一段</p></li>
 </ol>
 <pre><code>我要建立一個花蓮三天兩夜自由行的旅遊助理，服務對象是帶長輩或小孩的家庭旅客，它只能根據我提供的花蓮素材回答景點、交通、住宿、步道和夜市問題；如果是有授權版本，素材會使用知識區裡的 01–07 七份花蓮素材檔</code></pre>
+<div class="scn only-c">
+<p><strong>授權情境 C:</strong> 如果你是 C 情境，請改貼下面這段第一段提示詞，讓指示明確包含「08_花蓮素材合併版_無授權學員用.txt」:</p>
+<pre class="instr"><code>我要建立一個花蓮三天兩夜自由行的旅遊助理，服務對象是帶長輩或小孩的家庭旅客。它只能根據使用者每次對話中附上的「08_花蓮素材合併版_無授權學員用.txt」回答景點、交通、住宿、步道和夜市問題；這個合併版文字檔包含 01–07 七份花蓮素材，請把它視為本 Agent 的唯一資料來源。若使用者沒有附上該檔案，請先提醒使用者用「+」附上檔案，不要憑記憶或推測回答</code></pre>
+</div>
 <pre><code>如果不同資料對同一件事的說法不一樣，請以日期較新的官方資料為準，並主動告訴使用者舊版寫什麼、新版寫什麼；網友心得只能當作體驗參考，不能當作價格、時間或開放狀態的依據</code></pre>
 <pre><code>回答時先講結論，三個以上的項目用表格，每個數字都標註來源檔名，控制在 400 字以內；資料裡沒有的內容要直接說沒有，不可以猜，也不提供即時天氣或班機資訊</code></pre>
 <ol start="3" type="1">
@@ -1549,10 +1543,6 @@ border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 15px}
 <li><p>按右上角「<strong>更新</strong>」，再打開 Agent 開一個新對話，重問 Demo 1-4 的接駁車問題</p></li>
 </ol>
 <pre class="test"><code>太魯閣接駁車一日券全票要多少錢?</code></pre>
-<div class="scn only-c">
-<p><strong>授權情境 C:</strong> 如果你是 C 情境，請改貼下面這段第一段提示詞，讓指示明確包含「08_花蓮素材合併版_無授權學員用.txt」:</p>
-<pre class="instr"><code>我要建立一個花蓮三天兩夜自由行的旅遊助理，服務對象是帶長輩或小孩的家庭旅客。它只能根據使用者每次對話中附上的「08_花蓮素材合併版_無授權學員用.txt」回答景點、交通、住宿、步道和夜市問題；這個合併版文字檔包含 01–07 七份花蓮素材，請把它視為本 Agent 的唯一資料來源。若使用者沒有附上該檔案，請先提醒使用者用「+」附上檔案，不要憑記憶或推測回答</code></pre>
-</div>
 <h3 id="重點提示-7">重點提示</h3>
 <ul>
 <li><p>不會寫指示也沒關係，用說的就能建出 Agent，這是最快的起點</p></li>
